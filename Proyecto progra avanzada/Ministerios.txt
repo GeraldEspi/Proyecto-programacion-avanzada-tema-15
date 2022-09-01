@@ -1,0 +1,8 @@
+Interior,Jose Albares,20
+Educacion,Carolina Diaz,15
+Hacienda,Gerald Kapone,4
+Salud,Megan Wilson,8
+Economia,Miquel Iceta,5
+Exterior,José Balmaceda,8
+Defensa,Mariano Ribera,10
+Medio ambiente,Madeline Massey,6

@@ -1,5 +1,3 @@
-import java.io.*;
-import java.util.*;
 
 public class Persona 
 {
@@ -9,39 +7,27 @@ public class Persona
 	private String profecion;
 	private int rut;
 	private int sueldo;
-	private Scanner archivo;
-  private String linea;
-	
     
     
 	public Persona()
 	{
-		
+		this.nombre = "";
+		this.mail = "";
+		this.cargo = "";
+		this.profecion = "";
+		this.rut = 0;
+		this.sueldo = 0;
 	}
 	
-	public void openFile( ) throws FileNotFoundException
-	{
-		this.archivo =new Scanner(new File("personas.txt"));
-	}
 	
-	public String firstLine() throws IOException
-    {
-        return nextLine();
-    }
 	
-	public String nextLine() throws IOException
-    {
-        this.linea = this.archivo.nextLine();
-        return(this.linea);
-    }
-	
-	public boolean llenado(String linea)
+	public boolean llenadoPorLinea(String linea)
     {
         if(linea == null) 
         {
         	return false;
         }
-      
+		
 		String[] datosLinea = linea.split(",");
 		
 		nombre = datosLinea[0];
@@ -53,6 +39,7 @@ public class Persona
 		
 		return true;
     }
+	
 	
 	//Getters
 	public String getsNombre()
@@ -105,9 +92,12 @@ public class Persona
 	{
 		this.sueldo = sueldo;
 	}
-
-  
 	
+	
+	public void mostrarDatos() 
+	{
+		System.out.print("Nombre:"+ nombre +"/Mail:"+ mail + "/Cargo:"+ cargo + "/Profecion:"+ profecion + "/Rut:"+ rut +"/Sueldo:"+ sueldo);
+	}
 	
 	
 	

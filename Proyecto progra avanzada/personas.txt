@@ -1,10 +1,10 @@
-Mariano Ribera,marianox@gmail.com,defensa,general,16733292,36
-Jose Albares,joseAlba@gmail.com,interior,derecho,23635778,37
-José Balmaceda,JMB12@hotmail.com,exterior,comunicaciones,21902718,40
-Manuel Castelles,castuel@gmail.com,justicia,derecho,11902758,40
-Leando Garcia,larcia@gmail.com,consumo,economia,21942758,30
-Carolina Diaz,carddia@gmail.com,igualdad,derecho,20799720,27
-Gerald Kapone,gerspi@gmail.com,hacienda,economia,20187750,42
-Miquel Iceta,miqueta12@gmail.com,universidades,economia,20091330,32
-Madeline Massey,madessey@gmail.com,cultura y deportes,antropologia,14671539,24
-Megan Wilson,wilsonwap@gmail.com,sanidad,medicina,12020089,40
+Mariano Ribera,marianox@gmail.com,Defensa,general,16733292,36
+Jose Albares,joseAlba@gmail.com,Interior,derecho,23635778,37
+José Balmaceda,JMB12@hotmail.com,Exterior,comunicaciones,21902718,40
+Manuel Castelles,castuel@gmail.com,Defensa,derecho,11902758,40
+Leando Garcia,larcia@gmail.com,Educacion,economia,21942758,30
+Carolina Diaz,carddia@gmail.com,Educacion,derecho,20799720,27
+Gerald Kapone,gerspi@gmail.com,Hacienda,economia,20187750,42
+Miquel Iceta,miqueta12@gmail.com,Economia,economia,20091330,32
+Madeline Massey,madessey@gmail.com,Medio ambiente,antropologia,14671539,24
+Megan Wilson,wilsonwap@gmail.com,Salud,medicina,12020089,40
