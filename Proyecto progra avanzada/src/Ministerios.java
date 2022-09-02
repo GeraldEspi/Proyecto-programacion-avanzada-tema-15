@@ -1,4 +1,4 @@
-import java.util.Hashtable;
+import java.util.*;
 
 public class Ministerios 
 {
@@ -53,7 +53,7 @@ public class Ministerios
 	{
 		return empleados.size();
 	}
-	public Persona getNombrePersona(int key) 
+	public Persona getFuncionarioKey(int key) 
 	{
 		Persona p = empleados.get(key);
 		return p;
@@ -83,5 +83,17 @@ public class Ministerios
 	public void mostrarDatos() 
 	{
 		System.out.print("ministerio:"+ nombreMinisterio +"/ministro:"+ nombreMinistro + "/limite de Funcionarios:"+ limFuncionarios +"\n");
+	}
+	
+	public void mostrarFuncionarios() 
+	{
+		Enumeration<Integer> e = empleados.keys();
+		
+		while(e.hasMoreElements()) 
+		{
+			int key = e.nextElement();
+			Persona p = empleados.get(key);
+			p.imprimirDatos();
+		}
 	}
 }
