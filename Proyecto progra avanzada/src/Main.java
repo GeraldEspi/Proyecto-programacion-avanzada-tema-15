@@ -61,10 +61,12 @@ public class Main
 		p.imprimirDatos();*/
 		
 		do {//mostramos las diferentes opciones a escoger
+			System.out.println("Opcion 0 : Salir del programa");
             System.out.println("Opcion 1 : Agregar Funcionario");
             System.out.println("Opcion 2 : Listar Ministerios Disponibles");
             System.out.println("Opcion 3 : Listar Todos Funcionarios");
             System.out.println("Opcion 4 : Listar Funcionarios de un ministerio");
+           
             opcion = Integer.parseInt(LeerLinea.readLine());
             switch (opcion) {
                 case 1 -> {//Agregar Funcionario
@@ -123,8 +125,8 @@ public class Main
                 	
                 }
                 case 0 ->
-                        System.out.println("Bye <3");
-                default -> System.out.println("Opcion ingresada no es valida");//pa los que no saben poner un numero
+                        System.out.println("Gracias por preferirnos");
+                default -> System.out.println("Opcion ingresada no es valida");// por si el usuario se "equivoca"
             }
         }while( opcion != 0 );//
 		
