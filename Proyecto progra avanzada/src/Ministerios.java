@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.Hashtable;
 
 public class Ministerios 
 {
@@ -6,13 +6,13 @@ public class Ministerios
 	private String nombreMinistro;
 	private int limFuncionarios;
 	private int funcionariosActivos;
-	private ArrayList<Persona> empleados;
+	private Hashtable<Integer,Persona> empleados;
 	
 	public Ministerios() 
 	{
 		this.limFuncionarios = 0;
 		this.funcionariosActivos = 0;
-		this.empleados = new ArrayList<Persona>();
+		this.empleados = new Hashtable<Integer,Persona>();
 	}
 	
 	public boolean llenadoPorLinea(String linea)
@@ -53,9 +53,9 @@ public class Ministerios
 	{
 		return empleados.size();
 	}
-	public Persona getNombrePersona(int pos) 
+	public Persona getNombrePersona(int key) 
 	{
-		Persona p = empleados.get(pos);
+		Persona p = empleados.get(key);
 		return p;
 	}
 	
@@ -74,14 +74,10 @@ public class Ministerios
 	}
 	
 	
-	public void addArrayPersona(Persona p) 
+	public void addMapPersona(Persona p) 
 	{
-		boolean ToF;
-		ToF = empleados.add(p);
-		if(ToF == true) 
-		{
-			this.funcionariosActivos++;
-		}
+		empleados.put(p.getsKey(),p);
+		this.funcionariosActivos++;
 	}
 	
 	public void mostrarDatos() 
