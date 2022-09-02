@@ -1,5 +1,6 @@
 
-public class Persona {
+public class Persona 
+{
   private int key;
   private String nombre;
   private String mail;
@@ -18,7 +19,10 @@ public class Persona {
     sueldo = 0;
   }
 
-  public boolean llenado(String linea) {
+  /*Funcion para generar un nodo de tipo persona mediante una linea de formato:
+  	claveFuncionario,Nombre,mail,ministerio,profesion,rut,sueldo*/
+  public boolean llenado(String linea) 
+  {
     if (linea == null) {
       return false;
     }
@@ -37,15 +41,16 @@ public class Persona {
 
   }
 
-  public void imprimirDatos() {
-	System.out.println("\n--------------------");
-    System.out.println("-key: " + key);
-    System.out.println("-Nombre: " + nombre);
-    System.out.println("-Mail: " + mail);
-    System.out.println("-Profesión: " + profesion);
-    System.out.println("-Rut: " + rut);
-    System.out.println("-Sueldo: " + sueldo + " UTM");
-    System.out.println("--------------------\n");
+  public void imprimirDatos() 
+  {
+		System.out.println("\n--------------------");
+	    System.out.println("-key: " + key);
+	    System.out.println("-Nombre: " + nombre);
+	    System.out.println("-Mail: " + mail);
+	    System.out.println("-Profesión: " + profesion);
+	    System.out.println("-Rut: " + rut);
+	    System.out.println("-Sueldo: " + sueldo + " UTM");
+	    System.out.println("--------------------\n");
   }
 
   // Getters
