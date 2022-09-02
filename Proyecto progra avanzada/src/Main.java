@@ -69,7 +69,7 @@ public class Main
             switch (opcion) {
                 case 1 -> {//Agregar Funcionario
                 	System.out.println("Ingrese los datos del funcionario con el formato");
-                	System.out.println("claveFuncionario,Nombre,mail,Salud,profecion,rut,sueldo en utm: \n");
+                	System.out.println("claveFuncionario,Nombre,mail,ministerio,profesion,rut,sueldo en utm: \n");
                 	linea= LeerLinea.readLine();
                 	a = p.llenado(linea);
         			for(j = 0; j < arrMin.size() ; j++) 

@@ -38,13 +38,14 @@ public class Persona {
   }
 
   public void imprimirDatos() {
+	System.out.println("\n--------------------");
     System.out.println("-key: " + key);
     System.out.println("-Nombre: " + nombre);
     System.out.println("-Mail: " + mail);
     System.out.println("-Profesión: " + profesion);
     System.out.println("-Rut: " + rut);
     System.out.println("-Sueldo: " + sueldo + " UTM");
-
+    System.out.println("--------------------\n");
   }
 
   // Getters
