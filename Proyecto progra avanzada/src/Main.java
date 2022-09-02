@@ -68,8 +68,24 @@ public class Main
             opcion = Integer.parseInt(LeerLinea.readLine());
             switch (opcion) {
                 case 1 -> {//Agregar Funcionario
-                	System.out.println("Ingrese el nombre del funcionario");
-                	
+                	System.out.println("Ingrese los datos del funcionario con el formato");
+                	System.out.println("claveFuncionario,Nombre,mail,Salud,profecion,rut,sueldo en utm: \n");
+                	linea= LeerLinea.readLine();
+                	a = p.llenado(linea);
+        			for(j = 0; j < arrMin.size() ; j++) 
+        			{
+        				m = arrMin.get(j);
+        				if (p.getsCargo().compareTo(m.getNombreMinisterio()) == 0) 
+        				{
+        					break;
+        				}
+        			}
+        			if(a == true) 
+        			{
+        				m.addMapPersona(p);
+        				p = new Persona();
+        			}
+        			linea = l.nextLine();
                 }
                 case 2 -> 
                 {
