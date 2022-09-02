@@ -36,7 +36,7 @@ public class Gobierno {
 		for(j = 0; j < arrMin.size() ; j++) 
 		{
 			minis = arrMin.get(j);
-			if (perso.getsCargo().compareTo(minis.getNombreMinisterio()) == 0) 
+			if (perso.getsMinisterio().compareTo(minis.getNombreMinisterio()) == 0) 
 			{
 				break;
 			}

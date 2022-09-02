@@ -4,7 +4,7 @@ public class Persona
   private int key;
   private String nombre;
   private String mail;
-  private String cargo;
+  private String ministerio;
   private String profesion;
   private int rut;
   private int sueldo;
@@ -13,7 +13,7 @@ public class Persona
     key = 0;
     nombre = "";
     mail = "";
-    cargo = "";
+    ministerio = "";
     profesion = "";
     rut = 0;
     sueldo = 0;
@@ -32,7 +32,7 @@ public class Persona
     key = Integer.parseInt(datosLinea[0]);
     nombre = datosLinea[1];
     mail = datosLinea[2];
-    cargo = datosLinea[3];
+    ministerio = datosLinea[3];
     profesion = datosLinea[4];
     rut = Integer.parseInt(datosLinea[5]);
     sueldo = Integer.parseInt(datosLinea[6]);
@@ -66,8 +66,8 @@ public class Persona
     return mail;
   }
 
-  public String getsCargo() {
-    return cargo;
+  public String getsMinisterio() {
+    return ministerio;
   }
 
   public String getsProfesion() {
@@ -96,8 +96,8 @@ public class Persona
     this.mail = mail;
   }
 
-  public void setCargo(String cargo) {
-    this.cargo = cargo;
+  public void setCargo(String ministerio) {
+    this.ministerio = ministerio;
   }
 
   public void setProfesion(String profesion) {
