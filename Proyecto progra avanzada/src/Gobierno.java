@@ -91,5 +91,73 @@ public class Gobierno {
     	}
 	}
 	
+	public Ministerio buscarMinisterio(String miniNombre) 
+	{
+		Ministerio miniAux = new Ministerio();
+		
+		for(int j = 0; j < arrMin.size() ; j++) 
+		{
+			miniAux = arrMin.get(j);
+			if(miniNombre.equals(miniAux.getNombreMinisterio())) 
+			{
+				return miniAux;
+			}
+		}
+		return null;
+	}
+	
+	public Persona buscarPersona(int key, Ministerio mini)
+	{
+		return mini.getFuncionarioKey(key);
+	}
+	
+	
+	public Persona buscarPersona(int key, String miniNombre)
+	{
+		Ministerio miniAux = new Ministerio();
+		
+		for(int j = 0; j < arrMin.size() ; j++) 
+		{
+			miniAux = arrMin.get(j);
+			if(miniNombre.equals(miniAux.getNombreMinisterio())) 
+			{
+				break;
+			}
+		}
+		
+		return miniAux.getFuncionarioKey(key);
+	}
+	
+	public Persona buscarPersona(String nombre, String miniNombre) 
+	{
+		Ministerio miniAux = new Ministerio();
+		
+		for(int j = 0; j < arrMin.size() ; j++) 
+		{
+			miniAux = arrMin.get(j);
+			if(miniNombre.equals(miniAux.getNombreMinisterio())) 
+			{
+				break;
+			}
+		}
+		return miniAux.buscarFuncionario(nombre);
+	}
+	
+	public void eliminarFuncionario(Persona p) 
+	{
+		Ministerio miniAux;
+		
+		for(int j = 0; j < arrMin.size() ; j++) 
+		{
+			miniAux = arrMin.get(j);
+			if((p.getsProfesion()).equals(miniAux.getNombreMinisterio())) 
+			{
+				miniAux.eliminarPersona(p);
+			}
+		}
+
+	}
+	
+	
 	
 }
