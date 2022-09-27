@@ -100,4 +100,33 @@ public class Ministerio
 			p.imprimirDatos();
 		}
 	}
+	
+	public Persona buscarFuncionario(String nombreAux) 
+	{
+		Enumeration<Integer> e = empleados.keys();
+		
+		while(e.hasMoreElements()) 
+		{
+			int key = e.nextElement();
+			Persona perso = empleados.get(key);
+			
+			if(nombreAux.equals(perso.getsNombre())) 
+			{
+				return perso;
+			}
+		}
+		System.out.println("No se encontro al funcionario");
+		return null;
+	}
+	
+	
+	public void eliminarPersona(Persona auxPerso) 
+	{
+		auxPerso.imprimirDatos();
+		int key = auxPerso.getsKey();
+		boolean ToF = empleados.remove(key, auxPerso);
+		
+		System.out.println(ToF);
+		
+	}
 }

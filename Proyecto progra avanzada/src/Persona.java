@@ -1,4 +1,5 @@
 
+
 public class Persona 
 {
   private int key;
@@ -112,6 +113,14 @@ public class Persona
     this.sueldo = sueldo;
 
   }
-	
-	
+  
+  public boolean compararPersonas(String auxNombre) 
+  {
+	  if(nombre.equals(auxNombre))
+	  {
+		  return true;
+	  }
+	  
+	  return false;
+  }
 }

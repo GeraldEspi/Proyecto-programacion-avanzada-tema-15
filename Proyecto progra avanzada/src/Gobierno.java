@@ -150,7 +150,7 @@ public class Gobierno {
 		for(int j = 0; j < arrMin.size() ; j++) 
 		{
 			miniAux = arrMin.get(j);
-			if((p.getsProfesion()).equals(miniAux.getNombreMinisterio())) 
+			if((p.getsMinisterio()).equals(miniAux.getNombreMinisterio())) 
 			{
 				miniAux.eliminarPersona(p);
 			}
