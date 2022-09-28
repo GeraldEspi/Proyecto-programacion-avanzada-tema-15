@@ -97,7 +97,7 @@ public class Persona
     this.mail = mail;
   }
 
-  public void setCargo(String ministerio) {
+  public void setMinisterio(String ministerio) {
     this.ministerio = ministerio;
   }
 
@@ -105,12 +105,14 @@ public class Persona
     this.profesion = profesion;
   }
 
-  public void setRut(int rut) {
-    this.rut = rut;
+  public void setRut(String rut) {
+	
+    this.rut = Integer.parseInt(rut);
   }
 
-  public void setSueldo(int sueldo) {
-    this.sueldo = sueldo;
+  public void setSueldo(String sueldo) {
+	  
+	  this.sueldo = Integer.parseInt(sueldo);
 
   }
   

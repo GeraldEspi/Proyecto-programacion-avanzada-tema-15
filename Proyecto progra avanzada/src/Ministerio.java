@@ -77,7 +77,7 @@ public class Ministerio
 	
 	public void addMapPersona(Persona p) 
 	{
-		empleados.put(p.getsKey(),p);
+		empleados.put(p.getsRut(),p);
 		this.funcionariosActivos++;
 	}
 	
@@ -123,7 +123,7 @@ public class Ministerio
 	public void eliminarPersona(Persona auxPerso) 
 	{
 		auxPerso.imprimirDatos();
-		int key = auxPerso.getsKey();
+		int key = auxPerso.getsRut();
 		boolean ToF = empleados.remove(key, auxPerso);
 		
 		System.out.println(ToF);
