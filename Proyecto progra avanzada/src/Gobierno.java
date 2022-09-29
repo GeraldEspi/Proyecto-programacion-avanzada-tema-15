@@ -67,7 +67,7 @@ public class Gobierno {
 		for(j = 0; j < arrMin.size() ; j++) 
 		{
 			minis = arrMin.get(j);
-			minis.mostrarFuncionarios();
+			minis.mostrarFuncionariosMinisterio();
 		}
 	}
 	
@@ -81,7 +81,7 @@ public class Gobierno {
     		minis = arrMin.get(j);
     		if (linea.compareTo(minis.getNombreMinisterio()) == 0) 
 			{
-    			minis.mostrarFuncionarios();
+    			minis.mostrarFuncionariosMinisterio();
     			break;
 			}
 		}
@@ -156,6 +156,34 @@ public class Gobierno {
 			}
 		}
 
+	}
+	
+	public ListaFuncionarios listaRango(int parametro1, int parametro2) 
+	{
+		Ministerio minis;
+		ListaFuncionarios listaXparametro = new ListaFuncionarios();
+		int j = 0;
+		
+		for(j = 0; j < arrMin.size() ; j++) 
+		{
+			minis = arrMin.get(j);
+			listaXparametro = minis.listaParametro(parametro1,parametro2,listaXparametro);
+		}
+		return listaXparametro;
+	}
+	
+	public ListaFuncionarios listaRango(int parametro1) 
+	{
+		Ministerio minis;
+		ListaFuncionarios listaXparametro = new ListaFuncionarios();
+		int j = 0;
+		
+		for(j = 0; j < arrMin.size() ; j++) 
+		{
+			minis = arrMin.get(j);
+			listaXparametro = minis.listaParametro(parametro1,listaXparametro);
+		}
+		return listaXparametro;
 	}
 	
 	

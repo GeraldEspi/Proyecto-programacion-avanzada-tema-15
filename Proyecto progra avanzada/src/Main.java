@@ -1,6 +1,5 @@
 import java.io.*;
 
-
 public class Main 
 {
 	public static void main(String[] args)throws IOException 
@@ -35,6 +34,7 @@ public class Main
             System.out.println("Opcion 1 : Agregar Funcionario");
             System.out.println("Opcion 2 : Listar");
             System.out.println("Opcion 3 : Buscar Funcionario");
+            System.out.println("Opcion 4 : Listar Funcionarios en un rango de sueldo");
             System.out.println("Opcion 0 : Para finalizar el programa");
             opcion = Integer.parseInt(LeerLinea.readLine());
             switch (opcion) {
@@ -179,7 +179,6 @@ public class Main
                 						}
                 						case 2 ->
                 						{
-                							p.imprimirDatos();
                 							gober.eliminarFuncionario(p);
                 							System.out.println("El funcionario ha sido eliminado");
                 							break;
@@ -306,6 +305,42 @@ public class Main
                 		
                 	}while(opcion2 != 0);
                 	
+                }
+                case 4 ->
+                {
+                	do 
+                	{
+                		System.out.println("Opcion 1 : Listar con rango entre dos numero que ingrese");
+                        System.out.println("Opcion 2 : Listar con rango de 0 al que ingrese");
+                        System.out.println("Opcion 0 : Para salir al menu principal");
+                        opcion2 = Integer.parseInt(LeerLinea.readLine());
+                		switch(opcion2) 
+                		{
+                			case 1 ->
+                			{
+                				System.out.println("Ingrese el numero mas pequenyo del parametro");
+                            	linea = LeerLinea.readLine();
+                            	System.out.println("Ingrese el numero mas grande del parametro");
+                            	linea2 = LeerLinea.readLine();
+                            	ListaFuncionarios lista =gober.listaRango(Integer.parseInt(linea), Integer.parseInt(linea2));
+                            	lista.mostrarFuncionarios();
+                			}
+                			case 2 ->
+                			{
+                				System.out.println("Ingrese el numero");
+                            	linea = LeerLinea.readLine();
+                            	ListaFuncionarios lista =gober.listaRango(Integer.parseInt(linea));
+                            	lista.mostrarFuncionarios();
+                            	break;
+                			}
+                			case 0 ->
+                			{
+                				System.out.println("Saliendo al menu principal");
+                				break;
+                			}
+                		}
+                		
+                	}while(opcion2 != 0);
                 }
                 case 0 ->
                 {

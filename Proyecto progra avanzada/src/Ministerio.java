@@ -1,5 +1,4 @@
 import java.util.Enumeration;
-import java.util.Hashtable;
 
 public class Ministerio 
 {
@@ -7,13 +6,13 @@ public class Ministerio
 	private String nombreMinistro;
 	private int limFuncionarios;
 	private int funcionariosActivos;
-	private Hashtable<Integer,Persona> empleados;
+	private ListaFuncionarios funcionarios;
 	
 	public Ministerio() 
 	{
 		this.limFuncionarios = 0;
 		this.funcionariosActivos = 0;
-		this.empleados = new Hashtable<Integer,Persona>();
+		this.funcionarios = new ListaFuncionarios();
 	}
 	
 	public boolean llenadoPorLinea(String linea)
@@ -52,12 +51,11 @@ public class Ministerio
 	}
 	public int getSizeArray() 
 	{
-		return empleados.size();
+		return funcionarios.getLargo();
 	}
 	public Persona getFuncionarioKey(int key) 
 	{
-		Persona p = empleados.get(key);
-		return p;
+		return funcionarios.getFuncionario(key);
 	}
 	
 	//Setters
@@ -77,7 +75,7 @@ public class Ministerio
 	
 	public void addMapPersona(Persona p) 
 	{
-		empleados.put(p.getsRut(),p);
+		funcionarios.setNewFuncio(p);
 		this.funcionariosActivos++;
 	}
 	
@@ -89,26 +87,19 @@ public class Ministerio
 		System.out.println("--------------------------\n");
 	}
 	
-	public void mostrarFuncionarios() 
+	public void mostrarFuncionariosMinisterio() 
 	{
-		Enumeration<Integer> e = empleados.keys();
-		
-		while(e.hasMoreElements()) 
-		{
-			int key = e.nextElement();
-			Persona p = empleados.get(key);
-			p.imprimirDatos();
-		}
+		funcionarios.mostrarFuncionarios();
 	}
 	
 	public Persona buscarFuncionario(String nombreAux) 
 	{
-		Enumeration<Integer> e = empleados.keys();
+		Enumeration<Integer> e = funcionarios.getEnumeration();
 		
 		while(e.hasMoreElements()) 
 		{
 			int key = e.nextElement();
-			Persona perso = empleados.get(key);
+			Persona perso = funcionarios.getFuncionario(key);
 			
 			if(nombreAux.equals(perso.getsNombre())) 
 			{
@@ -119,14 +110,42 @@ public class Ministerio
 		return null;
 	}
 	
-	
 	public void eliminarPersona(Persona auxPerso) 
 	{
 		auxPerso.imprimirDatos();
-		int key = auxPerso.getsRut();
-		boolean ToF = empleados.remove(key, auxPerso);
+		funcionarios.eliminarFuncionario(auxPerso);
+	}
+	
+	public ListaFuncionarios listaParametro(int parametro1, int parametro2, ListaFuncionarios listaXparametro) 
+	{
+		Enumeration<Integer> e = funcionarios.getEnumeration();
 		
-		System.out.println(ToF);
+		while(e.hasMoreElements()) 
+		{
+			int key = e.nextElement();
+			Persona perso = funcionarios.getFuncionario(key);
+			
+			if(perso.getSueldo() >= parametro1 && perso.getSueldo() <= parametro2) 
+			{
+				listaXparametro.setNewFuncio(perso);
+			}
+		}
+		return listaXparametro;
+	}
+	public ListaFuncionarios listaParametro(int parametro1, ListaFuncionarios listaXparametro) 
+	{
+		Enumeration<Integer> e = funcionarios.getEnumeration();
 		
+		while(e.hasMoreElements()) 
+		{
+			int key = e.nextElement();
+			Persona perso = funcionarios.getFuncionario(key);
+			
+			if(perso.getSueldo() >= 0 && perso.getSueldo() <= parametro1) 
+			{
+				listaXparametro.setNewFuncio(perso);
+			}
+		}
+		return listaXparametro;
 	}
 }

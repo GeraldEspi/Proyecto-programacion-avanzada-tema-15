@@ -116,13 +116,18 @@ public class Persona
 
   }
   
-  public boolean compararPersonas(String auxNombre) 
+  public boolean compararPersonas(Persona auxPerso) 
   {
-	  if(nombre.equals(auxNombre))
+	  if(nombre.equals(auxPerso.getsNombre()))
 	  {
-		  return true;
+		  if(rut == (auxPerso.getsRut())) 
+		  {
+			  if(profesion.equals(auxPerso.getsProfesion())) {
+				  
+				 return true;
+			  }
+		  }
 	  }
-	  
 	  return false;
   }
 }
