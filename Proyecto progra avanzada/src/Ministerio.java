@@ -49,13 +49,17 @@ public class Ministerio
 	{
 		return funcionariosActivos;
 	}
-	public int getSizeArray() 
+	public int getSizeMap() 
 	{
 		return funcionarios.getLargo();
 	}
 	public Funcionario getFuncionarioKey(int key) 
 	{
 		return funcionarios.getFuncionario(key);
+	}
+	public Enumeration<Integer> getsEnumeration()
+	{
+		return funcionarios.getEnumeration();
 	}
 	
 	//Setters

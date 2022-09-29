@@ -9,6 +9,11 @@ public class Gobierno {
 		arrMin = new ArrayList<Ministerio>();
 	}
 	
+	public int getsSize() 
+	{
+		return arrMin.size();
+	}
+	
 	/*Metodo para generar nodos de tipo ministerio mediante una liena he insertarlos en el 
 	 arrayList de esta misma clase*/
 	public void llenadoArray(String linea) 
@@ -91,7 +96,7 @@ public class Gobierno {
     	}
 	}
 	
-	public Ministerio buscarMinisterio(String miniNombre) 
+	public Ministerio getsMinisterio(String miniNombre) 
 	{
 		Ministerio miniAux = new Ministerio();
 		
@@ -104,6 +109,10 @@ public class Gobierno {
 			}
 		}
 		return null;
+	}
+	public Ministerio getsMinisterio(int key) 
+	{
+		return arrMin.get(key);
 	}
 	
 	public Funcionario buscarPersona(int key, Ministerio mini)

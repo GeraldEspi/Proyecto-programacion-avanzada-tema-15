@@ -351,5 +351,6 @@ public class Main
                 default -> System.out.println("Opcion ingresada no es valida");//pa los que no saben poner un numero
             }
         }while( opcion != 0 );
+		l.guardarDatos(gober);
 	}
 }
