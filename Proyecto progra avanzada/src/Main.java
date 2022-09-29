@@ -101,8 +101,9 @@ public class Main
                 				linea2 = LeerLinea.readLine();
                 				System.out.println("Ingrese el nombre del funcionario");
                 				linea = LeerLinea.readLine();
-                				Persona p = gober.buscarPersona(linea, linea2);
-                				if(p == null) break;
+                				Funcionario funcio = gober.buscarPersona(linea, linea2);
+                				if(funcio == null) break;
+                				funcio.imprimirDatos();
                 				do 
                 				{
                 					System.out.println("Opcion 1 : Editar datos del funcionario");
@@ -129,42 +130,42 @@ public class Main
                                                 	{
                                                 		System.out.println("Ingrese el nuevo nombre");
                                                 		linea = LeerLinea.readLine();
-                                                		p.setNombre(linea);
+                                                		funcio.setNombre(linea);
                                                 		break;
                                                 	}
                                                 	case 2 ->
                                                 	{
                                                 		System.out.println("Ingrese el nuevo mail");
                                                 		linea = LeerLinea.readLine();
-                                                		p.setMail(linea);
+                                                		funcio.setMail(linea);
                                                 		break;
                                                 	}
                                                 	case 3 ->
                                                 	{
                                                 		System.out.println("Ingrese el nuevo ministerio");
                                                 		linea = LeerLinea.readLine();
-                                                		p.setMinisterio(linea);
+                                                		funcio.setMinisterio(linea);
                                                 		break;
                                                 	}
                                                 	case 4 ->
                                                 	{
                                                 		System.out.println("Ingrese la nueva profesion");
                                                 		linea = LeerLinea.readLine();
-                                                		p.setProfesion(linea);
+                                                		funcio.setProfesion(linea);
                                                 		break;
                                                 	}
                                                 	case 5 ->
                                                 	{
                                                 		System.out.println("Ingrese el nuevo rut");
                                                 		linea = LeerLinea.readLine();
-                                                		p.setRut(linea);
+                                                		funcio.setRut(linea);
                                                 		break;
                                                 	}
                                                 	case 6 ->
                                                 	{
                                                 		System.out.println("Ingrese el nuevo sueldo");
                                                 		linea = LeerLinea.readLine();
-                                                		p.setSueldo(linea);
+                                                		funcio.setSueldo(linea);
                                                 		break;
                                                 	}
                                                 	case 0 ->
@@ -179,7 +180,7 @@ public class Main
                 						}
                 						case 2 ->
                 						{
-                							gober.eliminarFuncionario(p);
+                							gober.eliminarFuncionario(funcio);
                 							System.out.println("El funcionario ha sido eliminado");
                 							break;
                 							
@@ -200,8 +201,9 @@ public class Main
                 				linea2 = LeerLinea.readLine();
                 				System.out.println("Ingrese el rut del funcionario");
                 				linea = LeerLinea.readLine();
-                				Persona p = gober.buscarPersona(Integer.parseInt(linea), linea2);
-                				if(p == null) break;
+                				Funcionario funcio = gober.buscarPersona(Integer.parseInt(linea), linea2);
+                				if(funcio == null) break;
+                				funcio.imprimirDatos();
                 				do 
                 				{
                 					System.out.println("Opcion 1 : Editar datos del funcionario");
@@ -228,42 +230,42 @@ public class Main
                                                 	{
                                                 		System.out.println("Ingrese el nuevo nombre");
                                                 		linea = LeerLinea.readLine();
-                                                		p.setNombre(linea);
+                                                		funcio.setNombre(linea);
                                                 		break;
                                                 	}
                                                 	case 2 ->
                                                 	{
                                                 		System.out.println("Ingrese el nuevo mail");
                                                 		linea = LeerLinea.readLine();
-                                                		p.setMail(linea);
+                                                		funcio.setMail(linea);
                                                 		break;
                                                 	}
                                                 	case 3 ->
                                                 	{
                                                 		System.out.println("Ingrese el nuevo ministerio");
                                                 		linea = LeerLinea.readLine();
-                                                		p.setMinisterio(linea);
+                                                		funcio.setMinisterio(linea);
                                                 		break;
                                                 	}
                                                 	case 4 ->
                                                 	{
                                                 		System.out.println("Ingrese la nueva profesion");
                                                 		linea = LeerLinea.readLine();
-                                                		p.setProfesion(linea);
+                                                		funcio.setProfesion(linea);
                                                 		break;
                                                 	}
                                                 	case 5 ->
                                                 	{
                                                 		System.out.println("Ingrese el nuevo rut");
                                                 		linea = LeerLinea.readLine();
-                                                		p.setRut(linea);
+                                                		funcio.setRut(linea);
                                                 		break;
                                                 	}
                                                 	case 6 ->
                                                 	{
                                                 		System.out.println("Ingrese el nuevo sueldo");
                                                 		linea = LeerLinea.readLine();
-                                                		p.setSueldo(linea);
+                                                		funcio.setSueldo(linea);
                                                 		break;
                                                 	}
                                                 	case 0 ->
@@ -278,8 +280,7 @@ public class Main
                 						}
                 						case 2 ->
                 						{
-                							p.imprimirDatos();
-                							gober.eliminarFuncionario(p);
+                							gober.eliminarFuncionario(funcio);
                 							System.out.println("El funcionario ha sido eliminado");
                 							break;
                 							

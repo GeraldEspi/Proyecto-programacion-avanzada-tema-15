@@ -53,7 +53,7 @@ public class Ministerio
 	{
 		return funcionarios.getLargo();
 	}
-	public Persona getFuncionarioKey(int key) 
+	public Funcionario getFuncionarioKey(int key) 
 	{
 		return funcionarios.getFuncionario(key);
 	}
@@ -73,9 +73,9 @@ public class Ministerio
 	}
 	
 	
-	public void addMapPersona(Persona p) 
+	public void addMapPersona(Funcionario funcio) 
 	{
-		funcionarios.setNewFuncio(p);
+		funcionarios.setNewFuncio(funcio);
 		this.funcionariosActivos++;
 	}
 	
@@ -92,28 +92,28 @@ public class Ministerio
 		funcionarios.mostrarFuncionarios();
 	}
 	
-	public Persona buscarFuncionario(String nombreAux) 
+	public Funcionario buscarFuncionario(String nombreAux) 
 	{
 		Enumeration<Integer> e = funcionarios.getEnumeration();
 		
 		while(e.hasMoreElements()) 
 		{
 			int key = e.nextElement();
-			Persona perso = funcionarios.getFuncionario(key);
+			Funcionario funcio = funcionarios.getFuncionario(key);
 			
-			if(nombreAux.equals(perso.getsNombre())) 
+			if(nombreAux.equals(funcio.getsNombre())) 
 			{
-				return perso;
+				return funcio;
 			}
 		}
 		System.out.println("No se encontro al funcionario");
 		return null;
 	}
 	
-	public void eliminarPersona(Persona auxPerso) 
+	public void eliminarPersona(Funcionario funcio) 
 	{
-		auxPerso.imprimirDatos();
-		funcionarios.eliminarFuncionario(auxPerso);
+		funcio.imprimirDatos();
+		funcionarios.eliminarFuncionario(funcio);
 	}
 	
 	public ListaFuncionarios listaParametro(int parametro1, int parametro2, ListaFuncionarios listaXparametro) 
@@ -123,11 +123,11 @@ public class Ministerio
 		while(e.hasMoreElements()) 
 		{
 			int key = e.nextElement();
-			Persona perso = funcionarios.getFuncionario(key);
+			Funcionario funcio = funcionarios.getFuncionario(key);
 			
-			if(perso.getSueldo() >= parametro1 && perso.getSueldo() <= parametro2) 
+			if(funcio.getsSueldo() >= parametro1 && funcio.getsSueldo() <= parametro2) 
 			{
-				listaXparametro.setNewFuncio(perso);
+				listaXparametro.setNewFuncio(funcio);
 			}
 		}
 		return listaXparametro;
@@ -139,11 +139,11 @@ public class Ministerio
 		while(e.hasMoreElements()) 
 		{
 			int key = e.nextElement();
-			Persona perso = funcionarios.getFuncionario(key);
+			Funcionario funcio = funcionarios.getFuncionario(key);
 			
-			if(perso.getSueldo() >= 0 && perso.getSueldo() <= parametro1) 
+			if(funcio.getsSueldo() >= 0 && funcio.getsSueldo() <= parametro1) 
 			{
-				listaXparametro.setNewFuncio(perso);
+				listaXparametro.setNewFuncio(funcio);
 			}
 		}
 		return listaXparametro;

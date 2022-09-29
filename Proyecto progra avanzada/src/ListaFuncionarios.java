@@ -3,35 +3,36 @@ import java.util.Hashtable;
 
 public class ListaFuncionarios 
 {
-	private Hashtable<Integer,Persona> empleados;
+	private Hashtable<Integer,Funcionario> empleados;
 	
 	public ListaFuncionarios() 
 	{
-		this.empleados = new Hashtable<Integer,Persona>();
+		this.empleados = new Hashtable<Integer,Funcionario>();
 	}
 	
-	public void setNewFuncio(Persona auxPerso) 
+	public void setNewFuncio(Funcionario auxFuncio) 
 	{
 		Enumeration<Integer> e = empleados.keys();
 		
 		if(empleados.size() == 0) 
 		{
-			empleados.put(auxPerso.getsRut(), auxPerso);
+			empleados.put(auxFuncio.getsRut(), auxFuncio);
 		}
 		
 		while(e.hasMoreElements()) 
 		{
 			int key = e.nextElement();
-			Persona perso = empleados.get(key);
+			Funcionario funcio = empleados.get(key);
 			
-			if(auxPerso.compararPersonas(perso) == false) 
+			if(funcio.compararPersonas(auxFuncio) == false) 
 			{
-				empleados.put(auxPerso.getsRut(), auxPerso);
+				empleados.put(auxFuncio.getsRut(), auxFuncio);
+				break;
 			}
 		}
 	}
 	
-	public Persona getFuncionario(int key) 
+	public Funcionario getFuncionario(int key) 
 	{
 		return empleados.get(key);
 	}
@@ -58,7 +59,7 @@ public class ListaFuncionarios
 		while(e.hasMoreElements()) 
 		{
 			int key = e.nextElement();
-			Persona p = empleados.get(key);
+			Funcionario p = empleados.get(key);
 			p.imprimirDatos();
 		}
 	}

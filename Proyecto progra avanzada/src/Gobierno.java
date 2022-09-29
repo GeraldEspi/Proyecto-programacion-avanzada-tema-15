@@ -27,7 +27,7 @@ public class Gobierno {
 	 he insertarlo a el mapa del ministerio correspondiente*/
 	public void llenadoTablaMinisterio(String linea) 
 	{
-		Persona perso = new Persona();
+		Funcionario perso = new Funcionario();
 		Ministerio minis = new Ministerio();
 		boolean ToF;
 		int j = 0;
@@ -106,13 +106,13 @@ public class Gobierno {
 		return null;
 	}
 	
-	public Persona buscarPersona(int key, Ministerio mini)
+	public Funcionario buscarPersona(int key, Ministerio mini)
 	{
 		return mini.getFuncionarioKey(key);
 	}
 	
 	
-	public Persona buscarPersona(int key, String miniNombre)
+	public Funcionario buscarPersona(int key, String miniNombre)
 	{
 		Ministerio miniAux = new Ministerio();
 		
@@ -128,7 +128,7 @@ public class Gobierno {
 		return miniAux.getFuncionarioKey(key);
 	}
 	
-	public Persona buscarPersona(String nombre, String miniNombre) 
+	public Funcionario buscarPersona(String nombre, String miniNombre) 
 	{
 		Ministerio miniAux = new Ministerio();
 		
@@ -143,16 +143,16 @@ public class Gobierno {
 		return miniAux.buscarFuncionario(nombre);
 	}
 	
-	public void eliminarFuncionario(Persona p) 
+	public void eliminarFuncionario(Funcionario auxFuncio) 
 	{
 		Ministerio miniAux;
 		
 		for(int j = 0; j < arrMin.size() ; j++) 
 		{
 			miniAux = arrMin.get(j);
-			if((p.getsMinisterio()).equals(miniAux.getNombreMinisterio())) 
+			if((auxFuncio.getsMinisterio()).equals(miniAux.getNombreMinisterio())) 
 			{
-				miniAux.eliminarPersona(p);
+				miniAux.eliminarPersona(auxFuncio);
 			}
 		}
 
@@ -185,7 +185,4 @@ public class Gobierno {
 		}
 		return listaXparametro;
 	}
-	
-	
-	
 }
