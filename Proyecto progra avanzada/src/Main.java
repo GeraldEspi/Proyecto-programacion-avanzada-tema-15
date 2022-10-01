@@ -1,5 +1,7 @@
 import java.io.*;
 
+import vista.Gestion;
+
 public class Main 
 {
 	public static void main(String[] args)throws IOException 
@@ -11,7 +13,7 @@ public class Main
 		int opcion, opcion2;
 		
 		l.openFile("Ministerios");
-
+		
 		linea = l.firstLine();
 		// Ciclo para crear los nodos del arreglo ministerios
 		while(linea != null) 
@@ -30,12 +32,12 @@ public class Main
 			linea = l.nextLine();
 		}
 		
+		
+		
+		
 		do {//mostramos las diferentes opciones a escoger
-            System.out.println("Opcion 1 : Agregar Funcionario");
-            System.out.println("Opcion 2 : Listar");
-            System.out.println("Opcion 3 : Buscar Funcionario");
-            System.out.println("Opcion 4 : Listar Funcionarios en un rango de sueldo");
-            System.out.println("Opcion 0 : Para finalizar el programa");
+			
+			presentarVentana();
             opcion = Integer.parseInt(LeerLinea.readLine());
             switch (opcion) {
                 case 1 -> //Agregar Funcionario
@@ -345,12 +347,22 @@ public class Main
                 }
                 case 0 ->
                 {
-                        System.out.println("Bye <3");
+                		cerrarVentana();
                         break;
                 }
                 default -> System.out.println("Opcion ingresada no es valida");//pa los que no saben poner un numero
             }
         }while( opcion != 0 );
 		l.guardarDatos(gober);
+	}
+
+	private static void presentarVentana() {
+		Gestion miVentana = new Gestion();
+		miVentana.setVisible(true);
+	}
+	
+	private static void cerrarVentana() {
+		Gestion miVentana = new Gestion();
+		miVentana.setVisible(false);
 	}
 }
