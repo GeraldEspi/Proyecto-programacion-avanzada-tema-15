@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import clases.Coordinador;
 import clases.Gobierno;
 import clases.Ministerio;
 
@@ -26,6 +27,7 @@ public class VentanaTexto extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextArea textArea;
+	private Coordinador coord;
 	
 
 	/**
@@ -72,10 +74,11 @@ public class VentanaTexto extends JFrame {
 		titulo.setBounds(10, 11, 176, 22);
 		titulo.setFont(new Font("Tahoma", Font.BOLD, 18));
 		contentPane.add(titulo);
+		
+		coord = new Coordinador();
 	}
 	
 	public void setGobierno(Gobierno gobiernoAct) {
-		this.miGobierno = gobiernoAct;
 		
 	}
 
