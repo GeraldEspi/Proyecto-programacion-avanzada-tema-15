@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import clases.Coordinador;
+
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -16,6 +19,7 @@ public class ventana3 extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
 	JButton btnOpcin_3, btnOpcin_3_1, btnOpcin_3_1_1;
+	private Coordinador coord;
 
 	/**
 	 * Launch the application.
@@ -73,6 +77,12 @@ public class ventana3 extends JFrame implements ActionListener {
 		btnOpcin_3_1_1.setBounds(10, 185, 84, 23);
 		contentPane.add(btnOpcin_3_1_1);
 		btnOpcin_3_1_1.addActionListener(this);
+		private Coordinador coord;
+	}
+	
+	public void setCoord(Coordinador coord)
+	{
+		this.coord = coord;
 	}
 
 	@Override

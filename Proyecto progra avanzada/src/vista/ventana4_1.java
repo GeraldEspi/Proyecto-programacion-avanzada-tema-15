@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import clases.Coordinador;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -17,6 +20,7 @@ public class ventana4_1 extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
+	private Coordinador coord;
 
 	/**
 	 * Launch the application.
@@ -79,6 +83,13 @@ public class ventana4_1 extends JFrame {
 		panel.setBackground(Color.LIGHT_GRAY);
 		panel.setBounds(355, 11, 282, 328);
 		contentPane.add(panel);
+		
+		coord = new Coordinador();
+	}
+	
+	public void setCoord(Coordinador coord)
+	{
+		this.coord = coord;
 	}
 	
 	

@@ -76,6 +76,11 @@ public class ventana4 extends JFrame implements ActionListener{
 		
 		coord = new Coordinador();
 	}
+	
+	public void setCoord(Coordinador coord)
+	{
+		this.coord = coord;
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {

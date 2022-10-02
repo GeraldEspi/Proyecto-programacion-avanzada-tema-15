@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import clases.Coordinador;
+
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -14,6 +17,7 @@ public class ventana3_encontradamodificar extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
+	private Coordinador coord;
 
 	/**
 	 * Launch the application.
@@ -60,6 +64,13 @@ public class ventana3_encontradamodificar extends JFrame {
 		JButton boton1 = new JButton("Aceptar");
 		boton1.setBounds(171, 66, 91, 23);
 		contentPane.add(boton1);
+		
+		coord = new Coordinador();
+	}
+	
+	public void setCoord(Coordinador coord)
+	{
+		this.coord = coord;
 	}
 
 }

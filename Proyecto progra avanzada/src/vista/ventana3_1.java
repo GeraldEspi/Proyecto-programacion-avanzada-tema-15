@@ -84,5 +84,10 @@ public class ventana3_1 extends JFrame {
 		
 		coord = new Coordinador();
 	}
+	
+	public void setCoord(Coordinador coord)
+	{
+		this.coord = coord;
+	}
 
 }

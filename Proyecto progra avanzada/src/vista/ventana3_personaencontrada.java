@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import clases.Coordinador;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
@@ -16,6 +19,7 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 
 	private JPanel contentPane; 
 	JButton btnOpcion, btnOpcion2, btnOpcion3, btnOpcion4, btnOpcion5, btnOpcion6, Salir;
+	private Coordinador coord;
 	/**
 	 * Launch the application.
 	 */
@@ -89,6 +93,13 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 		btnOpcion5.addActionListener(this);
 		btnOpcion6.addActionListener(this);
 		Salir.addActionListener(this);
+		
+		coord = new Coordinador();
+	}
+	
+	public void setCoord(Coordinador coord)
+	{
+		this.coord = coord;
 	}
 	
 	
