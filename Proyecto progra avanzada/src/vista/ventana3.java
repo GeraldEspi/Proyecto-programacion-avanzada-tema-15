@@ -88,15 +88,13 @@ public class ventana3 extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if(btnOpcin_3 == e.getSource()) 
 		{
-			ventana3_1 opc1 = new ventana3_1();
 			this.setVisible(false);
-			opc1.setVisible(true);
+			coord.visible3_1();
 		}
 		if(btnOpcin_3_1 == e.getSource()) 
 		{
-			ventana3_2 opc2 = new ventana3_2();
 			this.setVisible(false);
-			opc2.setVisible(true);
+			coord.visible3_2();
 		}
 		if(btnOpcin_3_1_1 == e.getSource()) 
 		{

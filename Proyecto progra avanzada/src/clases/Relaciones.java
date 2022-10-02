@@ -45,6 +45,7 @@ public class Relaciones
 		coord.setV3_1(v3_1);
 		coord.setV3_2(v3_2);
 		coord.setV3_e(v3_e);
+		coord.setV3_p(v3_p);
 		coord.setV4_1(v4_1);
 		coord.setV4_2(v4_2);
 		coord.setVT(vT);

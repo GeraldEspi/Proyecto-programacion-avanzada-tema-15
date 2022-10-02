@@ -2,18 +2,25 @@ package vista;
 
 import java.awt.EventQueue;
 
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import clases.Coordinador;
+import clases.Funcionario;
 
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 
-public class ventana3_1 extends JFrame {
+public class ventana3_1 extends JFrame implements ActionListener {
 
 	/**
 	 * 
@@ -81,12 +88,34 @@ public class ventana3_1 extends JFrame {
 		boton1 = new JButton("Aceptar");
 		boton1.setBounds(101, 159, 91, 23);
 		contentPane.add(boton1);
+		boton1.addActionListener(this);
 	
 	}
 	
 	public void setCoord(Coordinador coord)
 	{
 		this.coord = coord;
+	}
+	public void actionPerformed(ActionEvent e) 
+	{
+		if(boton1 == e.getSource())
+		{
+			String ministerio = textField.getText();
+			String nombre = textField_1.getText();
+			
+			Funcionario funcio = coord.buscarNombre(ministerio, nombre);
+			if(funcio == null) 
+			{
+				JOptionPane.showMessageDialog(null, "Funcionario ingresado no se encuentra");
+				this.setVisible(false);
+				coord.visible3();
+			}
+			else 
+			{
+				this.setVisible(false);
+				coord.visible3_p();
+			}
+		}
 	}
 
 }

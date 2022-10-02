@@ -113,6 +113,23 @@ public class Coordinador
 	{
 		v2.setVisible(true);
 	}
+	public void visible3() 
+	{
+		v3.setVisible(true);
+	}
+	public void visible3_1() 
+	{
+		v3_1.setVisible(true);
+	}
+	public void visible3_2() 
+	{
+		v3_2.setVisible(true);
+	}
+	public void visible3_p() 
+	{
+		v3_p.setVisible(true);
+	}
+	
 	public VentanaTexto getVT() 
 	{
 		return vT;
@@ -164,6 +181,15 @@ public class Coordinador
 	public void agregarFuncio(String funcionario) 
 	{
 		gober.llenadoTablaMinisterio(funcionario);
+	}
+	
+	public Funcionario buscarNombre(String mini, String nombre) 
+	{
+		return gober.buscarPersona(nombre, mini);
+	}
+	public Funcionario buscarNombre(String mini, int rut) 
+	{
+		return gober.buscarPersona(rut, mini);
 	}
 	
 	
