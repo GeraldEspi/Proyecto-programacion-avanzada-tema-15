@@ -84,13 +84,16 @@ public class Ministerio
 		this.funcionariosActivos++;
 	}
 	
-	public void mostrarDatos() 
+	public String mostrarDatos() 
 	{	
-		System.out.println("\n---Ministerio de "+nombreMinisterio+"---");
-		System.out.println("*Ministro: "+ nombreMinistro+"");
-		System.out.println("*Limite de Funcionarios: "+ limFuncionarios+""  );
-		System.out.println("*Cantidad de Funcionarios: "+ funcionariosActivos+""  );
-		System.out.println("--------------------------\n");
+		
+		String cadena;
+		
+		cadena = "\n---Ministerio de "+ nombreMinisterio +"---\n";
+		cadena += "*Ministro: "+ nombreMinistro +"\n";
+		cadena += "*Limite de Funcionarios: "+ limFuncionarios +"\n" ;
+		cadena += "*Cantidad de Funcionarios: "+ funcionariosActivos +"\n";
+		return cadena;
 	}
 	
 	public void mostrarFuncionariosMinisterio() 

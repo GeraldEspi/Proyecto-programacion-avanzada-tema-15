@@ -77,7 +77,6 @@ public class ventana3 extends JFrame implements ActionListener {
 		btnOpcin_3_1_1.setBounds(10, 185, 84, 23);
 		contentPane.add(btnOpcin_3_1_1);
 		btnOpcin_3_1_1.addActionListener(this);
-		private Coordinador coord;
 	}
 	
 	public void setCoord(Coordinador coord)
@@ -102,6 +101,7 @@ public class ventana3 extends JFrame implements ActionListener {
 		if(btnOpcin_3_1_1 == e.getSource()) 
 		{
 			this.setVisible(false);
+			coord.back();
 		}
 		
 	}

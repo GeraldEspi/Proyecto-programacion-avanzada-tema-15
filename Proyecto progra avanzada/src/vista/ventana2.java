@@ -116,7 +116,6 @@ public class ventana2 extends JFrame implements ActionListener {
 		if(btnOp1 == e.getSource())
 		{
 			VentanaTexto v = new VentanaTexto();
-			v.setGobierno(coord.getGober());
 			v.MostrarListaEnArea();
 			v.setVisible(true);
 
@@ -137,14 +136,6 @@ public class ventana2 extends JFrame implements ActionListener {
 		{
 			this.setVisible(false);
 			System.exit(0);
-		}
-		
-		
+		}	
 	}
-	
-	public void setCoord(Coordinador c) 
-	{
-		this.coord = c;
-	}
-	
 }

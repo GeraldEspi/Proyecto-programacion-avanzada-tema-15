@@ -104,7 +104,7 @@ public class ventana4 extends JFrame implements ActionListener{
 		{
 			
 			this.setVisible(false);
-			System.exit(0);
+			coord.back();
 		}
 		
 		

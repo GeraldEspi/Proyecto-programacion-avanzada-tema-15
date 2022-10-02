@@ -19,6 +19,7 @@ public class ventana3_2 extends JFrame {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JButton boton1;
+	private Coordinador coord;
 
 	/**
 	 * Launch the application.

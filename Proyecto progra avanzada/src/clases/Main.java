@@ -1,15 +1,13 @@
 package clases;
 import java.io.*;
 
-import vista.Gestion;
-import vista.ventana1;
-
 public class Main 
 {
 	public static void main(String[] args)throws IOException 
 	{
-		Coordinador coord = new Coordinador();
-		/*String linea, linea2;
+		Relaciones r = new Relaciones();
+		
+		String linea, linea2;
 		Gobierno gober = new Gobierno();
 		Lector l = new Lector();
 		BufferedReader LeerLinea = new BufferedReader(new InputStreamReader (System.in));
@@ -35,19 +33,12 @@ public class Main
 			gober.llenadoTablaMinisterio(linea);
 			linea = l.nextLine();
 		}
+		r.inicioPrograma(gober);
 		
 		
+		/*presentarVentana();
 		
-		presentarVentana();*/
-		
-		coord.inicioGober();
-		
-		coord.inicioVentana();
-		
-		
-		
-		
-		/*do {//mostramos las diferentes opciones a escoger
+		do {//mostramos las diferentes opciones a escoger
 			System.out.println("Ingrese los datos del funcionario con el formato");
 			
             opcion = Integer.parseInt(LeerLinea.readLine());
@@ -365,17 +356,6 @@ public class Main
                 }
                 default -> System.out.println("Opcion ingresada no es valida");//pa los que no saben poner un numero
             }
-        }while( opcion != 0 );
-		l.guardarDatos(gober);*/
-	}
-
-	private static void presentarVentana() {
-		Gestion miVentana = new Gestion();
-		miVentana.setVisible(true);
-	}
-	
-	private static void cerrarVentana() {
-		Gestion miVentana = new Gestion();
-		miVentana.setVisible(false);
+        }while( opcion != 0 );*/
 	}
 }

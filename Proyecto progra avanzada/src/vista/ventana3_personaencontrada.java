@@ -144,7 +144,7 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 		if(Salir == e.getSource())
 		{	
 			this.setVisible(false);
-			System.exit(0);
+			coord.back();
 		}
 		
 	}

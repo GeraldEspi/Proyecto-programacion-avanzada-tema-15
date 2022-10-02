@@ -78,32 +78,25 @@ public class VentanaTexto extends JFrame {
 		coord = new Coordinador();
 	}
 	
-	public void setGobierno(Gobierno gobiernoAct) {
-		
-	}
-	
-	
 	public void setCoord(Coordinador coord)
 	{
 		this.coord = coord;
 	}
 
 	public void MostrarListaEnArea() {
-		ArrayList<Ministerio> ListaMin = miGobierno.getMinisterios();
+		Gobierno gober = coord.getGober();
 		Ministerio minis = new Ministerio();
 		String cadena = "Info\n";
 		
-		
-		for(int j = 0; j < ListaMin.size() ; j++) 
+		for(int j = 0; j < gober.getsSize() ; j++) 
 		{
-			minis = ListaMin.get(j);
-			cadena += "\n---Ministerio de "+minis.getNombreMinisterio()+"---\n";
-			cadena += "*Ministro: "+ minis.getMinistro()+"\n";
-			cadena += "*Limite de Funcionarios: "+ minis.getLimFuncionarios()+"\n" ;
-			cadena += "*Cantidad de Funcionarios: "+ minis.getFuncionariosActivos()+"\n";
+			minis = gober.getsMiniInt(j);
+			cadena += "\n---Ministerio de "+ minis.getNombreMinisterio() +"---\n";
+			cadena += "*Ministro: "+ minis.getMinistro() +"\n";
+			cadena += "*Limite de Funcionarios: "+ minis.getLimFuncionarios() +"\n" ;
+			cadena += "*Cantidad de Funcionarios: "+ minis.getFuncionariosActivos() +"\n";
 			cadena += "--------------------------\n";
 		}
-		
 		textArea.setText(cadena);
 		
 	}

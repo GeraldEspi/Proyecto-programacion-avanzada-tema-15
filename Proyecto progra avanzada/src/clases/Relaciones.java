@@ -1,5 +1,7 @@
 package clases;
 
+import java.io.FileNotFoundException;
+
 import vista.Gestion;
 import vista.ventana1;
 import vista.ventana2;
@@ -15,7 +17,7 @@ import vista.ventana4_2;
 public class Relaciones 
 {
 	
-	public void inicioPrograma() 
+	public void inicioPrograma(Gobierno g) throws FileNotFoundException
 	{
 		Gestion ges = new Gestion();
 		ventana1 v1 = new ventana1();
@@ -53,7 +55,7 @@ public class Relaciones
 		coord.setV4_1(v4_1);
 		coord.setV4_2(v4_2);
 		
-		coord.iniciarPrograma();
+		coord.iniciarPrograma(g);
 	}
 
 }

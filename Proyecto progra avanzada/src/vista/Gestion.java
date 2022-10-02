@@ -6,11 +6,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import clases.Gobierno;
+import clases.Coordinador;
 
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -35,7 +36,7 @@ public class Gestion extends JFrame implements ActionListener
 	private JButton btnOpcion_Salir;
 	private JButton btnOpcion_2;
 	private JButton btnOpcion_1;
-	Gobierno gober = new Gobierno();
+	private Coordinador coord;
 
 	/**
 	 * Launch the application.
@@ -109,8 +110,12 @@ public class Gestion extends JFrame implements ActionListener
 		btnOpcion_Salir.addActionListener(this);
 	}
 
+	public void setCoord(Coordinador coord) 
+	{
+		this.coord = coord;
+	}
 	
-	public void actionPerformed(ActionEvent e) 
+	public void actionPerformed(ActionEvent e)
 	{
 		
 		if(btnOpcion_1 == e.getSource()) 
@@ -142,7 +147,6 @@ public class Gestion extends JFrame implements ActionListener
 			
 			this.setVisible(false);
 			System.exit(0);
-
 		}
 	}
 	
