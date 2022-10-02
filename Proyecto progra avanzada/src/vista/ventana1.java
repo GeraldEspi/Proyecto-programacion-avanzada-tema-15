@@ -6,15 +6,21 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class ventana1 extends JFrame {
+@SuppressWarnings("serial")
+public class ventana1 extends JFrame implements ActionListener {
 
-	private JPanel contentPane;
+	/**
+	 * 
+	 */
+	private JPanel contentPane; JButton boton1;
 	private JTextField textField;
 
 	/**
@@ -49,22 +55,20 @@ public class ventana1 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton boton1 = new JButton("Aceptar");
-		boton1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		boton1 = new JButton("Aceptar");
 		boton1.setBounds(167, 69, 91, 23);
+		
 		contentPane.add(boton1);
+		
 		
 		textField = new JTextField();
 		textField.setColumns(30);
 		textField.setBounds(90, 38, 246, 20);
 		contentPane.add(textField);
 		
-		JLabel lblAgregeUnFuncionario = new JLabel("Agrege un funcionario\r\n");
+		JLabel lblAgregeUnFuncionario = new JLabel("Ingrese el funcionario\r\n a agregar");
 		lblAgregeUnFuncionario.setFont(new Font("Tahoma", Font.BOLD, 18));
-		lblAgregeUnFuncionario.setBounds(109, 11, 237, 22);
+		lblAgregeUnFuncionario.setBounds(67, 5, 346, 22);
 		contentPane.add(lblAgregeUnFuncionario);
 		
 		JLabel lblIngreseLosDatos = new JLabel("Ingrese los datos del funcionario con el formato");
@@ -76,5 +80,21 @@ public class ventana1 extends JFrame {
 		lblClavefuncionarionombremailministerioprofesionrutsueldoEnUtm.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		lblClavefuncionarionombremailministerioprofesionrutsueldoEnUtm.setBounds(34, 142, 400, 14);
 		contentPane.add(lblClavefuncionarionombremailministerioprofesionrutsueldoEnUtm);
+		
+		
+		boton1.addActionListener(this);
+		
+	}
+
+	
+	public void actionPerformed(ActionEvent e) {
+		if(boton1 == e.getSource()) {
+			
+			
+			JOptionPane.showMessageDialog(null, "Agregado");
+			
+		}
+		
+		
 	}
 }

@@ -28,7 +28,7 @@ public class Gestion extends JFrame implements ActionListener {
 	private JLabel lblNewLabel_1_2;
 	private JLabel lblNewLabel_1_3;
 	private JLabel lblNewLabel_1_4;
-	private JLabel lblNewLabel_1;
+	private JLabel lblNewLabel_1; 
 
 	/**
 	 * Launch the application.
@@ -115,7 +115,35 @@ public class Gestion extends JFrame implements ActionListener {
 		if(boton1 == e.getSource()) {
 			
 			int num1 = (Integer.parseInt(Campo1.getText()));
-			this.setVisible(false);
+			ventana1 opc1 = new ventana1();
+			do {
+				switch (num1) {
+				case 1 -> 
+				{
+					opc1.setVisible(true);
+					this.setVisible(false);
+				}
+				case 2 -> 
+				{
+					ventana2 opc2 = new ventana2();
+					this.setVisible(false);
+					opc2.setVisible(true);
+				}
+				
+				case 3 ->
+				{
+					ventana3 opc3 = new ventana3();
+					this.setVisible(false);
+					opc3.setVisible(true);
+					
+				}
+				
+				case 4 -> 
+				{
+					
+				}
+					
+			
 		}
 		
 	}

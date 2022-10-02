@@ -12,6 +12,10 @@ import javax.swing.JButton;
 
 public class ventana3_1 extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2450402251351263908L;
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;

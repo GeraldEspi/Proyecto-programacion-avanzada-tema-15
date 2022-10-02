@@ -1,6 +1,7 @@
 import java.io.*;
 
 import vista.Gestion;
+import vista.ventana1;
 
 public class Main 
 {
@@ -13,6 +14,7 @@ public class Main
 		int opcion, opcion2;
 		
 		l.openFile("Ministerios");
+		presentarVentana();
 		
 		linea = l.firstLine();
 		// Ciclo para crear los nodos del arreglo ministerios
@@ -37,7 +39,7 @@ public class Main
 		
 		do {//mostramos las diferentes opciones a escoger
 			
-			presentarVentana();
+			
             opcion = Integer.parseInt(LeerLinea.readLine());
             switch (opcion) {
                 case 1 -> //Agregar Funcionario
