@@ -53,16 +53,18 @@ public class ListaFuncionarios
 		empleados.remove((auxPerso.getsRut()), auxPerso);
 	}
 	
-	public void mostrarFuncionarios() 
+	public String mostrarFuncionarios() 
 	{
 		Enumeration<Integer> e = empleados.keys();
+		String cadena ="";
 		
 		while(e.hasMoreElements()) 
 		{
 			int key = e.nextElement();
 			Funcionario p = empleados.get(key);
-			p.imprimirDatos();
+			cadena+= p.imprimirDatos();
 		}
+		return cadena;
 	}
 	
 }

@@ -6,34 +6,8 @@ public class Main
 	public static void main(String[] args)throws IOException 
 	{
 		Relaciones r = new Relaciones();
-		
-		String linea, linea2;
-		Gobierno gober = new Gobierno();
-		Lector l = new Lector();
-		BufferedReader LeerLinea = new BufferedReader(new InputStreamReader (System.in));
-		int opcion, opcion2;
-		
-		l.openFile("Ministerios");
-		
-		
-		linea = l.firstLine();
-		// Ciclo para crear los nodos del arreglo ministerios
-		while(linea != null) 
-		{
-			gober.llenadoArray(linea);
-			linea = l.nextLine();
-		}	
-		
-		l.openFile("personas");
-		
-		linea = l.firstLine();
-		// Ciclo para crear los nodos tipo personas y agregarlos al arraylist perteneciente al ministerio que pertenece la persona
-		while(linea != null) 
-		{
-			gober.llenadoTablaMinisterio(linea);
-			linea = l.nextLine();
-		}
-		r.inicioPrograma(gober);
+	
+		r.inicioPrograma();
 		
 		
 		/*presentarVentana();

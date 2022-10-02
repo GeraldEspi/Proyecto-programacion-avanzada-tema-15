@@ -84,7 +84,6 @@ public class ventana4_1 extends JFrame {
 		panel.setBounds(355, 11, 282, 328);
 		contentPane.add(panel);
 		
-		coord = new Coordinador();
 	}
 	
 	public void setCoord(Coordinador coord)

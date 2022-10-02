@@ -31,15 +31,20 @@ public class Funcionario extends Persona
 		  this.sueldo = Integer.parseInt(sueldo);
 	  }
 	  
-	  public void imprimirDatos() 
+	  public String imprimirDatos() 
 	  {
-			System.out.println("\n--------------------");
-		    System.out.println("-Nombre: " + nombre);
-		    System.out.println("-Mail: " + mail);
-		    System.out.println("-Profesión: " + profesion);
-		    System.out.println("-Rut: " + rut);
-		    System.out.println("-Sueldo: " + sueldo + " UTM");
-		    System.out.println("--------------------\n");
+		  
+		String cadena;
+			
+		cadena = "-Nombre: " + nombre + "\n";
+		cadena += "-Mail: " + mail + "\n";
+		cadena += "-Ministerio: " + ministerio + "\n";
+		cadena += "-Profesión: " + profesion + "\n";
+		cadena += "-Rut: " + rut + "\n";
+		cadena += "-Sueldo: " + sueldo + " UTM\n";
+		cadena += "--------------------------\n";
+			
+		return cadena;
 	  }
 	  
 	  public boolean llenado(String linea) 

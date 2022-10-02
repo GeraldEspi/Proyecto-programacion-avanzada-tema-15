@@ -81,8 +81,7 @@ public class ventana3_1 extends JFrame {
 		boton1 = new JButton("Aceptar");
 		boton1.setBounds(101, 159, 91, 23);
 		contentPane.add(boton1);
-		
-		coord = new Coordinador();
+	
 	}
 	
 	public void setCoord(Coordinador coord)

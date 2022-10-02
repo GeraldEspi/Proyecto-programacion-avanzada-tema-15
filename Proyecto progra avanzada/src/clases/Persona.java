@@ -36,15 +36,20 @@ public class Persona
 		return true;
 	}
 
-	public void imprimirDatos() 
-	{
-		System.out.println("\n--------------------");
-	    System.out.println("-Nombre: " + nombre);
-	    System.out.println("-Mail: " + mail);
-	    System.out.println("-Profesión: " + profesion);
-	    System.out.println("-Rut: " + rut);
-	    System.out.println("--------------------\n");
-	}
+	public String imprimirDatos() 
+	  {
+		  
+		String cadena;
+			
+		cadena = "-Nombre: " + nombre;
+		cadena += "-Mail: " + mail;
+		cadena += "-Profesión: " + profesion;
+		cadena += "-Rut: " + rut ;
+		cadena += "--------------------------\n";
+			
+		return cadena;
+	  }
+	  
 
   // Getters
 	public String getsNombre() {

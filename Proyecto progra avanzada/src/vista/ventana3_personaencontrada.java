@@ -93,8 +93,6 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 		btnOpcion5.addActionListener(this);
 		btnOpcion6.addActionListener(this);
 		Salir.addActionListener(this);
-		
-		coord = new Coordinador();
 	}
 	
 	public void setCoord(Coordinador coord)

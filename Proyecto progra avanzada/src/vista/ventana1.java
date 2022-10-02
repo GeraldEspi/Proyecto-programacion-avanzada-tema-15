@@ -87,7 +87,6 @@ public class ventana1 extends JFrame implements ActionListener {
 		
 		
 		boton1.addActionListener(this);
-		coord = new Coordinador();
 		
 	}
 	

@@ -2,6 +2,7 @@ package vista;
 
 import java.awt.EventQueue;
 
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -74,30 +75,45 @@ public class VentanaTexto extends JFrame {
 		titulo.setBounds(10, 11, 176, 22);
 		titulo.setFont(new Font("Tahoma", Font.BOLD, 18));
 		contentPane.add(titulo);
-		
-		coord = new Coordinador();
+	
 	}
 	
-	public void setCoord(Coordinador coord)
+	public void setCoord(Coordinador c)
 	{
-		this.coord = coord;
+		this.coord = c;
 	}
 
-	public void MostrarListaEnArea() {
+	public void MostrarListaMinisterios() {
 		Gobierno gober = coord.getGober();
 		Ministerio minis = new Ministerio();
 		String cadena = "Info\n";
 		
+		System.out.println(gober.getsSize());
+		
 		for(int j = 0; j < gober.getsSize() ; j++) 
 		{
 			minis = gober.getsMiniInt(j);
-			cadena += "\n---Ministerio de "+ minis.getNombreMinisterio() +"---\n";
-			cadena += "*Ministro: "+ minis.getMinistro() +"\n";
-			cadena += "*Limite de Funcionarios: "+ minis.getLimFuncionarios() +"\n" ;
-			cadena += "*Cantidad de Funcionarios: "+ minis.getFuncionariosActivos() +"\n";
-			cadena += "--------------------------\n";
+			cadena += minis.mostrarDatos();
 		}
 		textArea.setText(cadena);
 		
 	}
+	
+	public void MostrarListaTodosFuncio() {
+		Gobierno gober = coord.getGober();
+		Ministerio minis = new Ministerio();
+		String cadena = "Info\n";
+		
+		System.out.println(gober.getsSize());
+		
+		for(int j = 0; j < gober.getsSize() ; j++) 
+		{
+			minis = gober.getsMiniInt(j);
+			cadena += minis.mostrarDatos();
+		}
+		textArea.setText(cadena);
+		
+	}
+	
+	
 }

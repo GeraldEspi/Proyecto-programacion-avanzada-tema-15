@@ -86,19 +86,22 @@ public class Ministerio
 	
 	public String mostrarDatos() 
 	{	
-		
 		String cadena;
 		
-		cadena = "\n---Ministerio de "+ nombreMinisterio +"---\n";
-		cadena += "*Ministro: "+ nombreMinistro +"\n";
-		cadena += "*Limite de Funcionarios: "+ limFuncionarios +"\n" ;
-		cadena += "*Cantidad de Funcionarios: "+ funcionariosActivos +"\n";
+		cadena = "\n---Ministerio de "+ getNombreMinisterio() +"---\n";
+		cadena += "*Ministro: "+ getMinistro() +"\n";
+		cadena += "*Limite de Funcionarios: "+ getLimFuncionarios() +"\n" ;
+		cadena += "*Cantidad de Funcionarios: "+ getFuncionariosActivos() +"\n";
+		cadena += "--------------------------\n";
+		
 		return cadena;
 	}
 	
-	public void mostrarFuncionariosMinisterio() 
+	
+	
+	public String mostrarFuncionariosMinisterio() 
 	{
-		funcionarios.mostrarFuncionarios();
+		return funcionarios.mostrarFuncionarios();
 	}
 	
 	public Funcionario buscarFuncionario(String nombreAux) 

@@ -2,6 +2,7 @@ package clases;
 
 import java.io.*;
 
+
 import vista.Gestion;
 import vista.ventana1;
 import vista.ventana2;
@@ -13,6 +14,7 @@ import vista.ventana3_encontradamodificar;
 import vista.ventana3_personaencontrada;
 import vista.ventana4_1;
 import vista.ventana4_2;
+import vista.VentanaTexto;
 
 
 public class Coordinador 
@@ -28,6 +30,7 @@ public class Coordinador
 	private ventana3_personaencontrada v3_p;
 	private ventana4_1 v4_1;
 	private ventana4_2 v4_2;
+	private VentanaTexto vT;
 	private Gobierno gober;
 	
 	public Coordinador() 
@@ -81,9 +84,14 @@ public class Coordinador
 		this.v4_2 = v4_2;
 	}
 	
+	public void setVT(VentanaTexto VT) 
+	{
+		this.vT = VT;
+	}
+	
 	public void setGobierno(Gobierno g) 
 	{
-		this.gober=g;
+		this.gober = g;
 	}
 	
 	//--------------------------------------
@@ -97,10 +105,21 @@ public class Coordinador
 	{
 		ges.setVisible(true);
 	}
-	
-	public void iniciarPrograma(Gobierno g) throws FileNotFoundException
+	public void visible1() 
 	{
-		setGobierno(g);
+		v1.setVisible(true);
+	}
+	public void visible2() 
+	{
+		v2.setVisible(true);
+	}
+	public VentanaTexto getVT() 
+	{
+		return vT;
+	}
+	
+	public void iniciarPrograma() throws FileNotFoundException
+	{
 		inicioVentana();
 	}
 	
@@ -110,13 +129,12 @@ public class Coordinador
 		Lector l = new Lector();
 		
 		l.openFile("Ministerios");
-		
-		
+
 		linea = l.firstLine();
 		// Ciclo para crear los nodos del arreglo ministerios
 		while(linea != null) 
 		{
-			gober.llenadoArray(linea);
+			this.gober.llenadoArray(linea);
 			linea = l.nextLine();
 		}	
 		
@@ -126,9 +144,10 @@ public class Coordinador
 		// Ciclo para crear los nodos tipo personas y agregarlos al arraylist perteneciente al ministerio que pertenece la persona
 		while(linea != null) 
 		{
-			gober.llenadoTablaMinisterio(linea);
+			this.gober.llenadoTablaMinisterio(linea);
 			linea = l.nextLine();
 		}
+		System.out.println(gober.getsSize());
 	}
 	
 	public void guardarDatos() throws IOException

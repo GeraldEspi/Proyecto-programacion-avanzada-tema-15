@@ -54,10 +54,22 @@ public class Gobierno {
 		
 		
 	}
-	
+
 	public Ministerio getsMiniInt(int i) 
 	{
 		return arrMin.get(i);
+	}
+	
+	public void listarMinisterios() 
+	{
+		Ministerio minis = new Ministerio();
+		int j = 0; 
+		
+		for(j = 0; j < arrMin.size() ; j++) 
+		{
+			minis = arrMin.get(j);
+			minis.mostrarDatos();
+		}
 	}
 	
 	public void listarTodosFuncio() 

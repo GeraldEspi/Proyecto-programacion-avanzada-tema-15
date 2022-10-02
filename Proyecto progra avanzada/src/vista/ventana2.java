@@ -100,8 +100,6 @@ public class ventana2 extends JFrame implements ActionListener {
 		btnOp3.addActionListener(this);
 		btnOp4.addActionListener(this);
 		Salir.addActionListener(this);
-		
-		coord = new Coordinador();
 	}
 	
 	
@@ -115,18 +113,20 @@ public class ventana2 extends JFrame implements ActionListener {
 	{
 		if(btnOp1 == e.getSource())
 		{
-			VentanaTexto v = new VentanaTexto();
-			v.MostrarListaEnArea();
-			v.setVisible(true);
+			VentanaTexto vt = coord.getVT();
+			vt.MostrarListaMinisterios();
+			vt.setVisible(true);
 
 		}
 		if(btnOp2 == e.getSource())
 		{
-			
+			VentanaTexto vt = coord.getVT();
+			vt.MostrarListaTodosFuncio();
+			vt.setVisible(true);
 		}
 		if(btnOp3 == e.getSource())
 		{
-			
+			//leer mini desde la ventana
 		}
 		if(btnOp4 == e.getSource())
 		{
