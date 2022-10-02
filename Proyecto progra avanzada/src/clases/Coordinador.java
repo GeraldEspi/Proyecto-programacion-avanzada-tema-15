@@ -173,6 +173,10 @@ public class Coordinador
 		v3_e.setVisible(true);
 		setModificado(i);
 	}
+	public void visible4_1() 
+	{
+		v4_1.setVisible(true);
+	}
 	
 	
 	
@@ -210,7 +214,7 @@ public class Coordinador
 			this.gober.llenadoTablaMinisterio(linea);
 			linea = l.nextLine();
 		}
-		System.out.println(gober.getsSize());
+	
 	}
 	
 	public void guardarDatos() throws IOException

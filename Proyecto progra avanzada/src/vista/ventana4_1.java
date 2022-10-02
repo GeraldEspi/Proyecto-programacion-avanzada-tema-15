@@ -22,8 +22,8 @@ import javax.swing.JScrollPane;
 public class ventana4_1 extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField textField_small;
+	private JTextField textField_big;
 	private Coordinador coord;
 	
 	JButton Salir, Aceptar;
@@ -70,15 +70,15 @@ public class ventana4_1 extends JFrame implements ActionListener {
 		lblNewLabel_1_1.setBounds(37, 106, 275, 14);
 		contentPane.add(lblNewLabel_1_1);
 		
-		textField = new JTextField();
-		textField.setColumns(30);
-		textField.setBounds(37, 38, 246, 20);
-		contentPane.add(textField);
+		textField_small = new JTextField();
+		textField_small.setColumns(30);
+		textField_small.setBounds(37, 38, 246, 20);
+		contentPane.add(textField_small);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(30);
-		textField_1.setBounds(37, 120, 246, 20);
-		contentPane.add(textField_1);
+		textField_big = new JTextField();
+		textField_big.setColumns(30);
+		textField_big.setBounds(37, 120, 246, 20);
+		contentPane.add(textField_big);
 		
 		 Aceptar = new JButton("Aceptar");
 		Aceptar.setBounds(37, 167, 91, 23);
@@ -107,6 +107,16 @@ public class ventana4_1 extends JFrame implements ActionListener {
 		
 		if(Aceptar == e.getSource()) 
 		{
+			
+			int num_men = Integer.parseInt(textField_small.getText());
+			int num_may = Integer.parseInt(textField_big.getText());
+			
+			
+			VentanaTexto vt = coord.getVT();
+			
+			
+			vt.MostrarRango1(num_men, num_may);
+			coord.visibleVLM();
 			
 		}
 		

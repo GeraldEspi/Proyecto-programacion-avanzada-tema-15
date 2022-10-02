@@ -18,6 +18,10 @@ import javax.swing.JButton;
 
 public class ventana4 extends JFrame implements ActionListener{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	JButton Op1, Op2, btnSalir;
 	private Coordinador coord;
@@ -74,7 +78,7 @@ public class ventana4 extends JFrame implements ActionListener{
 		Op2.addActionListener(this);
 		btnSalir.addActionListener(this);
 		
-		coord = new Coordinador();
+	
 	}
 	
 	public void setCoord(Coordinador coord)
@@ -87,9 +91,10 @@ public class ventana4 extends JFrame implements ActionListener{
 		
 		if(Op1 == e.getSource())
 		{
-			ventana4_1 v = new ventana4_1();
+			
 			this.setVisible(false);
-			v.setVisible(true);
+			coord.visible4_1();
+			
 			
 		}
 		

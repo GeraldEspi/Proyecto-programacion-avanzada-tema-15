@@ -8,7 +8,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import clases.Coordinador;
+import clases.Funcionario;
 import clases.Gobierno;
+import clases.ListaFuncionarios;
 import clases.Ministerio;
 
 import javax.swing.JScrollPane;
@@ -132,6 +134,35 @@ public class VentanaTexto extends JFrame implements ActionListener {
 		textArea.setText(cadena);
 		
 	}
+	
+	
+	public void MostrarRango1(int num1, int num2)
+	{
+		Gobierno gober = coord.getGober();
+		ListaFuncionarios lista = new ListaFuncionarios();
+		Funcionario func = new Funcionario();
+		String cadena = "info\n";
+		
+		
+		lista = gober.listaRango(num1, num2);
+		
+		for(int j = 0; j < lista.getLargo() ; j++) 
+		{
+			func = lista.getFuncionario(j);
+			cadena += func.imprimirDatos();
+			
+		}
+		textArea.setText(cadena);
+		
+		
+		
+	}
+	
+	public void MostraRango2(int num1)
+	{
+		
+	}
+	
 	
 
 	@Override
