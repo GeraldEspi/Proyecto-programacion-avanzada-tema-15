@@ -1,3 +1,4 @@
+package clases;
 import java.io.*;
 import java.util.*;
 import javax.swing.JOptionPane;
@@ -18,12 +19,12 @@ public class Lector {
 		this.archivo = new Scanner(new File(txt +".txt"));
 	}
 	
-	public String firstLine() throws IOException
+	public String firstLine()
     {
         return nextLine();
     }
 	
-	public String nextLine() throws IOException
+	public String nextLine() 
     {
 		if(this.archivo.hasNext() == false) 
 		{

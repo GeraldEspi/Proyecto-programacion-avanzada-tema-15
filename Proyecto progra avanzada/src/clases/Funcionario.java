@@ -1,4 +1,4 @@
-
+package clases;
 public class Funcionario extends Persona
 {
 	  private String ministerio;

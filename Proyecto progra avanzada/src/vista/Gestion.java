@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import clases.Gobierno;
+
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -103,6 +106,7 @@ public class Gestion extends JFrame implements ActionListener
 	
 	public void actionPerformed(ActionEvent e) 
 	{
+		
 		if(btnOpcion_1 == e.getSource()) 
 		{
 			ventana1 v1 = new ventana1();
