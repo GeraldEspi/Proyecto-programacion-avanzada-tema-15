@@ -15,7 +15,6 @@ import java.awt.event.ActionEvent;
 public class ventana3 extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -49,39 +48,27 @@ public class ventana3 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		textField = new JTextField();
-		textField.setColumns(30);
-		textField.setBounds(36, 38, 246, 20);
-		contentPane.add(textField);
-		
-		JLabel lblNewLabel = new JLabel("Escoger opción");
+		JLabel lblNewLabel = new JLabel("Qué desea buscar");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel.setBounds(67, 67, 84, 14);
+		lblNewLabel.setBounds(101, 37, 142, 14);
 		contentPane.add(lblNewLabel);
-		
-		JButton boton1 = new JButton("Aceptar");
-		boton1.setBounds(156, 63, 91, 23);
-		contentPane.add(boton1);
 		
 		JLabel titulo = new JLabel("Escoger una opción");
 		titulo.setFont(new Font("Tahoma", Font.BOLD, 18));
-		titulo.setBounds(71, 11, 176, 22);
+		titulo.setBounds(67, 11, 176, 22);
 		contentPane.add(titulo);
 		
-		JLabel lblNewLabel_1 = new JLabel("Opcion 1 : Buscar por nombre y ministerio");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1.setBounds(10, 97, 246, 49);
-		contentPane.add(lblNewLabel_1);
+		JButton btnOpcin_3 = new JButton("Opcion 1 : Buscar por nombre y ministerio");
+		btnOpcin_3.setBounds(10, 110, 280, 23);
+		contentPane.add(btnOpcin_3);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Opcion 2 : Buscar por rut y ministerio");
-		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1_1.setBounds(10, 133, 261, 49);
-		contentPane.add(lblNewLabel_1_1);
+		JButton btnOpcin_3_1 = new JButton("Opcion 2 : Buscar por rut y ministerio");
+		btnOpcin_3_1.setBounds(10, 146, 280, 23);
+		contentPane.add(btnOpcin_3_1);
 		
-		JLabel lblNewLabel_1_2 = new JLabel("Opcion 0 : Para salir de este menu");
-		lblNewLabel_1_2.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1_2.setBounds(10, 172, 293, 49);
-		contentPane.add(lblNewLabel_1_2);
+		JButton btnOpcin_3_1_1 = new JButton("Salir");
+		btnOpcin_3_1_1.setBounds(10, 185, 84, 23);
+		contentPane.add(btnOpcin_3_1_1);
 	}
 
 }

@@ -9,11 +9,12 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class ventana3_personaencontrada extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -37,7 +38,7 @@ public class ventana3_personaencontrada extends JFrame {
 	public ventana3_personaencontrada() {
 		setTitle("Modificar datos de funcionario encontrado\r\n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 396, 380);
+		setBounds(100, 100, 371, 380);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
@@ -47,59 +48,46 @@ public class ventana3_personaencontrada extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel_1 = new JLabel("Opcion 1 : Modificar el nombre");
-		lblNewLabel_1.setBounds(106, 10, 221, 14);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		contentPane.add(lblNewLabel_1);
-		
-		JLabel lblNewLabel_1_1 = new JLabel("Opcion 2 : Modificar el mail");
-		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1_1.setBounds(106, 37, 221, 14);
-		contentPane.add(lblNewLabel_1_1);
-		
-		JLabel lblNewLabel = new JLabel("Escoger opción");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel.setBounds(112, 273, 84, 14);
-		contentPane.add(lblNewLabel);
-		
-		JButton boton1 = new JButton("Aceptar");
-		boton1.setBounds(201, 269, 91, 23);
+		JButton boton1 = new JButton("Salir\r\n");
+		boton1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		boton1.setBounds(130, 271, 91, 23);
 		contentPane.add(boton1);
-		
-		textField = new JTextField();
-		textField.setColumns(30);
-		textField.setBounds(81, 244, 246, 20);
-		contentPane.add(textField);
 		
 		JLabel titulo = new JLabel("Escoger una opción");
 		titulo.setFont(new Font("Tahoma", Font.BOLD, 18));
-		titulo.setBounds(116, 217, 176, 22);
+		titulo.setBounds(100, 238, 176, 22);
 		contentPane.add(titulo);
 		
-		JLabel lblNewLabel_1_1_1 = new JLabel("Opcion 3 : Modificar el ministerio");
-		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1_1_1.setBounds(106, 62, 221, 14);
-		contentPane.add(lblNewLabel_1_1_1);
+		JButton btnOpcion = new JButton("Opcion 1 : Modificar el nombre");
+		btnOpcion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnOpcion.setBounds(70, 41, 222, 23);
+		contentPane.add(btnOpcion);
 		
-		JLabel lblNewLabel_1_1_2 = new JLabel("Opcion 4 : Modificar la profesion");
-		lblNewLabel_1_1_2.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1_1_2.setBounds(106, 92, 221, 14);
-		contentPane.add(lblNewLabel_1_1_2);
+		JButton btnOpcion_2 = new JButton("Opcion 2 : Modificar el mail");
+		btnOpcion_2.setBounds(70, 75, 222, 23);
+		contentPane.add(btnOpcion_2);
 		
-		JLabel lblNewLabel_1_1_2_1 = new JLabel("Opcion 5 : Modificar el rut");
-		lblNewLabel_1_1_2_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1_1_2_1.setBounds(106, 117, 221, 14);
-		contentPane.add(lblNewLabel_1_1_2_1);
+		JButton btnOpcion_2_1 = new JButton("Opcion 3 : Modificar el ministerio");
+		btnOpcion_2_1.setBounds(70, 105, 222, 23);
+		contentPane.add(btnOpcion_2_1);
 		
-		JLabel lblNewLabel_1_1_2_1_1 = new JLabel("Opcion 6 : Modificar el sueldo ");
-		lblNewLabel_1_1_2_1_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1_1_2_1_1.setBounds(106, 142, 221, 14);
-		contentPane.add(lblNewLabel_1_1_2_1_1);
+		JButton btnOpcion_2_1_1 = new JButton("Opcion 4 : Modificar la profesion");
+		btnOpcion_2_1_1.setBounds(70, 139, 222, 23);
+		contentPane.add(btnOpcion_2_1_1);
 		
-		JLabel lblNewLabel_1_1_2_1_1_1 = new JLabel("Opcion 0 : Para salir al menu principal");
-		lblNewLabel_1_1_2_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1_1_2_1_1_1.setBounds(106, 173, 221, 14);
-		contentPane.add(lblNewLabel_1_1_2_1_1_1);
+		JButton btnOpcion_2_1_1_1 = new JButton("Opcion 5 : Modificar el rut");
+		btnOpcion_2_1_1_1.setBounds(70, 171, 222, 23);
+		contentPane.add(btnOpcion_2_1_1_1);
+		
+		JButton btnOpcion_2_1_1_1_1 = new JButton("Opcion 6 : Modificar el sueldo ");
+		btnOpcion_2_1_1_1_1.setBounds(70, 205, 222, 23);
+		contentPane.add(btnOpcion_2_1_1_1_1);
 	}
 
 }

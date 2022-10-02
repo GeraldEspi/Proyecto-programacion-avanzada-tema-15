@@ -17,18 +17,20 @@ import java.awt.Font;
 import java.awt.FlowLayout;
 import javax.swing.JMenu;
 import javax.swing.SwingConstants;
+import javax.swing.border.BevelBorder;
+import java.awt.Color;
 
 @SuppressWarnings("serial")
 public class Gestion extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
-	JButton boton1;
-	private JTextField Campo1;
 	private final JLabel titulo = new JLabel("Escoger una opción");
-	private JLabel lblNewLabel_1_2;
-	private JLabel lblNewLabel_1_3;
-	private JLabel lblNewLabel_1_4;
-	private JLabel lblNewLabel_1; 
+	private JPanel panel;
+	private JButton btnOpcin_3;
+	private JButton btnOpcin;
+	private JButton btnOpcion;
+	private JButton btnOpcion_2;
+	private JButton btnOpcion_1;
 
 	/**
 	 * Launch the application.
@@ -55,7 +57,7 @@ public class Gestion extends JFrame implements ActionListener {
 	public Gestion() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 330, 375);
+		setBounds(100, 100, 449, 319);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
@@ -65,49 +67,36 @@ public class Gestion extends JFrame implements ActionListener {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		titulo.setBounds(65, 10, 176, 22);
+		titulo.setBounds(130, 30, 176, 22);
 		titulo.setFont(new Font("Tahoma", Font.BOLD, 18));
 		contentPane.add(titulo);
 		
-		Campo1 = new JTextField();
-		Campo1.setBounds(30, 37, 246, 20);
-		contentPane.add(Campo1);
-		Campo1.setColumns(30);
+		panel = new JPanel();
+		panel.setBackground(new Color(64, 128, 128));
+		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel.setBounds(32, 63, 368, 183);
+		contentPane.add(panel);
+		panel.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Escoger opción");
-		lblNewLabel.setBounds(61, 66, 84, 14);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
-		contentPane.add(lblNewLabel);
+		btnOpcin_3 = new JButton("Opcion 1 : Agregar Funcionario");
+		btnOpcin_3.setBounds(10, 11, 348, 23);
+		panel.add(btnOpcin_3);
 		
-		boton1 = new JButton("Aceptar");
-		boton1.setBounds(150, 62, 91, 23);
-		contentPane.add(boton1);
+		btnOpcin = new JButton("Opcion 2 : Listar\r\n");
+		btnOpcin.setBounds(10, 45, 348, 23);
+		panel.add(btnOpcin);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Opcion 2 : Listar");
-		lblNewLabel_1_1.setBounds(10, 137, 171, 49);
-		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		contentPane.add(lblNewLabel_1_1);
+		btnOpcion = new JButton("Opcion 3 : Buscar Funcionario\r\n");
+		btnOpcion.setBounds(10, 78, 348, 23);
+		panel.add(btnOpcion);
 		
-		lblNewLabel_1_2 = new JLabel("Opcion 3 : Buscar Funcionario");
-		lblNewLabel_1_2.setBounds(10, 176, 171, 49);
-		lblNewLabel_1_2.setFont(new Font("Tahoma", Font.BOLD, 11));
-		contentPane.add(lblNewLabel_1_2);
+		btnOpcion_2 = new JButton("Opcion 4 : Listar Funcionarios en un rango de sueldo");
+		btnOpcion_2.setBounds(10, 112, 348, 23);
+		panel.add(btnOpcion_2);
 		
-		lblNewLabel_1_3 = new JLabel("Opcion 4 : Listar Funcionarios en un rango de sueldo");
-		lblNewLabel_1_3.setBounds(10, 215, 324, 49);
-		lblNewLabel_1_3.setFont(new Font("Tahoma", Font.BOLD, 11));
-		contentPane.add(lblNewLabel_1_3);
-		
-		lblNewLabel_1_4 = new JLabel("Opcion 0: Salir\r\n");
-		lblNewLabel_1_4.setBounds(10, 253, 324, 49);
-		lblNewLabel_1_4.setFont(new Font("Tahoma", Font.BOLD, 11));
-		contentPane.add(lblNewLabel_1_4);
-		
-		lblNewLabel_1 = new JLabel("Opcion 1 : Agregar Funcionario");
-		lblNewLabel_1.setBounds(10, 101, 171, 49);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		contentPane.add(lblNewLabel_1);
-		boton1.addActionListener(this);
+		btnOpcion_1 = new JButton("Salir\r\n");
+		btnOpcion_1.setBounds(83, 146, 210, 23);
+		panel.add(btnOpcion_1);
 	}
 
 	
@@ -115,37 +104,15 @@ public class Gestion extends JFrame implements ActionListener {
 		if(boton1 == e.getSource()) {
 			
 			int num1 = (Integer.parseInt(Campo1.getText()));
-			ventana1 opc1 = new ventana1();
-			do {
-				switch (num1) {
-				case 1 -> 
-				{
-					opc1.setVisible(true);
-					this.setVisible(false);
-				}
-				case 2 -> 
-				{
-					ventana2 opc2 = new ventana2();
-					this.setVisible(false);
-					opc2.setVisible(true);
-				}
-				
-				case 3 ->
-				{
-					ventana3 opc3 = new ventana3();
-					this.setVisible(false);
-					opc3.setVisible(true);
-					
-				}
-				
-				case 4 -> 
-				{
-					
-				}
-					
 			
-		}
+			ventana1 opc1 = new ventana1();
+			ventana2 opc2 = new ventana2();
+			
+			this.setVisible(false);
+			opc1.setVisible(true);
+			opc2.setVisible(true);
 		
 	}
 	
+}
 }
