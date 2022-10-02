@@ -16,11 +16,14 @@ import javax.swing.JTextField;
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.JTextArea;
+import javax.swing.JButton;
 
-public class VentanaTexto extends JFrame {
+public class VentanaTexto extends JFrame implements ActionListener {
 
 	/**
 	 * 
@@ -29,7 +32,7 @@ public class VentanaTexto extends JFrame {
 	private JPanel contentPane;
 	private JTextArea textArea;
 	private Coordinador coord;
-	
+	JButton Salir;
 
 	/**
 	 * Launch the application.
@@ -53,7 +56,7 @@ public class VentanaTexto extends JFrame {
 	public VentanaTexto() {
 		setTitle("Mostrar Texto");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 334);
+		setBounds(100, 100, 450, 369);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
@@ -71,10 +74,16 @@ public class VentanaTexto extends JFrame {
 		textArea.setBackground(new Color(192, 192, 192));
 		scrollPane.setViewportView(textArea);
 		
-		JLabel titulo = new JLabel("Escoger una opción");
+		JLabel titulo = new JLabel("Lista de datos");
 		titulo.setBounds(10, 11, 176, 22);
 		titulo.setFont(new Font("Tahoma", Font.BOLD, 18));
 		contentPane.add(titulo);
+		
+		Salir = new JButton("Salir");
+		Salir.setBounds(164, 296, 89, 23);
+		contentPane.add(Salir);
+		
+		Salir.addActionListener(this);
 	
 	}
 	
@@ -114,7 +123,12 @@ public class VentanaTexto extends JFrame {
 		textArea.setText(cadena);
 		
 	}
-	
-	
-	
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(Salir == e.getSource())
+		{
+			this.setVisible(false);
+		}
+	}
 }
