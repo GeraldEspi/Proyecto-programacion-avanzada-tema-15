@@ -5,18 +5,27 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import clases.Gobierno;
+import clases.Ministerio;
+
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JTextField;
 import java.awt.Color;
 import javax.swing.border.BevelBorder;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
-public class ventana2 extends JFrame {
+public class ventana2 extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
+	JButton btnOp1, btnOp2,btnOp3,btnOp4,Salir;
+	Gobierno gober = new Gobierno();
 
 	/**
 	 * Launch the application.
@@ -55,36 +64,69 @@ public class ventana2 extends JFrame {
 		titulo.setBounds(10, 42, 176, 22);
 		contentPane.add(titulo);
 		
-		JPanel panel = new JPanel();
-		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		panel.setBackground(new Color(192, 192, 192));
-		panel.setBounds(313, 11, 280, 328);
-		contentPane.add(panel);
+		 btnOp1 = new JButton("Opcion 1 : Listar Ministerios Disponibles");
+		btnOp1.setBounds(10, 125, 280, 23);
+		contentPane.add(btnOp1); btnOp1.addActionListener(this);
 		
-		JButton btnOpcin_3 = new JButton("Opcion 1 : Listar Ministerios Disponibles");
-		btnOpcin_3.setBounds(10, 125, 280, 23);
-		contentPane.add(btnOpcin_3);
+		 btnOp2 = new JButton("Opcion 2 : Listar Todos Funcionarios");
+		btnOp2.setBounds(10, 161, 280, 23);
+		contentPane.add(btnOp2); btnOp2.addActionListener(this);
 		
-		JButton btnOpcin_3_1 = new JButton("Opcion 2 : Listar Todos Funcionarios");
-		btnOpcin_3_1.setBounds(10, 161, 280, 23);
-		contentPane.add(btnOpcin_3_1);
+		 btnOp3 = new JButton("Opcion 3 : Listar Funcionarios de un ministerio");
+		btnOp3.setBounds(10, 200, 280, 23);
+		contentPane.add(btnOp3);btnOp3.addActionListener(this);
+		 
+		 btnOp4 = new JButton("Opcion 4 : Listar Funcionarios en un rango de sueldo");
+		btnOp4.setBounds(10, 239, 280, 23);
+		contentPane.add(btnOp4); btnOp4.addActionListener(this);
 		
-		JButton btnOpcin_3_1_1 = new JButton("Opcion 3 : Listar Funcionarios de un ministerio");
-		btnOpcin_3_1_1.setBounds(10, 200, 280, 23);
-		contentPane.add(btnOpcin_3_1_1);
-		
-		JButton btnOpcin_3_1_1_1 = new JButton("Opcion 4 : Listar Funcionarios en un rango de sueldo");
-		btnOpcin_3_1_1_1.setBounds(10, 239, 280, 23);
-		contentPane.add(btnOpcin_3_1_1_1);
-		
-		JButton btnOpcin_3_1_1_1_1 = new JButton("Salir");
-		btnOpcin_3_1_1_1_1.setBounds(10, 277, 84, 23);
-		contentPane.add(btnOpcin_3_1_1_1_1);
+		 Salir = new JButton("Salir");
+		Salir.setBounds(10, 277, 84, 23);
+		contentPane.add(Salir); Salir.addActionListener(this);
 		
 		JLabel lblQuDeseaListar = new JLabel("Qué desea listar");
 		lblQuDeseaListar.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblQuDeseaListar.setBounds(10, 64, 176, 22);
 		contentPane.add(lblQuDeseaListar);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(321, 33, 282, 306);
+		contentPane.add(scrollPane);
+		
+		JTextArea txtrArea = new JTextArea();
+		scrollPane.setViewportView(txtrArea);
+		
+		JLabel lblDatos = new JLabel("Datos\r\n");
+		lblDatos.setBackground(new Color(0, 0, 0));
+		lblDatos.setBounds(424, 11, 59, 22);
+		contentPane.add(lblDatos);
+		lblDatos.setFont(new Font("Tahoma", Font.BOLD, 18));
 	}
 
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(btnOp1 == e.getSource())
+		{
+			gober.listarMinisterios();
+		}
+		if(btnOp2 == e.getSource())
+		{
+			
+		}
+		if(btnOp3 == e.getSource())
+		{
+			
+		}
+		if(btnOp4 == e.getSource())
+		{
+			
+		}
+		if(Salir == e.getSource())
+		{
+			this.setVisible(false);
+			System.exit(0);
+		}
+		
+		
+	}
 }

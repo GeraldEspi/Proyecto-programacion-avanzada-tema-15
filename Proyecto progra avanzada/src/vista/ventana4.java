@@ -7,12 +7,16 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
-public class ventana4 extends JFrame {
+public class ventana4 extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
+	JButton Op1, Op2, btnSalir;
 
 	/**
 	 * Launch the application.
@@ -50,16 +54,48 @@ public class ventana4 extends JFrame {
 		titulo.setBounds(146, 11, 176, 22);
 		contentPane.add(titulo);
 		
-		JButton boton1 = new JButton("Opcion 1 : Listar con rango entre dos numero que ingrese");
-		boton1.setBounds(65, 71, 325, 23);
-		contentPane.add(boton1);
+		 Op1 = new JButton("Opcion 1 : Listar con rango de numeros ingresados");
+		Op1.setBounds(65, 71, 325, 23);
+		contentPane.add(Op1);
 		
-		JButton btnOpcion = new JButton("Opcion 2 : Listar con rango de 0 al que ingrese");
-		btnOpcion.setBounds(65, 106, 325, 23);
-		contentPane.add(btnOpcion);
+		 Op2 = new JButton("Opcion 2 : Listar con rango de 0 al que ingrese");
+		Op2.setBounds(65, 106, 325, 23);
+		contentPane.add(Op2);
 		
-		JButton btnSalir = new JButton("Salir");
+		 btnSalir = new JButton("Salir");
 		btnSalir.setBounds(120, 172, 202, 23);
 		contentPane.add(btnSalir);
+		
+		Op1.addActionListener(this);
+		Op2.addActionListener(this);
+		btnSalir.addActionListener(this);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+		if(Op1 == e.getSource())
+		{
+			ventana4_1 v = new ventana4_1();
+			this.setVisible(false);
+			v.setVisible(true);
+			
+		}
+		
+		if(Op2 == e.getSource())
+		{
+			ventana4_2 v = new ventana4_2();
+			this.setVisible(false);
+			v.setVisible(true);
+		}
+		
+		if(btnSalir == e.getSource())
+		{
+			
+			this.setVisible(false);
+			System.exit(0);
+		}
+		
+		
 	}
 }

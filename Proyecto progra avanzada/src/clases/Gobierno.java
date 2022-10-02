@@ -31,7 +31,7 @@ public class Gobierno {
 	
 	/*Metodo para generar un nodo de tipo persona mediante una liena
 	 he insertarlo a el mapa del ministerio correspondiente*/
-	public void llenadoTablaMinisterio(String linea) 
+	public int llenadoTablaMinisterio(String linea) 
 	{
 		Funcionario perso = new Funcionario();
 		Ministerio minis = new Ministerio();
@@ -44,13 +44,17 @@ public class Gobierno {
 			minis = arrMin.get(j);
 			if (perso.getsMinisterio().compareTo(minis.getNombreMinisterio()) == 0) 
 			{
-				break;
+				return 0;
 			}
 		}
 		if(ToF == true) 
 		{
 			minis.addMapPersona(perso);
 		}
+		
+		return 1;
+		
+		
 	}
 	
 	public void listarMinisterios() 
@@ -76,6 +80,8 @@ public class Gobierno {
 			minis.mostrarFuncionariosMinisterio();
 		}
 	}
+	
+	
 	
 	public void listarFuncionariosMini(String linea) 
 	{
@@ -166,6 +172,10 @@ public class Gobierno {
 			}
 		}
 
+	}
+	
+	public ArrayList<Ministerio> getMinisterios(){
+		return arrMin;
 	}
 	
 	public ListaFuncionarios listaRango(int parametro1, int parametro2) 

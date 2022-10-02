@@ -12,10 +12,10 @@ import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class ventana3_personaencontrada extends JFrame {
+public class ventana3_personaencontrada extends JFrame implements ActionListener {
 
-	private JPanel contentPane;
-
+	private JPanel contentPane; 
+	JButton btnOpcion, btnOpcion2, btnOpcion3, btnOpcion4, btnOpcion5, btnOpcion6, Salir;
 	/**
 	 * Launch the application.
 	 */
@@ -48,46 +48,94 @@ public class ventana3_personaencontrada extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton boton1 = new JButton("Salir\r\n");
-		boton1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		boton1.setBounds(130, 271, 91, 23);
-		contentPane.add(boton1);
+		Salir = new JButton("Salir\r\n");
+		Salir.setBounds(130, 271, 91, 23);
+		contentPane.add(Salir);
 		
 		JLabel titulo = new JLabel("Escoger una opción");
 		titulo.setFont(new Font("Tahoma", Font.BOLD, 18));
 		titulo.setBounds(100, 238, 176, 22);
 		contentPane.add(titulo);
 		
-		JButton btnOpcion = new JButton("Opcion 1 : Modificar el nombre");
-		btnOpcion.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+		 btnOpcion = new JButton("Opcion 1 : Modificar el nombre");
 		btnOpcion.setBounds(70, 41, 222, 23);
 		contentPane.add(btnOpcion);
 		
-		JButton btnOpcion_2 = new JButton("Opcion 2 : Modificar el mail");
-		btnOpcion_2.setBounds(70, 75, 222, 23);
-		contentPane.add(btnOpcion_2);
+		 btnOpcion2 = new JButton("Opcion 2 : Modificar el mail");
+		btnOpcion2.setBounds(70, 75, 222, 23);
+		contentPane.add(btnOpcion2);
 		
-		JButton btnOpcion_2_1 = new JButton("Opcion 3 : Modificar el ministerio");
-		btnOpcion_2_1.setBounds(70, 105, 222, 23);
-		contentPane.add(btnOpcion_2_1);
+		 btnOpcion3 = new JButton("Opcion 3 : Modificar el ministerio");
+		btnOpcion3.setBounds(70, 105, 222, 23);
+		contentPane.add(btnOpcion3);
 		
-		JButton btnOpcion_2_1_1 = new JButton("Opcion 4 : Modificar la profesion");
-		btnOpcion_2_1_1.setBounds(70, 139, 222, 23);
-		contentPane.add(btnOpcion_2_1_1);
+		 btnOpcion4 = new JButton("Opcion 4 : Modificar la profesion");
+		btnOpcion4.setBounds(70, 139, 222, 23);
+		contentPane.add(btnOpcion4);
 		
-		JButton btnOpcion_2_1_1_1 = new JButton("Opcion 5 : Modificar el rut");
-		btnOpcion_2_1_1_1.setBounds(70, 171, 222, 23);
-		contentPane.add(btnOpcion_2_1_1_1);
+		 btnOpcion5 = new JButton("Opcion 5 : Modificar el rut");
+		btnOpcion5.setBounds(70, 171, 222, 23);
+		contentPane.add(btnOpcion5);
 		
-		JButton btnOpcion_2_1_1_1_1 = new JButton("Opcion 6 : Modificar el sueldo ");
-		btnOpcion_2_1_1_1_1.setBounds(70, 205, 222, 23);
-		contentPane.add(btnOpcion_2_1_1_1_1);
+		 btnOpcion6 = new JButton("Opcion 6 : Modificar el sueldo ");
+		btnOpcion6.setBounds(70, 205, 222, 23);
+		contentPane.add(btnOpcion6);
+		
+		
+		btnOpcion.addActionListener(this);
+		btnOpcion2.addActionListener(this);
+		btnOpcion3.addActionListener(this);
+		btnOpcion4.addActionListener(this);
+		btnOpcion5.addActionListener(this);
+		btnOpcion6.addActionListener(this);
+		Salir.addActionListener(this);
+	}
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		ventana3_encontradamodificar v = new ventana3_encontradamodificar();
+		if(btnOpcion == e.getSource())
+		{
+			
+			v.setVisible(true);
+		}
+		if(btnOpcion2 == e.getSource())
+		{
+			this.setVisible(false);
+			v.setVisible(true);
+			
+		}
+		if(btnOpcion3 == e.getSource())
+		{
+			this.setVisible(false);
+			v.setVisible(true);
+			
+		}
+		if(btnOpcion4 == e.getSource())
+		{
+			this.setVisible(false);
+			v.setVisible(true);
+			
+		}
+		if(btnOpcion5 == e.getSource())
+		{
+			this.setVisible(false);
+			v.setVisible(true);
+			
+		}
+		if(btnOpcion6 == e.getSource())
+		{
+			this.setVisible(false);
+			v.setVisible(true);
+		
+		}
+		if(Salir == e.getSource())
+		{	
+			this.setVisible(false);
+			System.exit(0);
+		}
+		
 	}
 
 }

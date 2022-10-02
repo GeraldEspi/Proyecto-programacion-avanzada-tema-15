@@ -85,7 +85,8 @@ public class Ministerio
 	}
 	
 	public void mostrarDatos() 
-	{	System.out.println("\n---Ministerio de "+nombreMinisterio+"---");
+	{	
+		System.out.println("\n---Ministerio de "+nombreMinisterio+"---");
 		System.out.println("*Ministro: "+ nombreMinistro+"");
 		System.out.println("*Limite de Funcionarios: "+ limFuncionarios+""  );
 		System.out.println("*Cantidad de Funcionarios: "+ funcionariosActivos+""  );

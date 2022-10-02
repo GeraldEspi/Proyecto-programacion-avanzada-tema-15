@@ -35,6 +35,7 @@ public class Gestion extends JFrame implements ActionListener
 	private JButton btnOpcion_Salir;
 	private JButton btnOpcion_2;
 	private JButton btnOpcion_1;
+	Gobierno gober = new Gobierno();
 
 	/**
 	 * Launch the application.
@@ -114,27 +115,27 @@ public class Gestion extends JFrame implements ActionListener
 		
 		if(btnOpcion_1 == e.getSource()) 
 		{
-			ventana1 v1 = new ventana1();
+			ventana1 v = new ventana1();
 			this.setVisible(false);
-			v1.setVisible(true);
+			v.setVisible(true);
 		}
 		if(btnOpcion_2 == e.getSource()) 
 		{
-			ventana2 v1 = new ventana2();
+			ventana2 v = new ventana2();
 			this.setVisible(false);
-			v1.setVisible(true);
+			v.setVisible(true);
 		}
 		if(btnOpcion_3 == e.getSource()) 
 		{
-			ventana3 v1 = new ventana3();
+			ventana3 v = new ventana3();
 			this.setVisible(false);
-			v1.setVisible(true);
+			v.setVisible(true);
 		}
 		if(btnOpcion_4 == e.getSource()) 
 		{
-			ventana4 v1 = new ventana4();
+			ventana4 v = new ventana4();
 			this.setVisible(false);
-			v1.setVisible(true);
+			v.setVisible(true);
 		}
 		if(btnOpcion_Salir == e.getSource()) 
 		{

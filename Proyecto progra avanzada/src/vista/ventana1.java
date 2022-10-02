@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import clases.Gobierno;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
@@ -22,6 +25,7 @@ public class ventana1 extends JFrame implements ActionListener {
 	 */
 	private JPanel contentPane; JButton boton1;
 	private JTextField textField;
+	Gobierno gober = new Gobierno();
 
 	/**
 	 * Launch the application.
@@ -89,9 +93,15 @@ public class ventana1 extends JFrame implements ActionListener {
 	
 	public void actionPerformed(ActionEvent e) {
 		if(boton1 == e.getSource()) {
-			
+			String funcionario = textField.getText();
+			if (gober.llenadoTablaMinisterio(funcionario) == 0) 
+			{
+				
+				JOptionPane.showMessageDialog(null, "No se a podido agregar el funcionario");
+			}
 			
 			JOptionPane.showMessageDialog(null, "Agregado");
+			this.setVisible(false);
 			
 		}
 		
