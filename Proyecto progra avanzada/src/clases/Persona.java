@@ -1,5 +1,6 @@
 package clases;
 
+import java.io.*;
 
 public class Persona 
 {
@@ -29,10 +30,10 @@ public class Persona
 
 		String[] datosLinea = linea.split(",");
 
-		nombre = datosLinea[1];
-		mail = datosLinea[2];
-		profesion = datosLinea[4];
-		rut = Integer.parseInt(datosLinea[5]);
+		nombre = datosLinea[0];
+		mail = datosLinea[1];
+		profesion = datosLinea[2];
+		rut = Integer.parseInt(datosLinea[3]);
 		return true;
 	}
 
@@ -81,8 +82,16 @@ public class Persona
 		this.profesion = profesion;
 	}
 
-	public void setRut(String rut) {
-		this.rut = Integer.parseInt(rut);
+	public void setRut(String rut) throws IOException
+	{
+		try 
+		  {
+			  this.rut = Integer.parseInt(rut);
+		  }
+		  catch(Exception e1) 
+		  {
+			  
+		  }
 	}
   
 	public boolean compararPersonas(Persona auxPerso) 

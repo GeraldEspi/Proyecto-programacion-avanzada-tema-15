@@ -82,7 +82,7 @@ public class ventana1 extends JFrame implements ActionListener {
 		lblIngreseLosDatos.setBounds(78, 117, 368, 14);
 		contentPane.add(lblIngreseLosDatos);
 		
-		JLabel lblClavefuncionarionombremailministerioprofesionrutsueldoEnUtm = new JLabel("  (  claveFuncionario,Nombre,mail,ministerio,profesion,rut,sueldo en utm  )");
+		JLabel lblClavefuncionarionombremailministerioprofesionrutsueldoEnUtm = new JLabel("  (  Nombre,mail,ministerio,profesion,rut,sueldo en utm  )");
 		lblClavefuncionarionombremailministerioprofesionrutsueldoEnUtm.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		lblClavefuncionarionombremailministerioprofesionrutsueldoEnUtm.setBounds(34, 142, 400, 14);
 		contentPane.add(lblClavefuncionarionombremailministerioprofesionrutsueldoEnUtm);

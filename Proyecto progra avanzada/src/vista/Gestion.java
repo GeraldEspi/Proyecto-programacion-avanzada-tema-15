@@ -143,6 +143,13 @@ public class Gestion extends JFrame implements ActionListener
 		if(btnOpcion_Salir == e.getSource()) 
 		{
 			this.setVisible(false);
+			try 
+			{
+				coord.guardarDatos();
+			} catch (IOException e1) 
+			{
+				e1.printStackTrace();
+			}
 			System.exit(0);
 		}
 	}

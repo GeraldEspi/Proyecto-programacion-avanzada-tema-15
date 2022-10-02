@@ -172,7 +172,6 @@ public class Gobierno {
 
 	}
 	
-	
 	public ListaFuncionarios listaRango(int parametro1, int parametro2) 
 	{
 		Ministerio minis;

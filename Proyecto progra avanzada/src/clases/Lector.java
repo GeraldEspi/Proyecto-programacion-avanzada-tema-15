@@ -44,7 +44,7 @@ public class Lector {
 		try 
 		{
 			
-			w = new FileWriter("personasPrueba.txt");
+			w = new FileWriter("personas.txt");
 			wr = new PrintWriter(w);
 			Ministerio mini;
 			Funcionario funcio;

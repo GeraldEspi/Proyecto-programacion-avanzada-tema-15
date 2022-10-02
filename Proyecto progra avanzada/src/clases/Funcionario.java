@@ -1,4 +1,5 @@
 package clases;
+import java.io.*;
 public class Funcionario extends Persona
 {
 	  private String ministerio;
@@ -26,9 +27,16 @@ public class Funcionario extends Persona
 	  {
 		    this.ministerio = ministerio;
 	  }
-	  public void setSueldo(String sueldo) 
+	  public void setSueldo(String sueldo) throws IOException
 	  {
-		  this.sueldo = Integer.parseInt(sueldo);
+		  try 
+		  {
+			  this.sueldo = Integer.parseInt(sueldo);
+		  }
+		  catch(Exception e1) 
+		  {
+			  
+		  }
 	  }
 	  
 	  public String imprimirDatos() 
@@ -55,12 +63,12 @@ public class Funcionario extends Persona
 
 	    String[] datosLinea = linea.split(",");
 
-	    nombre = datosLinea[1];
-	    mail = datosLinea[2];
-	    ministerio = datosLinea[3];
-	    profesion = datosLinea[4];
-	    rut = Integer.parseInt(datosLinea[5]);
-	    sueldo = Integer.parseInt(datosLinea[6]);
+	    nombre = datosLinea[0];
+	    mail = datosLinea[1];
+	    ministerio = datosLinea[2];
+	    profesion = datosLinea[3];
+	    rut = Integer.parseInt(datosLinea[4]);
+	    sueldo = Integer.parseInt(datosLinea[5]);
 
 	    return true;
 	  }

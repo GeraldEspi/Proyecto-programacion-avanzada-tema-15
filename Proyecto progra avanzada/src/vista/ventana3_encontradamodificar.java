@@ -16,6 +16,7 @@ import javax.swing.JOptionPane;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.JButton;
 
@@ -93,31 +94,51 @@ public class ventana3_encontradamodificar extends JFrame implements ActionListen
 				case 1 ->
 				{
 					f.setNombre(modificacion);
+					JOptionPane.showMessageDialog(null, "Se modifico correctamente");
 					break;
 				}
 				case 2 ->
 				{
 					f.setMail(modificacion);
+					JOptionPane.showMessageDialog(null, "Se modifico correctamente");
 					break;
 				}
 				case 3 ->
 				{
 					f.setMinisterio(modificacion);
+					JOptionPane.showMessageDialog(null, "Se modifico correctamente");
 					break;
 				}
 				case 4 ->
 				{
 					f.setProfesion(modificacion);
+					JOptionPane.showMessageDialog(null, "Se modifico correctamente");
 					break;
 				}
 				case 5 ->
 				{
-					f.setRut(modificacion);
+					try 
+					{
+						f.setRut(modificacion);
+						JOptionPane.showMessageDialog(null, "Se modifico correctamente");
+					}
+					catch(IOException e1) 
+					{
+						JOptionPane.showMessageDialog(null, "No se a podido modificar el rut");
+					}
 					break;
 				}
 				case 6 ->
 				{
-					f.setSueldo(modificacion);
+					try 
+					{
+						f.setSueldo(modificacion);
+						JOptionPane.showMessageDialog(null, "Se modifico correctamente");
+					}
+					catch(IOException e1) 
+					{
+						JOptionPane.showMessageDialog(null, "No se a podido modificar el sueldo");
+					}
 					break;
 				}
 			}

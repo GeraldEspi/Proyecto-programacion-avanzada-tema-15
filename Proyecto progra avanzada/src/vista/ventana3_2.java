@@ -94,10 +94,10 @@ public class ventana3_2 extends JFrame implements ActionListener{
 	{
 		if(boton1 == e.getSource())
 		{
-			String ministerio = textField.getText();
-			String nombre = textField_1.getText();
-			
-			Funcionario funcio = coord.buscarNombre(ministerio, nombre);
+			String rut = textField.getText();
+			String ministerio = textField_1.getText();
+			int rut1 = Integer.parseInt(rut);
+			Funcionario funcio = coord.buscarNombre(ministerio, rut1);
 			if(funcio == null) 
 			{
 				JOptionPane.showMessageDialog(null, "Funcionario ingresado no se encuentra");
