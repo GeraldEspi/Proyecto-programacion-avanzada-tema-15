@@ -21,14 +21,15 @@ import javax.swing.border.BevelBorder;
 import java.awt.Color;
 
 @SuppressWarnings("serial")
-public class Gestion extends JFrame implements ActionListener {
+public class Gestion extends JFrame implements ActionListener 
+{
 
 	private JPanel contentPane;
 	private final JLabel titulo = new JLabel("Escoger una opción");
 	private JPanel panel;
-	private JButton btnOpcin_3;
-	private JButton btnOpcin;
-	private JButton btnOpcion;
+	private JButton btnOpcion_3;
+	private JButton btnOpcion_4;
+	private JButton btnOpcion_Salir;
 	private JButton btnOpcion_2;
 	private JButton btnOpcion_1;
 
@@ -78,41 +79,55 @@ public class Gestion extends JFrame implements ActionListener {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		btnOpcin_3 = new JButton("Opcion 1 : Agregar Funcionario");
-		btnOpcin_3.setBounds(10, 11, 348, 23);
-		panel.add(btnOpcin_3);
+		btnOpcion_1 = new JButton("Opcion 1 : Agregar Funcionario");
+		btnOpcion_1.setBounds(10, 11, 348, 23);
+		panel.add(btnOpcion_1);
 		
-		btnOpcin = new JButton("Opcion 2 : Listar\r\n");
-		btnOpcin.setBounds(10, 45, 348, 23);
-		panel.add(btnOpcin);
-		
-		btnOpcion = new JButton("Opcion 3 : Buscar Funcionario\r\n");
-		btnOpcion.setBounds(10, 78, 348, 23);
-		panel.add(btnOpcion);
-		
-		btnOpcion_2 = new JButton("Opcion 4 : Listar Funcionarios en un rango de sueldo");
-		btnOpcion_2.setBounds(10, 112, 348, 23);
+		btnOpcion_2 = new JButton("Opcion 2 : Listar\r\n");
+		btnOpcion_2.setBounds(10, 45, 348, 23);
 		panel.add(btnOpcion_2);
 		
-		btnOpcion_1 = new JButton("Salir\r\n");
-		btnOpcion_1.setBounds(83, 146, 210, 23);
-		panel.add(btnOpcion_1);
+		btnOpcion_3 = new JButton("Opcion 3 : Buscar Funcionario\r\n");
+		btnOpcion_3.setBounds(10, 78, 348, 23);
+		panel.add(btnOpcion_3);
+		
+		btnOpcion_4 = new JButton("Opcion 4 : Listar Funcionarios en un rango de sueldo");
+		btnOpcion_4.setBounds(10, 112, 348, 23);
+		panel.add(btnOpcion_4);
+		
+		btnOpcion_Salir = new JButton("Salir\r\n");
+		btnOpcion_Salir.setBounds(83, 146, 210, 23);
+		panel.add(btnOpcion_Salir);
 	}
 
 	
-	public void actionPerformed(ActionEvent e) {
-		if(boton1 == e.getSource()) {
-			
-			int num1 = (Integer.parseInt(Campo1.getText()));
-			
-			ventana1 opc1 = new ventana1();
-			ventana2 opc2 = new ventana2();
-			
-			this.setVisible(false);
-			opc1.setVisible(true);
-			opc2.setVisible(true);
-		
+	public void actionPerformed(ActionEvent e) 
+	{
+		if(btnOpcion_1 == e.getSource()) 
+		{
+			ventana1 v1 = new ventana1();
+			v1.setVisible(true);
+		}
+		if(btnOpcion_2 == e.getSource()) 
+		{
+			ventana2 v1 = new ventana2();
+			v1.setVisible(true);
+		}
+		if(btnOpcion_3 == e.getSource()) 
+		{
+			ventana3 v1 = new ventana3();
+			v1.setVisible(true);
+		}
+		if(btnOpcion_4 == e.getSource()) 
+		{
+			ventana4 v1 = new ventana4();
+			v1.setVisible(true);
+		}
+		if(btnOpcion_Salir == e.getSource()) 
+		{
+			int i = 0;
+		}
 	}
 	
 }
-}
+
