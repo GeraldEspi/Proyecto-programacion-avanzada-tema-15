@@ -35,6 +35,7 @@ public class Coordinador
 	private VentanaTexto vT;
 	private Ventana_leer_ministerio vLM;
 	private Gobierno gober;
+	private Funcionario funcio;
 	
 	public Coordinador() 
 	{
@@ -91,15 +92,19 @@ public class Coordinador
 	{
 		this.vT = VT;
 	}
+	public void setvLM(Ventana_leer_ministerio vLM) 
+	{
+		this.vLM = vLM;
+	}
+	
 	
 	public void setGobierno(Gobierno g) 
 	{
 		this.gober = g;
 	}
-	
-	public void setvLM(Ventana_leer_ministerio vLM) 
+	public void setFuncioBusq(Funcionario funcio) 
 	{
-		this.vLM = vLM;
+		this.funcio = funcio;
 	}
 	
 	//--------------------------------------
@@ -107,6 +112,10 @@ public class Coordinador
 	public Gobierno getGober() 
 	{
 		return gober;
+	}
+	public Funcionario getFuncioBusq() 
+	{
+		return funcio;
 	}
 	
 	//visible de ventanas
