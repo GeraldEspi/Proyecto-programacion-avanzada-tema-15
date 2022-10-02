@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import clases.Coordinador;
+import clases.Funcionario;
 
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -24,6 +25,7 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 	JButton btnOpcion, btnOpcion2, btnOpcion3, btnOpcion4, btnOpcion5, btnOpcion6, Salir;
 	private Coordinador coord;
 	private JScrollPane scrollPane;
+	private JTextArea textArea;
 	/**
 	 * Launch the application.
 	 */
@@ -93,7 +95,7 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 		scrollPane.setBounds(66, 11, 224, 115);
 		contentPane.add(scrollPane);
 		
-		JTextArea textArea = new JTextArea();
+		textArea = new JTextArea();
 		textArea.setBackground(new Color(192, 192, 192));
 		scrollPane.setViewportView(textArea);
 		
@@ -115,41 +117,41 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		ventana3_encontradamodificar v = new ventana3_encontradamodificar();
+		Funcionario f = coord.getFuncioBusq();
+		String cadena = "Info\n";
+		cadena += f.imprimirDatos();
+		
+		textArea.setText(cadena);
+		
 		if(btnOpcion == e.getSource())
 		{
-			
-			v.setVisible(true);
+			this.setVisible(false);
+			coord.visible3_e();
 		}
 		if(btnOpcion2 == e.getSource())
 		{
 			this.setVisible(false);
-			v.setVisible(true);
-			
+			coord.visible3_e();
 		}
 		if(btnOpcion3 == e.getSource())
 		{
 			this.setVisible(false);
-			v.setVisible(true);
-			
+			coord.visible3_e();
 		}
 		if(btnOpcion4 == e.getSource())
 		{
 			this.setVisible(false);
-			v.setVisible(true);
-			
+			coord.visible3_e();
 		}
 		if(btnOpcion5 == e.getSource())
 		{
 			this.setVisible(false);
-			v.setVisible(true);
-			
+			coord.visible3_e();
 		}
 		if(btnOpcion6 == e.getSource())
 		{
 			this.setVisible(false);
-			v.setVisible(true);
-		
+			coord.visible3_e();
 		}
 		if(Salir == e.getSource())
 		{	

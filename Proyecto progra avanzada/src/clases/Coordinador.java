@@ -151,6 +151,10 @@ public class Coordinador
 	{
 		vLM.setVisible(true);
 	}
+	public void visible3_e() 
+	{
+		v3_e.setVisible(true);
+	}
 	
 	
 	

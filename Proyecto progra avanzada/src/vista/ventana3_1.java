@@ -112,6 +112,7 @@ public class ventana3_1 extends JFrame implements ActionListener {
 			}
 			else 
 			{
+				coord.setFuncioBusq(funcio);
 				this.setVisible(false);
 				coord.visible3_p();
 			}
