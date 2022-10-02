@@ -43,7 +43,7 @@ public class ventana4 extends JFrame implements ActionListener{
 	 */
 	public ventana4() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 367, 222);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
@@ -55,19 +55,19 @@ public class ventana4 extends JFrame implements ActionListener{
 		
 		JLabel titulo = new JLabel("Escoger una opción");
 		titulo.setFont(new Font("Tahoma", Font.BOLD, 18));
-		titulo.setBounds(146, 11, 176, 22);
+		titulo.setBounds(86, 11, 176, 22);
 		contentPane.add(titulo);
 		
 		 Op1 = new JButton("Opcion 1 : Listar con rango de numeros ingresados");
-		Op1.setBounds(65, 71, 325, 23);
+		Op1.setBounds(16, 71, 325, 23);
 		contentPane.add(Op1);
 		
 		 Op2 = new JButton("Opcion 2 : Listar con rango de 0 al que ingrese");
-		Op2.setBounds(65, 106, 325, 23);
+		Op2.setBounds(16, 106, 325, 23);
 		contentPane.add(Op2);
 		
 		 btnSalir = new JButton("Salir");
-		btnSalir.setBounds(120, 172, 202, 23);
+		btnSalir.setBounds(73, 140, 202, 23);
 		contentPane.add(btnSalir);
 		
 		Op1.addActionListener(this);
