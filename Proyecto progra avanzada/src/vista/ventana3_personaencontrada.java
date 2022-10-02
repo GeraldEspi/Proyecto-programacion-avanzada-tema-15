@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 import java.awt.Color;
+import javax.swing.JTextArea;
 
 public class ventana3_personaencontrada extends JFrame implements ActionListener {
 
@@ -23,7 +24,6 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 	JButton btnOpcion, btnOpcion2, btnOpcion3, btnOpcion4, btnOpcion5, btnOpcion6, Salir;
 	private Coordinador coord;
 	private JScrollPane scrollPane;
-	private JTextField textField;
 	/**
 	 * Launch the application.
 	 */
@@ -93,10 +93,9 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 		scrollPane.setBounds(66, 11, 224, 115);
 		contentPane.add(scrollPane);
 		
-		textField = new JTextField();
-		textField.setBackground(new Color(192, 192, 192));
-		scrollPane.setViewportView(textField);
-		textField.setColumns(10);
+		JTextArea textArea = new JTextArea();
+		textArea.setBackground(new Color(192, 192, 192));
+		scrollPane.setViewportView(textArea);
 		
 		
 		btnOpcion.addActionListener(this);
@@ -159,5 +158,4 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 		}
 		
 	}
-
 }
