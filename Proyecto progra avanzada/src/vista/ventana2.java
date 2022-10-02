@@ -54,7 +54,7 @@ public class ventana2 extends JFrame implements ActionListener {
 	public ventana2() {
 		setTitle("Listar Ministerios");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 338, 389);
+		setBounds(100, 100, 390, 389);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
@@ -70,15 +70,15 @@ public class ventana2 extends JFrame implements ActionListener {
 		contentPane.add(titulo);
 		
 		 btnOp1 = new JButton("Opcion 1 : Listar Ministerios Disponibles");
-		btnOp1.setBounds(10, 125, 280, 23);
+		btnOp1.setBounds(10, 125, 354, 23);
 		contentPane.add(btnOp1); btnOp1.addActionListener(this);
 		
 		 btnOp2 = new JButton("Opcion 2 : Listar Todos Funcionarios");
-		btnOp2.setBounds(10, 161, 280, 23);
+		btnOp2.setBounds(10, 161, 354, 23);
 		contentPane.add(btnOp2); btnOp2.addActionListener(this);
 		
 		 btnOp3 = new JButton("Opcion 3 : Listar Funcionarios de un ministerio");
-		btnOp3.setBounds(10, 200, 280, 23);
+		btnOp3.setBounds(10, 200, 354, 23);
 		contentPane.add(btnOp3);btnOp3.addActionListener(this);
 		
 		 Salir = new JButton("Salir");
