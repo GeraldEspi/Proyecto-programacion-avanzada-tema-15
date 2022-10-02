@@ -29,7 +29,7 @@ public class ventana2 extends JFrame implements ActionListener {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	JButton btnOp1, btnOp2,btnOp3,btnOp4,Salir;
+	JButton btnOp1, btnOp2,btnOp3,Salir;
 	private Coordinador coord;
 
 	/**
@@ -80,10 +80,6 @@ public class ventana2 extends JFrame implements ActionListener {
 		 btnOp3 = new JButton("Opcion 3 : Listar Funcionarios de un ministerio");
 		btnOp3.setBounds(10, 200, 280, 23);
 		contentPane.add(btnOp3);btnOp3.addActionListener(this);
-		 
-		 btnOp4 = new JButton("Opcion 4 : Listar Funcionarios en un rango de sueldo");
-		btnOp4.setBounds(10, 239, 280, 23);
-		contentPane.add(btnOp4); btnOp4.addActionListener(this);
 		
 		 Salir = new JButton("Salir");
 		Salir.setBounds(10, 277, 84, 23);
@@ -98,7 +94,6 @@ public class ventana2 extends JFrame implements ActionListener {
 		btnOp1.addActionListener(this);
 		btnOp2.addActionListener(this);
 		btnOp3.addActionListener(this);
-		btnOp4.addActionListener(this);
 		Salir.addActionListener(this);
 	}
 	
@@ -127,10 +122,6 @@ public class ventana2 extends JFrame implements ActionListener {
 		if(btnOp3 == e.getSource())
 		{
 			//leer mini desde la ventana
-		}
-		if(btnOp4 == e.getSource())
-		{
-			
 		}
 		if(Salir == e.getSource())
 		{

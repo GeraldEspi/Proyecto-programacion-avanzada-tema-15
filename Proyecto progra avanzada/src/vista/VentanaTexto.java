@@ -116,4 +116,5 @@ public class VentanaTexto extends JFrame {
 	}
 	
 	
+	
 }
