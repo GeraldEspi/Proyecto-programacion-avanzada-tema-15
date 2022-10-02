@@ -92,7 +92,8 @@ public class ventana1 extends JFrame implements ActionListener {
 	}
 
 	
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) 
+	{
 		if(boton1 == e.getSource()) {
 			String funcionario = textField.getText();
 		
@@ -103,7 +104,6 @@ public class ventana1 extends JFrame implements ActionListener {
 			this.setVisible(false);
 			
 		}
-		
-		
 	}
+	
 }

@@ -136,4 +136,9 @@ public class ventana2 extends JFrame implements ActionListener {
 		
 	}
 	
+	public void setCoord(Coordinador c) 
+	{
+		this.coord = c;
+	}
+	
 }
