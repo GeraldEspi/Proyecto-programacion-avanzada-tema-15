@@ -14,12 +14,16 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JScrollPane;
+import java.awt.Color;
 
 public class ventana3_personaencontrada extends JFrame implements ActionListener {
 
 	private JPanel contentPane; 
 	JButton btnOpcion, btnOpcion2, btnOpcion3, btnOpcion4, btnOpcion5, btnOpcion6, Salir;
 	private Coordinador coord;
+	private JScrollPane scrollPane;
+	private JTextField textField;
 	/**
 	 * Launch the application.
 	 */
@@ -42,7 +46,7 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 	public ventana3_personaencontrada() {
 		setTitle("Modificar datos de funcionario encontrado\r\n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 371, 380);
+		setBounds(100, 100, 371, 440);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
@@ -53,37 +57,46 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 		contentPane.setLayout(null);
 		
 		Salir = new JButton("Salir\r\n");
-		Salir.setBounds(130, 271, 91, 23);
+		Salir.setBounds(128, 367, 91, 23);
 		contentPane.add(Salir);
 		
 		JLabel titulo = new JLabel("Escoger una opción");
 		titulo.setFont(new Font("Tahoma", Font.BOLD, 18));
-		titulo.setBounds(100, 238, 176, 22);
+		titulo.setBounds(95, 334, 176, 22);
 		contentPane.add(titulo);
 		
 		 btnOpcion = new JButton("Opcion 1 : Modificar el nombre");
-		btnOpcion.setBounds(70, 41, 222, 23);
+		btnOpcion.setBounds(68, 137, 222, 23);
 		contentPane.add(btnOpcion);
 		
 		 btnOpcion2 = new JButton("Opcion 2 : Modificar el mail");
-		btnOpcion2.setBounds(70, 75, 222, 23);
+		btnOpcion2.setBounds(68, 171, 222, 23);
 		contentPane.add(btnOpcion2);
 		
 		 btnOpcion3 = new JButton("Opcion 3 : Modificar el ministerio");
-		btnOpcion3.setBounds(70, 105, 222, 23);
+		btnOpcion3.setBounds(68, 201, 222, 23);
 		contentPane.add(btnOpcion3);
 		
 		 btnOpcion4 = new JButton("Opcion 4 : Modificar la profesion");
-		btnOpcion4.setBounds(70, 139, 222, 23);
+		btnOpcion4.setBounds(68, 235, 222, 23);
 		contentPane.add(btnOpcion4);
 		
 		 btnOpcion5 = new JButton("Opcion 5 : Modificar el rut");
-		btnOpcion5.setBounds(70, 171, 222, 23);
+		btnOpcion5.setBounds(68, 267, 222, 23);
 		contentPane.add(btnOpcion5);
 		
 		 btnOpcion6 = new JButton("Opcion 6 : Modificar el sueldo ");
-		btnOpcion6.setBounds(70, 205, 222, 23);
+		btnOpcion6.setBounds(68, 301, 222, 23);
 		contentPane.add(btnOpcion6);
+		
+		scrollPane = new JScrollPane();
+		scrollPane.setBounds(66, 11, 224, 115);
+		contentPane.add(scrollPane);
+		
+		textField = new JTextField();
+		textField.setBackground(new Color(192, 192, 192));
+		scrollPane.setViewportView(textField);
+		textField.setColumns(10);
 		
 		
 		btnOpcion.addActionListener(this);

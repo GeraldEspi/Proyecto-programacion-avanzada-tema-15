@@ -10,17 +10,23 @@ import clases.Coordinador;
 
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.border.BevelBorder;
+import javax.swing.JScrollPane;
 
-public class ventana4_1 extends JFrame {
+public class ventana4_1 extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
 	private Coordinador coord;
+	
+	JButton Salir, Aceptar;
 
 	/**
 	 * Launch the application.
@@ -44,7 +50,7 @@ public class ventana4_1 extends JFrame {
 	public ventana4_1() {
 		setTitle("Opcion 1 : Listar con rango entre dos numero que ingrese");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 663, 387);
+		setBounds(100, 100, 363, 252);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -56,12 +62,12 @@ public class ventana4_1 extends JFrame {
 		
 		JLabel lblNewLabel_1 = new JLabel("Ingrese el numero mas pequenño del parametro");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1.setBounds(37, 13, 315, 14);
+		lblNewLabel_1.setBounds(37, 25, 315, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Ingrese el numero mas grande del parametro");
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1_1.setBounds(37, 86, 221, 14);
+		lblNewLabel_1_1.setBounds(37, 106, 275, 14);
 		contentPane.add(lblNewLabel_1_1);
 		
 		textField = new JTextField();
@@ -74,21 +80,37 @@ public class ventana4_1 extends JFrame {
 		textField_1.setBounds(37, 120, 246, 20);
 		contentPane.add(textField_1);
 		
-		JButton boton1 = new JButton("Aceptar");
-		boton1.setBounds(116, 167, 91, 23);
-		contentPane.add(boton1);
+		JButton Aceptar = new JButton("Aceptar");
+		Aceptar.setBounds(37, 167, 91, 23);
+		contentPane.add(Aceptar);
 		
-		JPanel panel = new JPanel();
-		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		panel.setBackground(Color.LIGHT_GRAY);
-		panel.setBounds(355, 11, 282, 328);
-		contentPane.add(panel);
+		JButton Salir = new JButton("Salir\r\n");
+		Salir.setBounds(192, 167, 91, 23);
+		contentPane.add(Salir);
 		
+		
+		Salir.addActionListener(this);
+		Aceptar.addActionListener(this);
 	}
 	
 	public void setCoord(Coordinador coord)
 	{
 		this.coord = coord;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(Salir == e.getSource()) 
+		{
+			this.setVisible(false);
+		}
+		
+		if(Aceptar == e.getSource()) 
+		{
+			
+		}
+		
+		
 	}
 	
 	

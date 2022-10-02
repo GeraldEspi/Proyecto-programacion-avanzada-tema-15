@@ -13,12 +13,14 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import java.awt.Color;
 import javax.swing.border.BevelBorder;
+import javax.swing.JButton;
 
 public class ventana4_2 extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
 	private Coordinador coord;
+	private JButton Aceptar;
 
 	/**
 	 * Launch the application.
@@ -42,7 +44,7 @@ public class ventana4_2 extends JFrame {
 	public ventana4_2() {
 		setTitle("Opcion 2 : Listar con rango de 0 al que ingrese");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 382, 414);
+		setBounds(100, 100, 382, 138);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -62,11 +64,9 @@ public class ventana4_2 extends JFrame {
 		textField.setColumns(30);
 		contentPane.add(textField);
 		
-		JPanel panel = new JPanel();
-		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		panel.setBackground(Color.LIGHT_GRAY);
-		panel.setBounds(48, 61, 282, 289);
-		contentPane.add(panel);
+		Aceptar = new JButton("Aceptar");
+		Aceptar.setBounds(135, 61, 91, 23);
+		contentPane.add(Aceptar);
 		
 		coord = new Coordinador();
 	}
