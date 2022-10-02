@@ -15,7 +15,7 @@ public class Main
 		int opcion, opcion2;
 		
 		l.openFile("Ministerios");
-		presentarVentana();
+		
 		
 		linea = l.firstLine();
 		// Ciclo para crear los nodos del arreglo ministerios
@@ -37,11 +37,16 @@ public class Main
 		
 		
 		
+		presentarVentana();
+		
+		
+		
 		
 		do {//mostramos las diferentes opciones a escoger
-			
+			System.out.println("Ingrese los datos del funcionario con el formato");
 			
             opcion = Integer.parseInt(LeerLinea.readLine());
+      
             switch (opcion) {
                 case 1 -> //Agregar Funcionario
                 {

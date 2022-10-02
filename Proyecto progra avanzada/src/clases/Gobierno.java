@@ -174,9 +174,6 @@ public class Gobierno {
 
 	}
 	
-	public ArrayList<Ministerio> getMinisterios(){
-		return arrMin;
-	}
 	
 	public ListaFuncionarios listaRango(int parametro1, int parametro2) 
 	{
@@ -204,5 +201,10 @@ public class Gobierno {
 			listaXparametro = minis.listaParametro(parametro1,listaXparametro);
 		}
 		return listaXparametro;
+	}
+
+	public ArrayList<Ministerio> getMinisterios() {
+	return arrMin;
+		
 	}
 }

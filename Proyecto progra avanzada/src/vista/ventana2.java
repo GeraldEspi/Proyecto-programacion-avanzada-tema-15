@@ -23,9 +23,13 @@ import javax.swing.JTextArea;
 
 public class ventana2 extends JFrame implements ActionListener {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	JButton btnOp1, btnOp2,btnOp3,btnOp4,Salir;
-	Gobierno gober = new Gobierno();
+	private Gobierno gober;
 
 	/**
 	 * Launch the application.
@@ -49,7 +53,7 @@ public class ventana2 extends JFrame implements ActionListener {
 	public ventana2() {
 		setTitle("Listar Ministerios");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 629, 389);
+		setBounds(100, 100, 338, 389);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
@@ -89,25 +93,29 @@ public class ventana2 extends JFrame implements ActionListener {
 		lblQuDeseaListar.setBounds(10, 64, 176, 22);
 		contentPane.add(lblQuDeseaListar);
 		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(321, 33, 282, 306);
-		contentPane.add(scrollPane);
 		
-		JTextArea txtrArea = new JTextArea();
-		scrollPane.setViewportView(txtrArea);
+		btnOp1.addActionListener(this);
+		btnOp2.addActionListener(this);
+		btnOp3.addActionListener(this);
+		btnOp4.addActionListener(this);
+		Salir.addActionListener(this);
+	}
+	
+	public void Ventana2(Gobierno gobiernoAct) {
+		this.gober = gobiernoAct;
 		
-		JLabel lblDatos = new JLabel("Datos\r\n");
-		lblDatos.setBackground(new Color(0, 0, 0));
-		lblDatos.setBounds(424, 11, 59, 22);
-		contentPane.add(lblDatos);
-		lblDatos.setFont(new Font("Tahoma", Font.BOLD, 18));
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(btnOp1 == e.getSource())
 		{
-			gober.listarMinisterios();
+			VentanaTexto v = new VentanaTexto();
+			v.setGobierno(gober);
+			v.MostrarListaEnArea();
+			v.setVisible(true);
+			
+			
 		}
 		if(btnOp2 == e.getSource())
 		{
