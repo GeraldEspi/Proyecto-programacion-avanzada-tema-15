@@ -15,6 +15,7 @@ import vista.ventana3_personaencontrada;
 import vista.ventana4_1;
 import vista.ventana4_2;
 import vista.VentanaTexto;
+import vista.Ventana_leer_ministerio;
 
 public class Relaciones 
 {
@@ -33,6 +34,7 @@ public class Relaciones
 		ventana4_1 v4_1 = new ventana4_1();
 		ventana4_2 v4_2 = new ventana4_2();
 		VentanaTexto vT= new VentanaTexto();
+		Ventana_leer_ministerio vLM = new Ventana_leer_ministerio();
 		Coordinador coord = new Coordinador();
 		
 		coord.inicioGober();
@@ -49,6 +51,7 @@ public class Relaciones
 		coord.setV4_1(v4_1);
 		coord.setV4_2(v4_2);
 		coord.setVT(vT);
+		coord.setvLM(vLM);
 		
 		ges.setCoord(coord);
 		v1.setCoord(coord);
@@ -62,6 +65,7 @@ public class Relaciones
 		v4_1.setCoord(coord);
 		v4_2.setCoord(coord);
 		vT.setCoord(coord);
+		vLM.setCoord(coord);
 		
 		coord.iniciarPrograma();
 	}
