@@ -47,6 +47,9 @@ public class ventana4_1 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		setResizable(false);
+		setLocationRelativeTo(null);
+		
 		JLabel lblNewLabel_1 = new JLabel("Ingrese el numero mas pequenño del parametro");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNewLabel_1.setBounds(37, 13, 315, 14);
@@ -77,5 +80,8 @@ public class ventana4_1 extends JFrame {
 		panel.setBounds(355, 11, 282, 328);
 		contentPane.add(panel);
 	}
+	
+	
+	
 
 }

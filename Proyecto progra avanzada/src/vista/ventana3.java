@@ -12,9 +12,10 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class ventana3 extends JFrame {
+public class ventana3 extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
+	JButton btnOpcin_3, btnOpcin_3_1, btnOpcin_3_1_1;
 
 	/**
 	 * Launch the application.
@@ -58,17 +59,41 @@ public class ventana3 extends JFrame {
 		titulo.setBounds(67, 11, 176, 22);
 		contentPane.add(titulo);
 		
-		JButton btnOpcin_3 = new JButton("Opcion 1 : Buscar por nombre y ministerio");
+		 btnOpcin_3 = new JButton("Opcion 1 : Buscar por nombre y ministerio");
 		btnOpcin_3.setBounds(10, 110, 280, 23);
 		contentPane.add(btnOpcin_3);
+		btnOpcin_3.addActionListener(this);
 		
-		JButton btnOpcin_3_1 = new JButton("Opcion 2 : Buscar por rut y ministerio");
+		 btnOpcin_3_1 = new JButton("Opcion 2 : Buscar por rut y ministerio");
 		btnOpcin_3_1.setBounds(10, 146, 280, 23);
 		contentPane.add(btnOpcin_3_1);
+		btnOpcin_3_1.addActionListener(this);
 		
-		JButton btnOpcin_3_1_1 = new JButton("Salir");
+		btnOpcin_3_1_1 = new JButton("Salir");
 		btnOpcin_3_1_1.setBounds(10, 185, 84, 23);
 		contentPane.add(btnOpcin_3_1_1);
+		btnOpcin_3_1_1.addActionListener(this);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(btnOpcin_3 == e.getSource()) 
+		{
+			ventana3_1 opc1 = new ventana3_1();
+			this.setVisible(false);
+			opc1.setVisible(true);
+		}
+		if(btnOpcin_3_1 == e.getSource()) 
+		{
+			ventana3_2 opc2 = new ventana3_2();
+			this.setVisible(false);
+			opc2.setVisible(true);
+		}
+		if(btnOpcin_3_1_1 == e.getSource()) 
+		{
+			this.setVisible(false);
+		}
+		
 	}
 
 }

@@ -85,22 +85,27 @@ public class Gestion extends JFrame implements ActionListener
 		btnOpcion_1 = new JButton("Opcion 1 : Agregar Funcionario");
 		btnOpcion_1.setBounds(10, 11, 348, 23);
 		panel.add(btnOpcion_1);
+		btnOpcion_1.addActionListener(this);
 		
 		btnOpcion_2 = new JButton("Opcion 2 : Listar\r\n");
 		btnOpcion_2.setBounds(10, 45, 348, 23);
 		panel.add(btnOpcion_2);
+		btnOpcion_2.addActionListener(this);
 		
 		btnOpcion_3 = new JButton("Opcion 3 : Buscar Funcionario\r\n");
 		btnOpcion_3.setBounds(10, 78, 348, 23);
 		panel.add(btnOpcion_3);
+		btnOpcion_3.addActionListener(this);
 		
 		btnOpcion_4 = new JButton("Opcion 4 : Listar Funcionarios en un rango de sueldo");
 		btnOpcion_4.setBounds(10, 112, 348, 23);
 		panel.add(btnOpcion_4);
+		btnOpcion_4.addActionListener(this);
 		
 		btnOpcion_Salir = new JButton("Salir\r\n");
 		btnOpcion_Salir.setBounds(83, 146, 210, 23);
 		panel.add(btnOpcion_Salir);
+		btnOpcion_Salir.addActionListener(this);
 	}
 
 	
@@ -110,26 +115,32 @@ public class Gestion extends JFrame implements ActionListener
 		if(btnOpcion_1 == e.getSource()) 
 		{
 			ventana1 v1 = new ventana1();
+			this.setVisible(false);
 			v1.setVisible(true);
 		}
 		if(btnOpcion_2 == e.getSource()) 
 		{
 			ventana2 v1 = new ventana2();
+			this.setVisible(false);
 			v1.setVisible(true);
 		}
 		if(btnOpcion_3 == e.getSource()) 
 		{
 			ventana3 v1 = new ventana3();
+			this.setVisible(false);
 			v1.setVisible(true);
 		}
 		if(btnOpcion_4 == e.getSource()) 
 		{
 			ventana4 v1 = new ventana4();
+			this.setVisible(false);
 			v1.setVisible(true);
 		}
 		if(btnOpcion_Salir == e.getSource()) 
 		{
-			int i = 0;
+			
+			this.setVisible(false);
+
 		}
 	}
 	
