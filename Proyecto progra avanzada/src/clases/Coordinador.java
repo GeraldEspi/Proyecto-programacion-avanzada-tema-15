@@ -1,5 +1,7 @@
 package clases;
 
+import java.io.FileNotFoundException;
+
 import vista.Gestion;
 import vista.ventana1;
 import vista.ventana2;
@@ -26,6 +28,7 @@ public class Coordinador
 	private ventana3_personaencontrada v3_p;
 	private ventana4_1 v4_1;
 	private ventana4_2 v4_2;
+	private Gobierno gober;
 	
 	public Coordinador() 
 	{
@@ -40,9 +43,45 @@ public class Coordinador
 		v3_p = new ventana3_personaencontrada();
 		v4_1 = new ventana4_1();
 		v4_2 = new ventana4_2();
+		gober = new Gobierno();
 	}
 	
+	public void inicioGober() throws FileNotFoundException
+	{
+		String linea, linea2;
+		Lector l = new Lector();
+		
+		l.openFile("Ministerios");
+		
+		
+		linea = l.firstLine();
+		// Ciclo para crear los nodos del arreglo ministerios
+		while(linea != null) 
+		{
+			gober.llenadoArray(linea);
+			linea = l.nextLine();
+		}	
+		
+		l.openFile("personas");
+		
+		linea = l.firstLine();
+		// Ciclo para crear los nodos tipo personas y agregarlos al arraylist perteneciente al ministerio que pertenece la persona
+		while(linea != null) 
+		{
+			gober.llenadoTablaMinisterio(linea);
+			linea = l.nextLine();
+		}
+	}
 	
+	public void inicioVentana() 
+	{
+		ges.setVisible(true);
+	}
+	
+	public Gobierno getGober() 
+	{
+		return gober;
+	}
 	
 	
 }

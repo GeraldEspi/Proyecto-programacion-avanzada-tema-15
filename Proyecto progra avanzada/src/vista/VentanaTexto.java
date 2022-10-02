@@ -26,7 +26,7 @@ public class VentanaTexto extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextArea textArea;
-	Gobierno miGobierno;
+	
 
 	/**
 	 * Launch the application.

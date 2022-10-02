@@ -8,6 +8,7 @@ import javax.swing.border.EmptyBorder;
 
 import clases.Gobierno;
 import clases.Ministerio;
+import clases.Coordinador;
 
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -29,7 +30,7 @@ public class ventana2 extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	JButton btnOp1, btnOp2,btnOp3,btnOp4,Salir;
-	private Gobierno gober;
+	private Coordinador coord;
 
 	/**
 	 * Launch the application.
@@ -99,23 +100,20 @@ public class ventana2 extends JFrame implements ActionListener {
 		btnOp3.addActionListener(this);
 		btnOp4.addActionListener(this);
 		Salir.addActionListener(this);
-	}
-	
-	public void Ventana2(Gobierno gobiernoAct) {
-		this.gober = gobiernoAct;
 		
+		coord = new Coordinador();
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) 
+	{
 		if(btnOp1 == e.getSource())
 		{
 			VentanaTexto v = new VentanaTexto();
-			v.setGobierno(gober);
+			v.setGobierno(coord.getGober());
 			v.MostrarListaEnArea();
 			v.setVisible(true);
-			
-			
+
 		}
 		if(btnOp2 == e.getSource())
 		{
@@ -137,4 +135,5 @@ public class ventana2 extends JFrame implements ActionListener {
 		
 		
 	}
+	
 }

@@ -141,6 +141,7 @@ public class Gestion extends JFrame implements ActionListener
 		{
 			
 			this.setVisible(false);
+			System.exit(0);
 
 		}
 	}
