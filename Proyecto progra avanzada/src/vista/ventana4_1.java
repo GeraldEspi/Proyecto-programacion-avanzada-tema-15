@@ -80,11 +80,11 @@ public class ventana4_1 extends JFrame implements ActionListener {
 		textField_1.setBounds(37, 120, 246, 20);
 		contentPane.add(textField_1);
 		
-		JButton Aceptar = new JButton("Aceptar");
+		 Aceptar = new JButton("Aceptar");
 		Aceptar.setBounds(37, 167, 91, 23);
 		contentPane.add(Aceptar);
 		
-		JButton Salir = new JButton("Salir\r\n");
+		 Salir = new JButton("Salir\r\n");
 		Salir.setBounds(192, 167, 91, 23);
 		contentPane.add(Salir);
 		
