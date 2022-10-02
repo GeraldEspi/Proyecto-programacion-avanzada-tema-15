@@ -1,14 +1,19 @@
 package vista;
 
 import java.awt.EventQueue;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import clases.Coordinador;
+
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 
 public class Ventana_leer_ministerio extends JFrame implements ActionListener{
@@ -16,6 +21,8 @@ public class Ventana_leer_ministerio extends JFrame implements ActionListener{
 	private JPanel contentPane;
 	private JTextField textField;
 	JButton btnAceptar, btnSalir;
+	Coordinador coord;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -67,19 +74,37 @@ public class Ventana_leer_ministerio extends JFrame implements ActionListener{
 		btnSalir.addActionListener(this);
 		btnAceptar.addActionListener(this);
 	}
+	public void setCoord(Coordinador coord)
+	{
+		this.coord = coord;
+	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) 
+	{
+		
 		if(btnSalir == e.getSource())
 		{
 			this.setVisible(false);
+			coord.visible2();
 		}
 		
 		if(btnAceptar == e.getSource())
 		{
-			String ministerio = textField.getText();		
-		}
-		
+			String ministerio = textField.getText();
+			if(coord.getMiniNomb(ministerio) == null) 
+			{
+				JOptionPane.showMessageDialog(null, "No se encontro el ministerio");
+				this.setVisible(false);
+				coord.visible2();
+			}
+			else 
+			{
+				VentanaTexto vt = coord.getVT();
+				this.setVisible(false);
+				vt.MostrarListaMiniFuncio(ministerio);
+				vt.setVisible(true);
+			}
+		}	
 	}
-
 }

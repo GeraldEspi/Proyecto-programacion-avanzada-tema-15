@@ -97,11 +97,9 @@ public class VentanaTexto extends JFrame implements ActionListener {
 		Ministerio minis = new Ministerio();
 		String cadena = "Info\n";
 		
-		System.out.println(gober.getsSize());
-		
 		for(int j = 0; j < gober.getsSize() ; j++) 
 		{
-			minis = gober.getsMiniInt(j);
+			minis = gober.getsMinisterio(j);
 			cadena += minis.mostrarDatos();
 		}
 		textArea.setText(cadena);
@@ -113,22 +111,35 @@ public class VentanaTexto extends JFrame implements ActionListener {
 		Ministerio minis = new Ministerio();
 		String cadena = "Info\n";
 		
-		System.out.println(gober.getsSize());
 		
 		for(int j = 0; j < gober.getsSize() ; j++) 
 		{
-			minis = gober.getsMiniInt(j);
+			minis = gober.getsMinisterio(j);
 			cadena += minis.mostrarFuncionariosMinisterio();
 		}
 		textArea.setText(cadena);
 		
 	}
+	
+	public void MostrarListaMiniFuncio(String ministe) 
+	{
+		Gobierno gober = coord.getGober();
+		Ministerio minis = new Ministerio();
+		String cadena = "Info\n";
+		
+		minis = gober.getsMinisterio(ministe);
+		cadena += minis.mostrarFuncionariosMinisterio();
+		textArea.setText(cadena);
+		
+	}
+	
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(Salir == e.getSource())
 		{
 			this.setVisible(false);
+			coord.visible2();
 		}
 	}
 }

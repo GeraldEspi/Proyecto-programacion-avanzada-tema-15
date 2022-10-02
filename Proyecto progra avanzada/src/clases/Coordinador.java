@@ -3,6 +3,7 @@ package clases;
 import java.io.*;
 
 
+
 import vista.Gestion;
 import vista.ventana1;
 import vista.ventana2;
@@ -15,6 +16,7 @@ import vista.ventana3_personaencontrada;
 import vista.ventana4_1;
 import vista.ventana4_2;
 import vista.VentanaTexto;
+import vista.Ventana_leer_ministerio;
 
 
 public class Coordinador 
@@ -31,6 +33,7 @@ public class Coordinador
 	private ventana4_1 v4_1;
 	private ventana4_2 v4_2;
 	private VentanaTexto vT;
+	private Ventana_leer_ministerio vLM;
 	private Gobierno gober;
 	
 	public Coordinador() 
@@ -94,13 +97,19 @@ public class Coordinador
 		this.gober = g;
 	}
 	
+	public void setvLM(Ventana_leer_ministerio vLM) 
+	{
+		this.vLM = vLM;
+	}
+	
 	//--------------------------------------
 
 	public Gobierno getGober() 
 	{
 		return gober;
 	}
-		
+	
+	//visible de ventanas
 	public void inicioVentana() 
 	{
 		ges.setVisible(true);
@@ -129,12 +138,21 @@ public class Coordinador
 	{
 		v3_p.setVisible(true);
 	}
+	public void visibleVLM() 
+	{
+		vLM.setVisible(true);
+	}
+	
+	
 	
 	public VentanaTexto getVT() 
 	{
 		return vT;
 	}
+
 	
+	
+	//--------------------------
 	public void iniciarPrograma() throws FileNotFoundException
 	{
 		inicioVentana();
@@ -190,6 +208,10 @@ public class Coordinador
 	public Funcionario buscarNombre(String mini, int rut) 
 	{
 		return gober.buscarPersona(rut, mini);
+	}
+	public Ministerio getMiniNomb(String nombre) 
+	{
+		return gober.getsMinisterio(nombre);
 	}
 	
 	

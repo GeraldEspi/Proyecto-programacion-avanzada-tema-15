@@ -121,8 +121,8 @@ public class ventana2 extends JFrame implements ActionListener {
 		}
 		if(btnOp3 == e.getSource())
 		{
-			//leer mini desde la ventana
-			
+			this.setVisible(false);
+			coord.visibleVLM();
 		}
 		if(Salir == e.getSource())
 		{
