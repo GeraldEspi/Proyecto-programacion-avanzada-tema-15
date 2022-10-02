@@ -46,9 +46,15 @@ public class Coordinador
 		gober = new Gobierno();
 	}
 	
+	public void iniciarPrograma() throws FileNotFoundException
+	{
+		inicioGober();
+		inicioVentana();
+	}
+	
 	public void inicioGober() throws FileNotFoundException
 	{
-		String linea, linea2;
+		String linea;
 		Lector l = new Lector();
 		
 		l.openFile("Ministerios");
@@ -174,6 +180,52 @@ public class Coordinador
 	{
 		return gober;
 	}
+	
+	public void setGes(Gestion g) 
+	{
+		this.ges = g;
+	}
+	public void setV1(ventana1 v1) 
+	{
+		this.v1 = v1; 
+	}
+	public void setV2(ventana2 v2) 
+	{
+		this.v2 = v2;
+	}
+	public void setV3(ventana3 v3) 
+	{
+		this.v3 = v3;
+	}
+	public void setV4(ventana4 v4) 
+	{
+		this.v4 = v4;
+	}
+	public void setV3_1(ventana3_1 V3_1) 
+	{
+		this.v3_1 = V3_1;
+	}
+	public void setV3_2(ventana3_2 V3_2) 
+	{
+		this.v3_2 = V3_2;
+	}
+	public void setV3_e(ventana3_encontradamodificar v3_e) 
+	{
+		this.v3_e = v3_e;
+	}
+	public void setV3_p(ventana3_personaencontrada v3_p) 
+	{
+		this.v3_p = v3_p;
+	}
+	public void setV4_1(ventana4_1 v4_1) 
+	{
+		this.v4_1 = v4_1;
+	}
+	public void setV4_2(ventana4_2 v4_2) 
+	{
+		this.v4_2 = v4_2;
+	}
+	
 	
 	
 	
