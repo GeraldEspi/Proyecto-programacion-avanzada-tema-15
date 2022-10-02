@@ -113,6 +113,8 @@ public class ventana3_1 extends JFrame implements ActionListener {
 			else 
 			{
 				coord.setFuncioBusq(funcio);
+				ventana3_personaencontrada v3_p = coord.getV3_P();
+				v3_p.mostrarFuncioBusq();
 				this.setVisible(false);
 				coord.visible3_p();
 			}

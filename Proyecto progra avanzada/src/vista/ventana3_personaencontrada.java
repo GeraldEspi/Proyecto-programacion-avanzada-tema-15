@@ -113,45 +113,46 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 	{
 		this.coord = coord;
 	}
-	
-	
-	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void mostrarFuncioBusq( )
+	{
 		Funcionario f = coord.getFuncioBusq();
 		String cadena = "Info\n";
 		cadena += f.imprimirDatos();
-		
 		textArea.setText(cadena);
-		
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
 		if(btnOpcion == e.getSource())
 		{
 			this.setVisible(false);
-			coord.visible3_e();
+			coord.visible3_e(1);
 		}
 		if(btnOpcion2 == e.getSource())
 		{
 			this.setVisible(false);
-			coord.visible3_e();
+			coord.visible3_e(2);
 		}
 		if(btnOpcion3 == e.getSource())
 		{
 			this.setVisible(false);
-			coord.visible3_e();
+			coord.visible3_e(3);
 		}
 		if(btnOpcion4 == e.getSource())
 		{
 			this.setVisible(false);
-			coord.visible3_e();
+			coord.visible3_e(4);
 		}
 		if(btnOpcion5 == e.getSource())
 		{
 			this.setVisible(false);
-			coord.visible3_e();
+			coord.visible3_e(5);
 		}
 		if(btnOpcion6 == e.getSource())
 		{
 			this.setVisible(false);
-			coord.visible3_e();
+			coord.visible3_e(6);
 		}
 		if(Salir == e.getSource())
 		{	

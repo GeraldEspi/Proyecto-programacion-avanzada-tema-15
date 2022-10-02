@@ -36,6 +36,7 @@ public class Coordinador
 	private Ventana_leer_ministerio vLM;
 	private Gobierno gober;
 	private Funcionario funcio;
+	private int modificado;
 	
 	public Coordinador() 
 	{
@@ -106,6 +107,10 @@ public class Coordinador
 	{
 		this.funcio = funcio;
 	}
+	public void setModificado(int i) 
+	{
+		this.modificado = i;
+	}
 	
 	//--------------------------------------
 
@@ -116,6 +121,18 @@ public class Coordinador
 	public Funcionario getFuncioBusq() 
 	{
 		return funcio;
+	}
+	public VentanaTexto getVT() 
+	{
+		return vT;
+	}
+	public ventana3_personaencontrada getV3_P() 
+	{
+		return v3_p;
+	}
+	public int getModificado() 
+	{
+		return modificado;
 	}
 	
 	//visible de ventanas
@@ -151,17 +168,15 @@ public class Coordinador
 	{
 		vLM.setVisible(true);
 	}
-	public void visible3_e() 
+	public void visible3_e(int i) 
 	{
 		v3_e.setVisible(true);
+		setModificado(i);
 	}
 	
 	
 	
-	public VentanaTexto getVT() 
-	{
-		return vT;
-	}
+	
 
 	
 	
