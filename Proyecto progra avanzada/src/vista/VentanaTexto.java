@@ -81,6 +81,12 @@ public class VentanaTexto extends JFrame {
 	public void setGobierno(Gobierno gobiernoAct) {
 		
 	}
+	
+	
+	public void setCoord(Coordinador coord)
+	{
+		this.coord = coord;
+	}
 
 	public void MostrarListaEnArea() {
 		ArrayList<Ministerio> ListaMin = miGobierno.getMinisterios();
