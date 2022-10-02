@@ -126,7 +126,7 @@ public class ventana2 extends JFrame implements ActionListener {
 		if(Salir == e.getSource())
 		{
 			this.setVisible(false);
-			System.exit(0);
+			coord.back();
 		}	
 	}
 }

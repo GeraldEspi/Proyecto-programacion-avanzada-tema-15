@@ -109,7 +109,7 @@ public class VentanaTexto extends JFrame {
 		for(int j = 0; j < gober.getsSize() ; j++) 
 		{
 			minis = gober.getsMiniInt(j);
-			cadena += minis.mostrarDatos();
+			cadena += minis.mostrarFuncionariosMinisterio();
 		}
 		textArea.setText(cadena);
 		

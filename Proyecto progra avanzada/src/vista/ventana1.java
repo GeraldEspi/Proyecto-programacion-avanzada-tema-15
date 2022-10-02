@@ -1,5 +1,7 @@
 package vista;
 
+import java.io.*;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -97,16 +99,26 @@ public class ventana1 extends JFrame implements ActionListener {
 	}
 
 	
-	public void actionPerformed(ActionEvent e) 
+	public void actionPerformed(ActionEvent e)
 	{
 		if(boton1 == e.getSource()) {
 			String funcionario = textField.getText();
 		
+			try 
+			{
+				coord.agregarFuncio(funcionario);
+				JOptionPane.showMessageDialog(null, "Agregado");
+			}
+			catch(Exception j)
+			{
 				JOptionPane.showMessageDialog(null, "No se a podido agregar el funcionario");
+			}
+			finally 
+			{
+				this.setVisible(false);
+				coord.back();
+			}
 			
-			
-			JOptionPane.showMessageDialog(null, "Agregado");
-			this.setVisible(false);
 			
 		}
 	}

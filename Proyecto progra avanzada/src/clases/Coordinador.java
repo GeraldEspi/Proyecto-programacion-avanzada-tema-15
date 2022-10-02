@@ -161,6 +161,11 @@ public class Coordinador
 		ges.setVisible(true);
 	}
 	
+	public void agregarFuncio(String funcionario) 
+	{
+		gober.llenadoTablaMinisterio(funcionario);
+	}
+	
 	
 	
 	
