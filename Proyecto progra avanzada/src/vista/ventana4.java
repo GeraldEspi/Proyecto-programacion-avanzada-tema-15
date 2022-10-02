@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import clases.Coordinador;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -17,6 +20,7 @@ public class ventana4 extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
 	JButton Op1, Op2, btnSalir;
+	private Coordinador coord;
 
 	/**
 	 * Launch the application.
@@ -69,6 +73,8 @@ public class ventana4 extends JFrame implements ActionListener{
 		Op1.addActionListener(this);
 		Op2.addActionListener(this);
 		btnSalir.addActionListener(this);
+		
+		coord = new Coordinador();
 	}
 
 	@Override
