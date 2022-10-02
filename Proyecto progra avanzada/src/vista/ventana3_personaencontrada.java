@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import clases.Coordinador;
+import clases.Funcionario;
 
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -116,41 +117,39 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		ventana3_encontradamodificar v = new ventana3_encontradamodificar();
+		Funcionario f = coord.getFuncioBusq();
+		String cadena = "Info\n";
+		
+		cadena += f.imprimirDatos();
+		textField.setText(cadena);
 		if(btnOpcion == e.getSource())
 		{
 			
-			v.setVisible(true);
+			
 		}
 		if(btnOpcion2 == e.getSource())
 		{
-			this.setVisible(false);
-			v.setVisible(true);
+			
 			
 		}
 		if(btnOpcion3 == e.getSource())
 		{
-			this.setVisible(false);
-			v.setVisible(true);
+			
 			
 		}
 		if(btnOpcion4 == e.getSource())
 		{
-			this.setVisible(false);
-			v.setVisible(true);
+			
 			
 		}
 		if(btnOpcion5 == e.getSource())
 		{
-			this.setVisible(false);
-			v.setVisible(true);
+			
 			
 		}
 		if(btnOpcion6 == e.getSource())
 		{
-			this.setVisible(false);
-			v.setVisible(true);
-		
+			
 		}
 		if(Salir == e.getSource())
 		{	
