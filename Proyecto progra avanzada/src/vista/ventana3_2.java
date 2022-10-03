@@ -20,7 +20,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 
 public class ventana3_2 extends JFrame implements ActionListener{
-
+	
+	// Globales---------------------------------------------------
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
@@ -47,6 +48,8 @@ public class ventana3_2 extends JFrame implements ActionListener{
 	/**
 	 * Create the frame.
 	 */
+	
+	// Constructuor----------------------------------------------
 	public ventana3_2() {
 		setTitle("Buscar por rut y ministerio");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -96,6 +99,7 @@ public class ventana3_2 extends JFrame implements ActionListener{
 		this.coord = coord;
 	}
 	
+	// Acciones Botones---------------------------------------
 	public void actionPerformed(ActionEvent e) 
 	{
 		if(aceptar == e.getSource())

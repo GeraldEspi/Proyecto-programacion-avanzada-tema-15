@@ -27,6 +27,8 @@ public class ventana2 extends JFrame implements ActionListener {
 	/**
 	 * 
 	 */
+	
+	// Globales---------------------------------------------------
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	JButton btnOp1, btnOp2,btnOp3,Salir;
@@ -51,6 +53,8 @@ public class ventana2 extends JFrame implements ActionListener {
 	/**
 	 * Create the frame.
 	 */
+	
+	// Constructuor----------------------------------------------
 	public ventana2() {
 		setTitle("Listar Ministerios");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -102,7 +106,8 @@ public class ventana2 extends JFrame implements ActionListener {
 	{
 		this.coord = coord;
 	}
-
+	
+	// Acciones Botones---------------------------------------
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{

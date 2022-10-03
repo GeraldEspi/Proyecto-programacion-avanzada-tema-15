@@ -19,6 +19,8 @@ import javax.swing.border.BevelBorder;
 import javax.swing.JButton;
 
 public class ventana4_2 extends JFrame implements ActionListener{
+	
+	// Globales---------------------------------------------------
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -44,6 +46,7 @@ public class ventana4_2 extends JFrame implements ActionListener{
 	/**
 	 * Create the frame.
 	 */
+	// Constructuor----------------------------------------------
 	public ventana4_2() {
 		setTitle("Opcion 2 : Listar con rango de 0 al que ingrese");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -83,7 +86,8 @@ public class ventana4_2 extends JFrame implements ActionListener{
 	{
 		this.coord = coord;
 	}
-
+	
+	// Acciones Botones---------------------------------------
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(Salir == e.getSource())

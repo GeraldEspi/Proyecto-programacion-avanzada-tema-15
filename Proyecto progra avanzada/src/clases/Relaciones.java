@@ -17,6 +17,9 @@ import vista.ventana4_2;
 import vista.VentanaTexto;
 import vista.Ventana_leer_ministerio;
 
+
+// Clase que permite las relaciones entre las distintas clases y ventanas
+
 public class Relaciones 
 {
 	

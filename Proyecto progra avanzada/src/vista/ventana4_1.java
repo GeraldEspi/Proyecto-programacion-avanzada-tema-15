@@ -21,6 +21,7 @@ import javax.swing.JScrollPane;
 
 public class ventana4_1 extends JFrame implements ActionListener {
 
+	// Globales---------------------------------------------------
 	private JPanel contentPane;
 	private JTextField textField_small;
 	private JTextField textField_big;
@@ -47,6 +48,7 @@ public class ventana4_1 extends JFrame implements ActionListener {
 	/**
 	 * Create the frame.
 	 */
+	// Constructuor----------------------------------------------
 	public ventana4_1() {
 		setTitle("Opcion 1 : Listar con rango entre dos numero que ingrese");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -97,7 +99,8 @@ public class ventana4_1 extends JFrame implements ActionListener {
 	{
 		this.coord = coord;
 	}
-
+	
+	// Acciones Botones---------------------------------------
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(Salir == e.getSource()) 

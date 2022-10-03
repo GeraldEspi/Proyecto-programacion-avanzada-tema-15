@@ -25,6 +25,7 @@ public class ventana1 extends JFrame implements ActionListener {
 	/**
 	 * 
 	 */
+	// Globales---------------------------------------------------
 	private JPanel contentPane; JButton aceptar;
 	private JTextField textField;
 	private Coordinador coord;
@@ -49,6 +50,8 @@ public class ventana1 extends JFrame implements ActionListener {
 	/**
 	 * Create the frame.
 	 */
+	
+	// Constructuor----------------------------------------------
 	public ventana1() {
 		setTitle("Agregar funcionario\r\n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -104,7 +107,7 @@ public class ventana1 extends JFrame implements ActionListener {
 		this.coord = coord;
 	}
 
-	
+	// Acciones Botones---------------------------------------
 	public void actionPerformed(ActionEvent e)
 	{
 		if(aceptar == e.getSource()) {

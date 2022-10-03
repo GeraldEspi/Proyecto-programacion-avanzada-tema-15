@@ -28,6 +28,7 @@ public class VentanaTexto extends JFrame implements ActionListener {
 	/**
 	 * 
 	 */
+	// Globales---------------------------------------------------
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextArea textArea;
@@ -53,6 +54,7 @@ public class VentanaTexto extends JFrame implements ActionListener {
 	/**
 	 * Create the frame.
 	 */
+	// Constructuor----------------------------------------------
 	public VentanaTexto() {
 		setTitle("Mostrar Texto");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -91,6 +93,9 @@ public class VentanaTexto extends JFrame implements ActionListener {
 	{
 		this.coord = c;
 	}
+	
+	
+	// EXCEPCION---- Funciones que permiten funcionar y mostrar texto a la ventana ----
 
 	public void MostrarListaMinisterios() {
 		Gobierno gober = coord.getGober();
@@ -162,6 +167,7 @@ public class VentanaTexto extends JFrame implements ActionListener {
 	}
 	
 	
+	// Acciones Botones---------------------------------------
 
 	@Override
 	public void actionPerformed(ActionEvent e) {

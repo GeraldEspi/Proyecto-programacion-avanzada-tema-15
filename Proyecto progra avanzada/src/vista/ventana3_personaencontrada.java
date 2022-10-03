@@ -23,6 +23,7 @@ import javax.swing.JTextArea;
 
 public class ventana3_personaencontrada extends JFrame implements ActionListener {
 
+	// Globales---------------------------------------------------
 	private JPanel contentPane; 
 	JButton btnOpcion, btnOpcion2, btnOpcion3, btnOpcion4, btnOpcion5, btnOpcion6, Salir;
 	private Coordinador coord;
@@ -48,6 +49,7 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 	/**
 	 * Create the frame.
 	 */
+	// Constructuor----------------------------------------------
 	public ventana3_personaencontrada() {
 		setTitle("Modificar datos de funcionario encontrado\r\n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -129,6 +131,7 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 		textArea.setText(cadena);
 	}
 	
+	// Acciones Botones---------------------------------------
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{

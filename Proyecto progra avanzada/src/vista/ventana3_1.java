@@ -25,6 +25,8 @@ public class ventana3_1 extends JFrame implements ActionListener {
 	/**
 	 * 
 	 */
+	
+	// Globales---------------------------------------------------
 	private static final long serialVersionUID = -2450402251351263908L;
 	private JPanel contentPane;
 	private JTextField textField;
@@ -53,6 +55,8 @@ public class ventana3_1 extends JFrame implements ActionListener {
 	/**
 	 * Create the frame.
 	 */
+	
+	// Constructuor----------------------------------------------
 	public ventana3_1() {
 		setTitle("Buscar funcionario por nombre y ministerio\r\n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -101,6 +105,8 @@ public class ventana3_1 extends JFrame implements ActionListener {
 	{
 		this.coord = coord;
 	}
+	
+	// Acciones Botones---------------------------------------
 	public void actionPerformed(ActionEvent e) 
 	{
 		if(aceptar == e.getSource())

@@ -21,7 +21,8 @@ import java.io.IOException;
 import javax.swing.JButton;
 
 public class ventana3_encontradamodificar extends JFrame implements ActionListener {
-
+	
+	// Globales---------------------------------------------------
 	private JPanel contentPane;
 	private JTextField textField;
 	JButton aceptar;
@@ -47,6 +48,7 @@ public class ventana3_encontradamodificar extends JFrame implements ActionListen
 	/**
 	 * Create the frame.
 	 */
+	// Constructuor----------------------------------------------
 	public ventana3_encontradamodificar() {
 		setTitle("Modificar datos de funcionario\r\n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -85,6 +87,8 @@ public class ventana3_encontradamodificar extends JFrame implements ActionListen
 	{
 		this.coord = coord;
 	}
+	
+	// Acciones Botones---------------------------------------
 	public void actionPerformed(ActionEvent e) 
 	{
 		

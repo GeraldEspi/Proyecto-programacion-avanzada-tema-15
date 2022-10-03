@@ -21,6 +21,7 @@ public class ventana4 extends JFrame implements ActionListener{
 	/**
 	 * 
 	 */
+	// Globales---------------------------------------------------
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	JButton Op1, Op2, btnSalir;
@@ -45,6 +46,7 @@ public class ventana4 extends JFrame implements ActionListener{
 	/**
 	 * Create the frame.
 	 */
+	// Constructuor----------------------------------------------
 	public ventana4() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 367, 222);
@@ -85,7 +87,8 @@ public class ventana4 extends JFrame implements ActionListener{
 	{
 		this.coord = coord;
 	}
-
+	
+	// Acciones Botones---------------------------------------
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		

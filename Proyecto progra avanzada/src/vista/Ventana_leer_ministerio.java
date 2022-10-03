@@ -16,8 +16,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
 
-public class Ventana_leer_ministerio extends JFrame implements ActionListener{
+public class Ventana_leer_ministerio extends JFrame implements ActionListener{ //
 
+	// Globales---------------------------------------------------
 	private JPanel contentPane;
 	private JTextField textField;
 	JButton btnAceptar, btnSalir;
@@ -42,6 +43,8 @@ public class Ventana_leer_ministerio extends JFrame implements ActionListener{
 	/**
 	 * Create the frame.
 	 */
+	
+	// Constructuor---------------------------------------------------
 	public Ventana_leer_ministerio() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 129);
@@ -78,14 +81,17 @@ public class Ventana_leer_ministerio extends JFrame implements ActionListener{
 	{
 		this.coord = coord;
 	}
-
+	
+	
+	// Acciones Botones----------------------------------
+	
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
 		
 		if(btnSalir == e.getSource())
 		{
-			this.setVisible(false);
+			this.setVisible(false); // 
 			coord.visible2();
 		}
 		

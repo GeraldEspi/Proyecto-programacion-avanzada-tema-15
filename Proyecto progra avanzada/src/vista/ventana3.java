@@ -16,7 +16,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class ventana3 extends JFrame implements ActionListener {
-
+	
+	// Globales---------------------------------------------------
 	private JPanel contentPane;
 	JButton btnOpcin_3, btnOpcin_3_1, btnOpcin_3_1_1;
 	private Coordinador coord;
@@ -40,6 +41,7 @@ public class ventana3 extends JFrame implements ActionListener {
 	/**
 	 * Create the frame.
 	 */
+	// Constructuor----------------------------------------------
 	public ventana3() {
 		setTitle("Buscar funcionario\r\n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -85,6 +87,7 @@ public class ventana3 extends JFrame implements ActionListener {
 	}
 
 	@Override
+	// Acciones Botones---------------------------------------
 	public void actionPerformed(ActionEvent e) {
 		if(btnOpcin_3 == e.getSource()) 
 		{
