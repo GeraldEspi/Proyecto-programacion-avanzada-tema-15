@@ -1,0 +1,8 @@
+
+Integrantes:
+-Gerald Espiniza
+-Carlos Aguirre
+-Nelson Fuentes
+
+Instrucciones:
+Ejecutar desde el Main.java
