@@ -18,7 +18,8 @@ import vista.ventana4_2;
 import vista.VentanaTexto;
 import vista.Ventana_leer_ministerio;
 
-
+// Clase que coordina todos las ventanas y clases entre sí
+// Además de lo dicho, permite el guardado y captura de los datos de los txt. 
 public class Coordinador 
 {
 	private Gestion ges;
@@ -198,6 +199,7 @@ public class Coordinador
 		inicioVentana();
 	}
 	
+	// Se inicia el gobierno
 	public void inicioGober() throws FileNotFoundException
 	{
 		String linea;

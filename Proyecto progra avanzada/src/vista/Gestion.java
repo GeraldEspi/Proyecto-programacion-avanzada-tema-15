@@ -2,32 +2,39 @@ package vista;
 
 import java.awt.EventQueue;
 
+
+// Ventana principal.
+
+// Estrictura GENERAL de todas las ventanas .
+
+// Primero las variables globales.
+// Constructor de la ventana.
+// Declaracion de coordinador para establecer que se usarán el mismo Gobierno y por ende mismas variables.
+// La implementación de ActionListener que ejecuta las acciones de los botones.
+
+
+// Dicha estructura se comparte en todas las ventanas.
+
+// Solo se exime de esta regla la ventana VentanaTexto que contiene una sección donde almacena varios métodos que le permiten funcionar correctamente.
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-
 import clases.Coordinador;
-
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
-import java.awt.FlowLayout;
-import javax.swing.JMenu;
-import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
 import java.awt.Color;
 
 @SuppressWarnings("serial")
 public class Gestion extends JFrame implements ActionListener 
 {
-
+	
+	// Globales---------------------------------------------------
 	private JPanel contentPane;
 	private final JLabel titulo = new JLabel("Escoger una opción");
 	private JPanel panel;
@@ -37,7 +44,7 @@ public class Gestion extends JFrame implements ActionListener
 	private JButton btnOpcion_2;
 	private JButton btnOpcion_1;
 	private Coordinador coord;
-
+	// ---------------------------------------------------
 	/**
 	 * Launch the application.
 	 */
@@ -60,6 +67,8 @@ public class Gestion extends JFrame implements ActionListener
 	/**
 	 * Create the frame.
 	 */
+	
+	// Constructuor---------------------------------------------------
 	public Gestion() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -109,18 +118,21 @@ public class Gestion extends JFrame implements ActionListener
 		panel.add(btnOpcion_Salir);
 		btnOpcion_Salir.addActionListener(this);
 	}
+	//---------------------------------------------------
 
 	public void setCoord(Coordinador coord) 
 	{
 		this.coord = coord;
 	}
+	//---------------------------------------------------
 	
+	// Acciones Botones----------------------------------
 	public void actionPerformed(ActionEvent e)
 	{
 		
 		if(btnOpcion_1 == e.getSource()) 
 		{
-			this.setVisible(false);
+			this.setVisible(false);  
 			coord.visible1();
 
 		}
@@ -153,6 +165,8 @@ public class Gestion extends JFrame implements ActionListener
 			System.exit(0);
 		}
 	}
+	
+	//---------------------------------------------------
 	
 }
 
