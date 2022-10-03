@@ -253,6 +253,11 @@ public class Coordinador
 	{
 		return gober.getsMinisterio(nombre);
 	}
+	public void eliminarFuncio() 
+	{
+		gober.eliminarFuncionario(funcio);
+		funcio = null;
+	}
 	
 	
 	

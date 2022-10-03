@@ -10,17 +10,20 @@ import clases.Coordinador;
 
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JTextField;
 import java.awt.Color;
 import javax.swing.border.BevelBorder;
 import javax.swing.JButton;
 
-public class ventana4_2 extends JFrame {
+public class ventana4_2 extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
 	private JTextField textField;
 	private Coordinador coord;
-	private JButton Aceptar;
+	private JButton Aceptar, 		Salir;
 
 	/**
 	 * Launch the application.
@@ -65,10 +68,15 @@ public class ventana4_2 extends JFrame {
 		contentPane.add(textField);
 		
 		Aceptar = new JButton("Aceptar");
-		Aceptar.setBounds(135, 61, 91, 23);
+		Aceptar.setBounds(62, 61, 91, 23);
 		contentPane.add(Aceptar);
 		
-		coord = new Coordinador();
+		Salir = new JButton("Salir");
+		Salir.setBounds(217, 61, 91, 23);
+		contentPane.add(Salir);
+		
+		Salir.addActionListener(this);
+		Aceptar.addActionListener(this);
 	}
 	
 	public void setCoord(Coordinador coord)
@@ -76,4 +84,25 @@ public class ventana4_2 extends JFrame {
 		this.coord = coord;
 	}
 
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(Salir == e.getSource())
+		{
+			this.setVisible(false);
+			coord.visible4();
+		}
+		
+		if(Aceptar == e.getSource())
+		{
+			int num_men = Integer.parseInt(textField.getText());
+			
+			VentanaTexto vt = coord.getVT();
+			
+			
+			vt.MostrarRango2(num_men);
+			this.setVisible(false);
+			vt.setVisible(true);
+		}
+		
+	}
 }

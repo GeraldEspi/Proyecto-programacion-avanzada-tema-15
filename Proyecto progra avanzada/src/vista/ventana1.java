@@ -25,9 +25,10 @@ public class ventana1 extends JFrame implements ActionListener {
 	/**
 	 * 
 	 */
-	private JPanel contentPane; JButton boton1;
+	private JPanel contentPane; JButton aceptar;
 	private JTextField textField;
 	private Coordinador coord;
+	private JButton salir;
 
 	/**
 	 * Launch the application.
@@ -61,10 +62,10 @@ public class ventana1 extends JFrame implements ActionListener {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		boton1 = new JButton("Aceptar");
-		boton1.setBounds(167, 69, 91, 23);
+		aceptar = new JButton("Aceptar");
+		aceptar.setBounds(90, 69, 91, 23);
 		
-		contentPane.add(boton1);
+		contentPane.add(aceptar);
 		
 		
 		textField = new JTextField();
@@ -83,12 +84,17 @@ public class ventana1 extends JFrame implements ActionListener {
 		contentPane.add(lblIngreseLosDatos);
 		
 		JLabel lblClavefuncionarionombremailministerioprofesionrutsueldoEnUtm = new JLabel("  (  Nombre,mail,ministerio,profesion,rut,sueldo en utm  )");
-		lblClavefuncionarionombremailministerioprofesionrutsueldoEnUtm.setFont(new Font("Tahoma", Font.PLAIN, 11));
-		lblClavefuncionarionombremailministerioprofesionrutsueldoEnUtm.setBounds(34, 142, 400, 14);
+		lblClavefuncionarionombremailministerioprofesionrutsueldoEnUtm.setFont(new Font("Tahoma", Font.BOLD, 13));
+		lblClavefuncionarionombremailministerioprofesionrutsueldoEnUtm.setBounds(24, 142, 400, 14);
 		contentPane.add(lblClavefuncionarionombremailministerioprofesionrutsueldoEnUtm);
 		
+		salir = new JButton("Salir\r\n");
+		salir.setBounds(245, 69, 91, 23);
+		contentPane.add(salir);
 		
-		boton1.addActionListener(this);
+		
+		aceptar.addActionListener(this);
+		salir.addActionListener(this);
 		
 	}
 	
@@ -101,7 +107,7 @@ public class ventana1 extends JFrame implements ActionListener {
 	
 	public void actionPerformed(ActionEvent e)
 	{
-		if(boton1 == e.getSource()) {
+		if(aceptar == e.getSource()) {
 			String funcionario = textField.getText();
 		
 			try 
@@ -121,6 +127,13 @@ public class ventana1 extends JFrame implements ActionListener {
 			
 			
 		}
+		
+		if(salir == e.getSource())
+		{
+			this.setVisible(false);
+			coord.back();
+		}
 	}
+	
 	
 }

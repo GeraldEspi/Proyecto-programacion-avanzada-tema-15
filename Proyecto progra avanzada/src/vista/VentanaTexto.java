@@ -8,7 +8,6 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import clases.Coordinador;
-import clases.Funcionario;
 import clases.Gobierno;
 import clases.ListaFuncionarios;
 import clases.Ministerio;
@@ -20,7 +19,6 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 import javax.swing.JTextArea;
 import javax.swing.JButton;
@@ -140,26 +138,26 @@ public class VentanaTexto extends JFrame implements ActionListener {
 	{
 		Gobierno gober = coord.getGober();
 		ListaFuncionarios lista = new ListaFuncionarios();
-		Funcionario func = new Funcionario();
 		String cadena = "info\n";
 		
-		
 		lista = gober.listaRango(num1, num2);
-		
-		for(int j = 0; j < lista.getLargo() ; j++) 
-		{
-			func = lista.getFuncionario(j);
-			cadena += func.imprimirDatos();
-			
-		}
+		cadena += lista.mostrarFuncionarios();
 		textArea.setText(cadena);
 		
 		
 		
 	}
 	
-	public void MostraRango2(int num1)
+	public void MostrarRango2(int num1)
 	{
+		
+		Gobierno gober = coord.getGober();
+		ListaFuncionarios lista = new ListaFuncionarios();
+		String cadena = "info\n";
+		
+		lista = gober.listaRango(num1);
+		cadena += lista.mostrarFuncionarios();
+		textArea.setText(cadena);
 		
 	}
 	
@@ -170,7 +168,7 @@ public class VentanaTexto extends JFrame implements ActionListener {
 		if(Salir == e.getSource())
 		{
 			this.setVisible(false);
-			coord.visible2();
+			coord.back();
 		}
 	}
 }

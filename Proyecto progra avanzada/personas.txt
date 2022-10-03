@@ -8,5 +8,4 @@ Miquel Iceta,miqueta12@gmail.com,Economia,economia,20091330,32
 José Balmaceda,JMB12@hotmail.com,Exterior,comunicaciones,21902718,40
 Manuel Castelles,castuel@gmail.com,Defensa,derecho,11902758,40
 Mariano Ribera,marianox@gmail.com,Defensa,general,16733292,36
-Carlos Aguirre,carlos@mail.cl,Defensa,estudiante,20678207,0
 Madeline Massey,madessey@gmail.com,Medio ambiente,antropologia,14671539,24

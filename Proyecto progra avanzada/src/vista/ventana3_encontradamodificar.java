@@ -24,8 +24,9 @@ public class ventana3_encontradamodificar extends JFrame implements ActionListen
 
 	private JPanel contentPane;
 	private JTextField textField;
-	JButton boton1;
+	JButton aceptar;
 	private Coordinador coord;
+	private JButton salir;
 
 	/**
 	 * Launch the application.
@@ -49,7 +50,7 @@ public class ventana3_encontradamodificar extends JFrame implements ActionListen
 	public ventana3_encontradamodificar() {
 		setTitle("Modificar datos de funcionario\r\n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 156);
+		setBounds(100, 100, 296, 156);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
@@ -60,20 +61,24 @@ public class ventana3_encontradamodificar extends JFrame implements ActionListen
 		contentPane.setLayout(null);
 		
 		textField = new JTextField();
-		textField.setBounds(104, 11, 246, 20);
+		textField.setBounds(10, 35, 260, 20);
 		textField.setColumns(30);
 		contentPane.add(textField);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Ingrese la respectiva modificación\r\n");
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1_1.setBounds(119, 41, 221, 14);
+		lblNewLabel_1_1.setBounds(10, 11, 194, 14);
 		contentPane.add(lblNewLabel_1_1);
 		
-		boton1 = new JButton("Aceptar");
-		boton1.setBounds(171, 66, 91, 23);
-		contentPane.add(boton1);
+		aceptar = new JButton("Aceptar");
+		aceptar.setBounds(10, 66, 91, 23);
+		contentPane.add(aceptar);
 		
-		boton1.addActionListener(this);
+		salir = new JButton("Salir\r\n");
+		salir.setBounds(179, 66, 91, 23);
+		contentPane.add(salir);
+		
+		aceptar.addActionListener(this);salir.addActionListener(this);
 	}
 	
 	public void setCoord(Coordinador coord)
@@ -83,7 +88,7 @@ public class ventana3_encontradamodificar extends JFrame implements ActionListen
 	public void actionPerformed(ActionEvent e) 
 	{
 		
-		if(boton1 == e.getSource())
+		if(aceptar == e.getSource())
 		{
 			Funcionario f = coord.getFuncioBusq();
 			String modificacion = textField.getText();
@@ -148,6 +153,11 @@ public class ventana3_encontradamodificar extends JFrame implements ActionListen
 			v3_p.mostrarFuncioBusq();
 			this.setVisible(false);
 			coord.visible3_p();
+		}
+		
+		if(salir == e.getSource())
+		{
+			this.setVisible(false);
 		}
 			
 	}

@@ -10,6 +10,8 @@ import clases.Coordinador;
 import clases.Funcionario;
 
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JTextField;
@@ -26,6 +28,7 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 	private Coordinador coord;
 	private JScrollPane scrollPane;
 	private JTextArea textArea;
+	private JButton btnOpcion7;
 	/**
 	 * Launch the application.
 	 */
@@ -48,7 +51,7 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 	public ventana3_personaencontrada() {
 		setTitle("Modificar datos de funcionario encontrado\r\n");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 371, 440);
+		setBounds(100, 100, 371, 516);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		
@@ -59,12 +62,12 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 		contentPane.setLayout(null);
 		
 		Salir = new JButton("Salir\r\n");
-		Salir.setBounds(128, 367, 91, 23);
+		Salir.setBounds(128, 443, 91, 23);
 		contentPane.add(Salir);
 		
 		JLabel titulo = new JLabel("Escoger una opción");
 		titulo.setFont(new Font("Tahoma", Font.BOLD, 18));
-		titulo.setBounds(95, 334, 176, 22);
+		titulo.setBounds(95, 410, 176, 22);
 		contentPane.add(titulo);
 		
 		 btnOpcion = new JButton("Opcion 1 : Modificar el nombre");
@@ -99,6 +102,10 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 		textArea.setBackground(new Color(192, 192, 192));
 		scrollPane.setViewportView(textArea);
 		
+		btnOpcion7 = new JButton("Opcion 7: Eliminar funcionario");
+		btnOpcion7.setBounds(68, 335, 222, 23);
+		contentPane.add(btnOpcion7);
+		
 		
 		btnOpcion.addActionListener(this);
 		btnOpcion2.addActionListener(this);
@@ -106,6 +113,7 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 		btnOpcion4.addActionListener(this);
 		btnOpcion5.addActionListener(this);
 		btnOpcion6.addActionListener(this);
+		btnOpcion7.addActionListener(this);
 		Salir.addActionListener(this);
 	}
 	
@@ -153,6 +161,13 @@ public class ventana3_personaencontrada extends JFrame implements ActionListener
 		{
 			this.setVisible(false);
 			coord.visible3_e(6);
+		}
+		if(btnOpcion7 == e.getSource())
+		{
+			this.setVisible(false);
+			coord.eliminarFuncio();
+			JOptionPane.showMessageDialog(null, "El funcionario ha sido eliminado");
+			coord.visible3();
 		}
 		if(Salir == e.getSource())
 		{	

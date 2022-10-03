@@ -30,8 +30,9 @@ public class ventana3_1 extends JFrame implements ActionListener {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JLabel lblNewLabel;
-	private JButton boton1;
+	private JButton aceptar;
 	private Coordinador coord;
+	private JButton salir;
 
 	/**
 	 * Launch the application.
@@ -77,18 +78,22 @@ public class ventana3_1 extends JFrame implements ActionListener {
 		
 		textField_1 = new JTextField();
 		textField_1.setColumns(30);
-		textField_1.setBounds(20, 119, 345, 20);
+		textField_1.setBounds(20, 98, 345, 20);
 		contentPane.add(textField_1);
 		
 		lblNewLabel = new JLabel("Ingrese el nombre del funcionario");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel.setBounds(20, 83, 316, 49);
+		lblNewLabel.setBounds(20, 59, 316, 49);
 		contentPane.add(lblNewLabel);
 		
-		boton1 = new JButton("Aceptar");
-		boton1.setBounds(101, 159, 91, 23);
-		contentPane.add(boton1);
-		boton1.addActionListener(this);
+		aceptar = new JButton("Aceptar");
+		aceptar.setBounds(20, 159, 91, 23);
+		contentPane.add(aceptar);
+		
+		salir = new JButton("Salir\r\n");
+		salir.setBounds(274, 159, 91, 23);
+		contentPane.add(salir);
+		aceptar.addActionListener(this);salir.addActionListener(this);
 	
 	}
 	
@@ -98,7 +103,7 @@ public class ventana3_1 extends JFrame implements ActionListener {
 	}
 	public void actionPerformed(ActionEvent e) 
 	{
-		if(boton1 == e.getSource())
+		if(aceptar == e.getSource())
 		{
 			String ministerio = textField.getText();
 			String nombre = textField_1.getText();
@@ -118,6 +123,12 @@ public class ventana3_1 extends JFrame implements ActionListener {
 				this.setVisible(false);
 				coord.visible3_p();
 			}
+		}
+		
+		if(salir == e.getSource())
+		{
+			this.setVisible(false);
+			coord.visible3();
 		}
 	}
 

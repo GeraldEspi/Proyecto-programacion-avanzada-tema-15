@@ -110,6 +110,7 @@ public class ventana2 extends JFrame implements ActionListener {
 		{
 			VentanaTexto vt = coord.getVT();
 			vt.MostrarListaMinisterios();
+			this.setVisible(false);
 			vt.setVisible(true);
 
 		}
@@ -117,6 +118,7 @@ public class ventana2 extends JFrame implements ActionListener {
 		{
 			VentanaTexto vt = coord.getVT();
 			vt.MostrarListaTodosFuncio();
+			this.setVisible(false);
 			vt.setVisible(true);
 		}
 		if(btnOp3 == e.getSource())

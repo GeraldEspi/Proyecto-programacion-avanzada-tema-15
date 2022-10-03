@@ -24,8 +24,9 @@ public class ventana3_2 extends JFrame implements ActionListener{
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
-	private JButton boton1;
+	private JButton aceptar;
 	private Coordinador coord;
+	private JButton salir;
 
 	/**
 	 * Launch the application.
@@ -49,7 +50,7 @@ public class ventana3_2 extends JFrame implements ActionListener{
 	public ventana3_2() {
 		setTitle("Buscar por rut y ministerio");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 443, 233);
+		setBounds(100, 100, 391, 233);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setResizable(false);
@@ -59,12 +60,12 @@ public class ventana3_2 extends JFrame implements ActionListener{
 		contentPane.setLayout(null);
 		
 		textField = new JTextField();
-		textField.setBounds(10, 119, 345, 20);
+		textField.setBounds(10, 98, 345, 20);
 		textField.setColumns(30);
 		contentPane.add(textField);
 		
 		JLabel lblNewLabel = new JLabel("Ingrese el rut del funcionario");
-		lblNewLabel.setBounds(10, 83, 316, 49);
+		lblNewLabel.setBounds(10, 59, 316, 49);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
 		contentPane.add(lblNewLabel);
 		
@@ -78,11 +79,16 @@ public class ventana3_2 extends JFrame implements ActionListener{
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 11));
 		contentPane.add(lblNewLabel_1);
 		
-		boton1 = new JButton("Aceptar");
-		boton1.setBounds(150, 160, 91, 23);
-		contentPane.add(boton1);
+		aceptar = new JButton("Aceptar");
+		aceptar.setBounds(10, 160, 91, 23);
+		contentPane.add(aceptar);
 		
-		boton1.addActionListener(this);
+		salir = new JButton("Salir");
+		salir.setBounds(264, 160, 91, 23);
+		contentPane.add(salir);
+		
+		aceptar.addActionListener(this);
+		salir.addActionListener(this);
 	}
 	
 	public void setCoord(Coordinador coord)
@@ -92,7 +98,7 @@ public class ventana3_2 extends JFrame implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e) 
 	{
-		if(boton1 == e.getSource())
+		if(aceptar == e.getSource())
 		{
 			String rut = textField.getText();
 			String ministerio = textField_1.getText();
@@ -112,6 +118,12 @@ public class ventana3_2 extends JFrame implements ActionListener{
 				this.setVisible(false);
 				coord.visible3_p();
 			}
+		}
+		
+		if(salir == e.getSource())
+		{
+			this.setVisible(false);
+			coord.visible3();
 		}
 	}
 

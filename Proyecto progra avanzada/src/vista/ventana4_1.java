@@ -60,14 +60,14 @@ public class ventana4_1 extends JFrame implements ActionListener {
 		setResizable(false);
 		setLocationRelativeTo(null);
 		
-		JLabel lblNewLabel_1 = new JLabel("Ingrese el numero mas pequenño del parametro");
+		JLabel lblNewLabel_1 = new JLabel("Ingrese el numero mas mínimo del parametro");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNewLabel_1.setBounds(37, 25, 315, 14);
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Ingrese el numero mas grande del parametro");
+		JLabel lblNewLabel_1_1 = new JLabel("Ingrese el numero mas límite del parametro");
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel_1_1.setBounds(37, 106, 275, 14);
+		lblNewLabel_1_1.setBounds(37, 69, 275, 14);
 		contentPane.add(lblNewLabel_1_1);
 		
 		textField_small = new JTextField();
@@ -77,7 +77,7 @@ public class ventana4_1 extends JFrame implements ActionListener {
 		
 		textField_big = new JTextField();
 		textField_big.setColumns(30);
-		textField_big.setBounds(37, 120, 246, 20);
+		textField_big.setBounds(37, 83, 246, 20);
 		contentPane.add(textField_big);
 		
 		 Aceptar = new JButton("Aceptar");
@@ -103,7 +103,7 @@ public class ventana4_1 extends JFrame implements ActionListener {
 		if(Salir == e.getSource()) 
 		{
 			this.setVisible(false);
-			coord.back();
+			coord.visible4();
 		}
 		
 		if(Aceptar == e.getSource()) 
@@ -115,16 +115,10 @@ public class ventana4_1 extends JFrame implements ActionListener {
 			
 			VentanaTexto vt = coord.getVT();
 			
-			
+			this.setVisible(false);
 			vt.MostrarRango1(num_men, num_may);
-			coord.visibleVLM();
+			vt.setVisible(true);
 			
 		}
-		
-		
 	}
-	
-	
-	
-
 }
