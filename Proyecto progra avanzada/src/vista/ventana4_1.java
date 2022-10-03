@@ -103,6 +103,7 @@ public class ventana4_1 extends JFrame implements ActionListener {
 		if(Salir == e.getSource()) 
 		{
 			this.setVisible(false);
+			coord.back();
 		}
 		
 		if(Aceptar == e.getSource()) 

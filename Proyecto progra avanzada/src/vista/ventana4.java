@@ -62,15 +62,15 @@ public class ventana4 extends JFrame implements ActionListener{
 		titulo.setBounds(86, 11, 176, 22);
 		contentPane.add(titulo);
 		
-		 Op1 = new JButton("Opcion 1 : Listar con rango de numeros ingresados");
+		Op1 = new JButton("Opcion 1 : Listar con rango de numeros ingresados");
 		Op1.setBounds(16, 71, 325, 23);
 		contentPane.add(Op1);
 		
-		 Op2 = new JButton("Opcion 2 : Listar con rango de 0 al que ingrese");
+		Op2 = new JButton("Opcion 2 : Listar con rango de 0 al que ingrese");
 		Op2.setBounds(16, 106, 325, 23);
 		contentPane.add(Op2);
 		
-		 btnSalir = new JButton("Salir");
+		btnSalir = new JButton("Salir");
 		btnSalir.setBounds(73, 140, 202, 23);
 		contentPane.add(btnSalir);
 		
@@ -91,20 +91,14 @@ public class ventana4 extends JFrame implements ActionListener{
 		
 		if(Op1 == e.getSource())
 		{
-			
 			this.setVisible(false);
 			coord.visible4_1();
-			
-			
 		}
-		
 		if(Op2 == e.getSource())
 		{
-			ventana4_2 v = new ventana4_2();
 			this.setVisible(false);
-			v.setVisible(true);
+			coord.visible4_2();;
 		}
-		
 		if(btnSalir == e.getSource())
 		{
 			

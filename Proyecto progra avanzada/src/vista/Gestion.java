@@ -136,9 +136,9 @@ public class Gestion extends JFrame implements ActionListener
 		}
 		if(btnOpcion_4 == e.getSource()) 
 		{
-			ventana4 v = new ventana4();
+			
 			this.setVisible(false);
-			v.setVisible(true);
+			coord.visible4();
 		}
 		if(btnOpcion_Salir == e.getSource()) 
 		{

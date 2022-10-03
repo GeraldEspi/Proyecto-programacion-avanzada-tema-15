@@ -173,9 +173,17 @@ public class Coordinador
 		v3_e.setVisible(true);
 		setModificado(i);
 	}
+	public void visible4() 
+	{
+		v4.setVisible(true);
+	}
 	public void visible4_1() 
 	{
 		v4_1.setVisible(true);
+	}
+	public void visible4_2() 
+	{
+		v4_2.setVisible(true);
 	}
 	
 	
